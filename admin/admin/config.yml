@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: grekoff501677-a11y/geely-parts-catalog  # Твой username/название-репо
+  branch: main
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: djjcxxgfm  # Замени на свой
+    api_key: EGP8ur_4h9uepVRNOOfpzKeHV3M        # Замени на свой
+
+collections:
+  - name: "products"
+    label: "Товары"
+    folder: "products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Название", name: "title", widget: "string"}
+      - {label: "Артикул", name: "sku", widget: "string"}
+      - {label: "Цена", name: "price", widget: "number"}
+      - {label: "Фото", name: "image", widget: "image"}
+      - {label: "Описание", name: "description", widget: "text"}
+      - {label: "Категория", name: "category", widget: "string"}
+      - {label: "Модели авто", name: "models", widget: "string"}
+      - {label: "В наличии", name: "available", widget: "boolean", default: true}
