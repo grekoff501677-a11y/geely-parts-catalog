@@ -3,12 +3,16 @@ backend:
   repo: grekoff501677-a11y/geely-parts-catalog
   branch: main
 
+# Editorial Workflow - накапливает изменения, публикуешь одной кнопкой
+publish_mode: editorial_workflow
+
 media_library:
   name: cloudinary
   config:
     cloud_name: djjcxxgfm
     api_key: 899658184497377  # Вставь свой
     api secret: EGP8ur_4h9uepVRNOOfpzKeHV3M
+    multiple: false
 
 collections:
   - name: "catalog"
@@ -21,21 +25,63 @@ collections:
           - label: "Товары"
             name: "items"
             widget: "list"
+            summary: '{{fields.name}} (ID: {{fields.id}})'
             fields:
-              - {label: "ID", name: "id", widget: "number"}
-              - {label: "Название", name: "name", widget: "string"}
-              - {label: "Описание", name: "desc", widget: "text", required: false}
-              - {label: "Цена", name: "price", widget: "number", required: false}
-              - {label: "Остаток", name: "stock", widget: "number", required: false}
-              - label: "Модели"
+              - label: "ID"
+                name: "id"
+                widget: "number"
+                hint: "Уникальный номер товара (следующий свободный)"
+                
+              - label: "Название"
+                name: "name"
+                widget: "string"
+                
+              - label: "Описание"
+                name: "desc"
+                widget: "text"
+                required: false
+                
+              - label: "Цена (₸)"
+                name: "price"
+                widget: "number"
+                required: false
+                hint: "Оставьте пустым если цена не указана"
+                
+              - label: "Остаток (шт)"
+                name: "stock"
+                widget: "number"
+                required: false
+                hint: "Оставьте пустым для 'Под заказ'"
+                
+              - label: "Модели автомобилей"
                 name: "models"
-                widget: "list"
-                field: {label: "Модель", name: "model", widget: "string"}
-              - {label: "Артикул", name: "sku", widget: "string", default: "-"}
-              - {label: "Фото (URL из Cloudinary)", name: "img", widget: "string", hint: "Вставь URL изображения из Cloudinary"}
-              - label: "Доп. фото (URLs)"
+                widget: "select"
+                multiple: true
+                options: ["Atlas", "Monjaro", "Okavango", "Coolray"]
+                hint: "Можно выбрать несколько"
+                
+              - label: "Артикул"
+                name: "sku"
+                widget: "string"
+                default: "-"
+                
+              - label: "Главное фото"
+                name: "img"
+                widget: "image"
+                hint: "Выберите фото из Cloudinary Media Library"
+                
+              - label: "Дополнительные фото"
                 name: "imgs"
                 widget: "list"
                 required: false
-                field: {label: "URL фото", name: "url", widget: "string"}
-              - {label: "Ссылка Kaspi", name: "kaspi", widget: "string", required: false}
+                hint: "Добавьте дополнительные ракурсы товара"
+                field:
+                  label: "Фото"
+                  name: "url"
+                  widget: "image"
+                  
+              - label: "Ссылка на Kaspi.kz"
+                name: "kaspi"
+                widget: "string"
+                required: false
+                hint: "Полная ссылка на товар в Kaspi"
