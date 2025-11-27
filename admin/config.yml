@@ -7,7 +7,7 @@ media_library:
   name: cloudinary
   config:
     cloud_name: djjcxxgfm  # Замени на свой
-    api_key: EGP8ur_4h9uepVRNOOfpzKeHV3M        # Замени на свой
+    api_key: 899658184497377        # Замени на свой
 
 collections:
   - name: "products"
