@@ -1,27 +1,33 @@
 backend:
   name: github
-  repo: grekoff501677-a11y/geely-parts-catalog  # Твой username/название-репо
+  repo: grekoff501677-a11y/geely-parts-catalog
   branch: main
 
 media_library:
   name: cloudinary
   config:
-    cloud_name: djjcxxgfm  # Замени на свой
-    api_key: 899658184497377        # Замени на свой
-    api_secret: EGP8ur_4h9uepVRNOOfpzKeHV3M
-    
+    cloud_name: djjcxxgfm
+    api_key: 899658184497377  # Вставь свой
+    api secret: EGP8ur_4h9uepVRNOOfpzKeHV3M
 collections:
-  - name: "products"
-    label: "Товары"
-    folder: "products"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Название", name: "title", widget: "string"}
-      - {label: "Артикул", name: "sku", widget: "string"}
-      - {label: "Цена", name: "price", widget: "number"}
-      - {label: "Фото", name: "image", widget: "image"}
-      - {label: "Описание", name: "description", widget: "text"}
-      - {label: "Категория", name: "category", widget: "string"}
-      - {label: "Модели авто", name: "models", widget: "string"}
-      - {label: "В наличии", name: "available", widget: "boolean", default: true}
+  - name: "catalog"
+    label: "Каталог"
+    files:
+      - name: "products"
+        label: "Товары"
+        file: "products.json"
+        fields:
+          - label: "Товары"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "number"}
+              - {label: "Название", name: "name", widget: "string"}
+              - {label: "Описание", name: "desc", widget: "text", required: false}
+              - {label: "Цена", name: "price", widget: "number", required: false}
+              - {label: "Остаток", name: "stock", widget: "number", required: false}
+              - {label: "Модели", name: "models", widget: "list"}
+              - {label: "Артикул", name: "sku", widget: "string", default: "-"}
+              - {label: "Фото", name: "img", widget: "image"}
+              - {label: "Доп. фото", name: "imgs", widget: "list", required: false, field: {label: "URL", name: "url", widget: "image"}}
+              - {label: "Ссылка Kaspi", name: "kaspi", widget: "string", required: false}
