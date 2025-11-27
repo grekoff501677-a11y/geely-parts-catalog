@@ -55,10 +55,13 @@ collections:
                 
               - label: "Модели автомобилей"
                 name: "models"
-                widget: "select"
-                multiple: true
-                options: ["Atlas", "Monjaro", "Okavango", "Coolray"]
-                hint: "Можно выбрать несколько"
+                widget: "list"
+                hint: "Добавьте модели: Atlas, Monjaro, Okavango, Coolray"
+                field:
+                  label: "Модель"
+                  name: "model"
+                  widget: "select"
+                  options: ["Atlas", "Monjaro", "Okavango", "Coolray"]
                 
               - label: "Артикул"
                 name: "sku"
