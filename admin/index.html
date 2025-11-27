@@ -17,17 +17,59 @@
       color: #e9f0f7;
     }
     .product-preview .img-wrap {
+      position: relative;
       aspect-ratio: 4/3;
       background: #0c1322;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      overflow: hidden;
     }
     .product-preview .img-wrap img {
       max-width: 100%;
       max-height: 100%;
+      width: auto;
+      height: auto;
       object-fit: contain;
+    }
+    /* Карусель */
+    .carousel-controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 8px 12px;
+      border-radius: 20px;
+    }
+    .carousel-controls button {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .carousel-controls button:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .carousel-controls button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    .carousel-counter {
+      color: white;
+      font-size: 13px;
+      min-width: 40px;
+      text-align: center;
     }
     .product-preview .content {
       padding: 16px;
@@ -73,8 +115,23 @@
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   <script>
+    // Глобальное состояние для карусели
+    let currentImageIndex = 0;
+    
     // Регистрируем кастомный preview для товара
     CMS.registerPreviewTemplate('catalog', createClass({
+      getInitialState: function() {
+        return { imageIndex: 0 };
+      },
+      
+      handlePrevImage: function() {
+        this.setState({ imageIndex: Math.max(0, this.state.imageIndex - 1) });
+      },
+      
+      handleNextImage: function(maxIndex) {
+        this.setState({ imageIndex: Math.min(maxIndex, this.state.imageIndex + 1) });
+      },
+      
       render: function() {
         const entry = this.props.entry;
         const items = entry.getIn(['data', 'items']);
@@ -83,62 +140,100 @@
         if (items && items.size > 0) {
           // Берем первый товар (или можно определить какой именно редактируется)
           const product = items.get(0).toJS();
-          return renderProductCard(product);
+          return this.renderProductCard(product);
         }
         
         return h('div', { className: 'product-preview' },
-          h('p', { style: { padding: '20px', textAlign: 'center' } }, 
+          h('p', { style: { padding: '20px', textAlign: 'center', color: '#9fb2c3' } }, 
             'Выберите товар для предварительного просмотра')
+        );
+      },
+      
+      renderProductCard: function(product) {
+        const price = product.price ? 
+          new Intl.NumberFormat('ru-RU').format(product.price) + ' ₸' : 
+          '—';
+        
+        const stock = product.stock == null ? 
+          'Под заказ' : 
+          product.stock + ' шт';
+        
+        const stockClass = (product.stock != null && product.stock <= 2) ? 
+          'stock low' : 
+          'stock';
+        
+        // Собираем все изображения
+        const images = [];
+        if (product.img) images.push(product.img);
+        if (product.imgs && Array.isArray(product.imgs)) {
+          product.imgs.forEach(function(imgObj) {
+            if (imgObj && imgObj.url) images.push(imgObj.url);
+          });
+        }
+        
+        const currentIndex = this.state.imageIndex;
+        const currentImage = images[currentIndex] || null;
+        const hasMultipleImages = images.length > 1;
+        
+        return h('div', { className: 'product-preview' },
+          h('div', { className: 'img-wrap' },
+            currentImage ? 
+              h('img', { 
+                src: currentImage, 
+                alt: product.name,
+                key: currentIndex // Важно для правильного обновления
+              }) :
+              h('div', { style: { color: '#9fb2c3', padding: '20px', textAlign: 'center' } }, 
+                'Фото не выбрано'),
+            
+            // Карусель управления (только если больше 1 фото)
+            hasMultipleImages && h('div', { className: 'carousel-controls' },
+              h('button', { 
+                onClick: this.handlePrevImage.bind(this),
+                disabled: currentIndex === 0,
+                'aria-label': 'Предыдущее фото'
+              }, '‹'),
+              h('span', { className: 'carousel-counter' }, 
+                (currentIndex + 1) + ' / ' + images.length),
+              h('button', { 
+                onClick: this.handleNextImage.bind(this, images.length - 1),
+                disabled: currentIndex === images.length - 1,
+                'aria-label': 'Следующее фото'
+              }, '›')
+            )
+          ),
+          h('div', { className: 'content' },
+            h('h3', { className: 'name' }, product.name || 'Без названия'),
+            product.desc && h('p', { className: 'desc' }, product.desc),
+            h('div', { className: 'price' }, price),
+            product.models && product.models.length > 0 && 
+              h('div', { className: 'models' },
+                product.models.map(function(model) {
+                  return h('span', { className: 'model-badge', key: model }, model);
+                })
+              ),
+            h('div', { className: stockClass }, stock),
+            product.sku && product.sku !== '-' &&
+              h('div', { style: { fontSize: '13px', color: '#9fb2c3', marginTop: '8px' } },
+                'Артикул: ' + product.sku),
+            product.kaspi && 
+              h('div', { style: { marginTop: '12px' } },
+                h('a', { 
+                  href: product.kaspi, 
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                  style: { color: '#aa8643', fontSize: '14px', textDecoration: 'none' }
+                }, 'Ссылка на Kaspi →')
+              )
+          )
         );
       }
     }));
     
-    // Функция для рендера карточки товара
-    function renderProductCard(product) {
-      const price = product.price ? 
-        new Intl.NumberFormat('ru-RU').format(product.price) + ' ₸' : 
-        '—';
-      
-      const stock = product.stock == null ? 
-        'Под заказ' : 
-        product.stock + ' шт';
-      
-      const stockClass = (product.stock != null && product.stock <= 2) ? 
-        'stock low' : 
-        'stock';
-      
-      return h('div', { className: 'product-preview' },
-        h('div', { className: 'img-wrap' },
-          product.img ? 
-            h('img', { src: product.img, alt: product.name }) :
-            h('div', { style: { color: '#9fb2c3' } }, 'Фото не выбрано')
-        ),
-        h('div', { className: 'content' },
-          h('h3', { className: 'name' }, product.name || 'Без названия'),
-          product.desc && h('p', { className: 'desc' }, product.desc),
-          h('div', { className: 'price' }, price),
-          product.models && product.models.length > 0 && 
-            h('div', { className: 'models' },
-              product.models.map(function(model) {
-                return h('span', { className: 'model-badge', key: model }, model);
-              })
-            ),
-          h('div', { className: stockClass }, stock),
-          product.kaspi && 
-            h('div', { style: { marginTop: '12px' } },
-              h('a', { 
-                href: product.kaspi, 
-                target: '_blank',
-                style: { color: '#aa8643', fontSize: '14px' }
-              }, 'Ссылка на Kaspi →')
-            )
-        )
-      );
-    }
-    
     // Вспомогательная функция для создания React-like элементов
-    function h(tag, props, ...children) {
-      return CMS.h(tag, props, ...children);
+    function h(tag, props) {
+      const children = Array.prototype.slice.call(arguments, 2);
+      return CMS.h.apply(null, [tag, props].concat(children));
     }
     
     function createClass(spec) {
