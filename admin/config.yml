@@ -8,7 +8,8 @@ media_library:
   config:
     cloud_name: djjcxxgfm  # Замени на свой
     api_key: 899658184497377        # Замени на свой
-
+    api_secret: EGP8ur_4h9uepVRNOOfpzKeHV3M
+    
 collections:
   - name: "products"
     label: "Товары"
