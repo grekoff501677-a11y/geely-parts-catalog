@@ -9,6 +9,7 @@ media_library:
     cloud_name: djjcxxgfm
     api_key: 899658184497377  # Вставь свой
     api secret: EGP8ur_4h9uepVRNOOfpzKeHV3M
+
 collections:
   - name: "catalog"
     label: "Каталог"
@@ -26,8 +27,15 @@ collections:
               - {label: "Описание", name: "desc", widget: "text", required: false}
               - {label: "Цена", name: "price", widget: "number", required: false}
               - {label: "Остаток", name: "stock", widget: "number", required: false}
-              - {label: "Модели", name: "models", widget: "list"}
+              - label: "Модели"
+                name: "models"
+                widget: "list"
+                field: {label: "Модель", name: "model", widget: "string"}
               - {label: "Артикул", name: "sku", widget: "string", default: "-"}
-              - {label: "Фото", name: "img", widget: "image"}
-              - {label: "Доп. фото", name: "imgs", widget: "list", required: false, field: {label: "URL", name: "url", widget: "image"}}
+              - {label: "Фото (URL из Cloudinary)", name: "img", widget: "string", hint: "Вставь URL изображения из Cloudinary"}
+              - label: "Доп. фото (URLs)"
+                name: "imgs"
+                widget: "list"
+                required: false
+                field: {label: "URL фото", name: "url", widget: "string"}
               - {label: "Ссылка Kaspi", name: "kaspi", widget: "string", required: false}
