@@ -1,244 +1,410 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex" />
-  <title>Админка каталога Geely</title>
-  <style>
-    /* Стили для preview карточки товара */
-    .product-preview {
-      max-width: 400px;
-      background: #0f1d2a;
-      border: 1px solid #1e3040;
-      border-radius: 16px;
-      overflow: hidden;
-      font-family: system-ui, -apple-system, sans-serif;
-      color: #e9f0f7;
-    }
-    .product-preview .img-wrap {
-      position: relative;
-      aspect-ratio: 4/3;
-      background: #0c1322;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .product-preview .img-wrap img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-    }
-    /* Карусель */
-    .carousel-controls {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 8px 12px;
-      border-radius: 20px;
-    }
-    .carousel-controls button {
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      color: white;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-    .carousel-controls button:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-    .carousel-controls button:disabled {
-      opacity: 0.3;
-      cursor: not-allowed;
-    }
-    .carousel-counter {
-      color: white;
-      font-size: 13px;
-      min-width: 40px;
-      text-align: center;
-    }
-    .product-preview .content {
-      padding: 16px;
-    }
-    .product-preview .name {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 0 0 8px;
-    }
-    .product-preview .desc {
-      font-size: 14px;
-      color: #9fb2c3;
-      margin: 0 0 12px;
-    }
-    .product-preview .price {
-      font-size: 24px;
-      font-weight: 700;
-      color: #aa8643;
-      margin: 0 0 8px;
-    }
-    .product-preview .models {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin: 0 0 8px;
-    }
-    .product-preview .model-badge {
-      font-size: 12px;
-      padding: 4px 8px;
-      border-radius: 8px;
-      background: #16283a;
-      border: 1px solid #1e3040;
-    }
-    .product-preview .stock {
-      font-size: 13px;
-      color: #b9c9dc;
-    }
-    .product-preview .stock.low {
-      color: #ff6b6b;
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Каталог 1TYRES | Damu Auto</title>
+<meta name="theme-color" content="#aa8643">
+<meta name="msapplication-TileColor" content="#aa8643">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/djjcxxgfm/image/upload/f_png,w_32,h_32,c_fill/v1757929669/%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%82%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80_geely_coolray_okavango_azkarra_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_9_avfuii.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/djjcxxgfm/image/upload/f_png,w_180,h_180,c_fill/v1757929669/%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%82%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80_geely_coolray_okavango_azkarra_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_9_avfuii.png">
+
+<link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+<style>
+  :root{
+    --bg:#0a1c2b;
+    --card:#0f1d2a;
+    --muted:#9fb2c3;
+    --text:#e9f0f7;
+    --brand:#aa8643;
+    --accent:#aa8643;
+    --danger:#ff6b6b;
+    --border:#1e3040;
+    --chip:#122233;
+    --chip-active:#16283a;
+    --focus:#aa8643;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial}
+  header{position:static;z-index:2;background:rgba(10,28,43,.9);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+  .wrap{max-width:1100px;margin:0 auto;padding:18px}
+  .title{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .logo{width:auto;height:60px;display:block;border-radius:10px;object-fit:contain}
+  h1{margin:0;font-size:22px;letter-spacing:.3px;text-align:center}
+  .updated{color:var(--muted);font-size:13px;text-align:center}
+
+  /* controls */
+  .controls{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+  .controls > *{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 12px;color:var(--text)}
+  .select{display:flex;justify-content:space-between;gap:8px;align-items:center}
+  .chips{display:grid;grid-template-columns:repeat(4,minmax(140px,1fr));gap:10px}
+  .chip{display:block;text-align:center;user-select:none;padding:10px 12px;border-radius:999px;border:1px solid var(--border);background:var(--chip);color:#c3d7eb;cursor:pointer}
+  .chip.active{background:var(--chip-active);border-color:var(--brand);box-shadow:0 0 0 1px var(--brand) inset}
+
+  /* search */
+  .search-container{display:flex;align-items:center;gap:8px}
+  .search-box{position:relative;flex:1;display:flex;align-items:center}
+  #searchInput{width:100%;padding:12px 40px 12px 16px;border:1px solid var(--border);border-radius:12px;background:var(--chip);color:var(--text);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}
+  #searchInput:focus{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand) inset}
+  #searchInput::placeholder{color:var(--muted)}
+  .clear-btn{position:absolute;right:8px;width:24px;height:24px;border:none;border-radius:50%;background:var(--muted);color:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:bold;transition:background .2s}
+  .clear-btn:hover{background:#ff6b6b}
+
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat( auto-fill, minmax(260px,1fr));gap:14px;margin:18px auto}
+  .card{position:relative;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:.2s transform,.2s box-shadow;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .imgwrap{aspect-ratio:4/3;background:#0c1322;display:flex;align-items:center;justify-content:center}
+  .imgwrap img{max-width:100%;max-height:100%;object-fit:contain}
+  /* carousel */
+  .carousel{position:relative;width:100%;height:100%;touch-action:pan-y}
+  .slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s, transform .2s}
+  .slide img{max-width:100%;max-height:100%;object-fit:contain}
+  .slide.active{opacity:1}
+  .carousel.swiping .slide{transition:none}
+  /* arrows */
+  .nav{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 6px;pointer-events:none}
+  .arrow{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid var(--border);background:rgba(17,33,49,.8);color:#eaf3ff;cursor:pointer;user-select:none}
+  .arrow:hover{filter:brightness(1.1);border-color:var(--brand)}
+  .arrow svg{width:18px;height:18px;fill:currentColor}
+  .badges{position:absolute;inset:auto 10px 10px auto;display:flex;gap:6px}
+  .badge{font-size:12px;padding:5px 8px;border-radius:10px;border:1px solid var(--border);background:#12203a;color:#cbe2ff}
+  .models{position:absolute;left:10px;bottom:10px;display:flex;gap:6px;flex-wrap:wrap}
+  .model{font-size:11px;padding:4px 7px;border-radius:9px;border:1px solid var(--border);background:#101d35;color:#a7c3e8}
+  .content{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
+  .name{margin:0 0 6px;font-weight:600}
+  .desc{margin:0;color:var(--muted);font-size:13px}
+  .row{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+  .price{font-size:20px;font-weight:700}
+  .stock{font-size:13px;color:#b9c9dc}
+  .low{color:var(--danger)}
+  .btns{display:flex;gap:8px;margin-top:12px}
+  .btn{flex:1;display:inline-flex;gap:8px;align-items:center;justify-content:center;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:#112131;color:#eaf3ff;text-decoration:none}
+  .btn:hover{filter:brightness(1.05);border-color:var(--brand)}
+  .btn.primary{background:linear-gradient(180deg,var(--brand),#8f6d34);border-color:var(--brand);color:white}
+  .empty{opacity:.7;text-align:center;padding:36px 10px;border:1px dashed var(--border);border-radius:16px}
+  footer{color:#8ea7c2;text-align:center;padding:20px 0 40px}
+
+  a:focus, button:focus { outline:2px solid var(--focus); outline-offset:2px; }
+
+  @media (max-width:800px){
+    .title{display:flex;flex-direction:row;align-items:center;gap:12px;flex-wrap:wrap}
+    .logo{height:50px}
+    h1{text-align:left}
+    .updated{text-align:left;margin-left:auto}
+    .chips{grid-template-columns:repeat(2,minmax(140px,1fr));}
+  }
+</style>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    // Глобальное состояние для карусели
-    let currentImageIndex = 0;
-    
-    // Регистрируем кастомный preview для товара
-    CMS.registerPreviewTemplate('catalog', createClass({
-      getInitialState: function() {
-        return { imageIndex: 0 };
-      },
-      
-      handlePrevImage: function() {
-        this.setState({ imageIndex: Math.max(0, this.state.imageIndex - 1) });
-      },
-      
-      handleNextImage: function(maxIndex) {
-        this.setState({ imageIndex: Math.min(maxIndex, this.state.imageIndex + 1) });
-      },
-      
-      render: function() {
-        const entry = this.props.entry;
-        const items = entry.getIn(['data', 'items']);
-        
-        // Если открыт конкретный товар из списка
-        if (items && items.size > 0) {
-          // Берем первый товар (или можно определить какой именно редактируется)
-          const product = items.get(0).toJS();
-          return this.renderProductCard(product);
-        }
-        
-        return h('div', { className: 'product-preview' },
-          h('p', { style: { padding: '20px', textAlign: 'center', color: '#9fb2c3' } }, 
-            'Выберите товар для предварительного просмотра')
-        );
-      },
-      
-      renderProductCard: function(product) {
-        const price = product.price ? 
-          new Intl.NumberFormat('ru-RU').format(product.price) + ' ₸' : 
-          '—';
-        
-        const stock = product.stock == null ? 
-          'Под заказ' : 
-          product.stock + ' шт';
-        
-        const stockClass = (product.stock != null && product.stock <= 2) ? 
-          'stock low' : 
-          'stock';
-        
-        // Собираем все изображения
-        const images = [];
-        if (product.img) images.push(product.img);
-        if (product.imgs && Array.isArray(product.imgs)) {
-          product.imgs.forEach(function(imgObj) {
-            if (imgObj && imgObj.url) images.push(imgObj.url);
-          });
-        }
-        
-        const currentIndex = this.state.imageIndex;
-        const currentImage = images[currentIndex] || null;
-        const hasMultipleImages = images.length > 1;
-        
-        return h('div', { className: 'product-preview' },
-          h('div', { className: 'img-wrap' },
-            currentImage ? 
-              h('img', { 
-                src: currentImage, 
-                alt: product.name,
-                key: currentIndex // Важно для правильного обновления
-              }) :
-              h('div', { style: { color: '#9fb2c3', padding: '20px', textAlign: 'center' } }, 
-                'Фото не выбрано'),
-            
-            // Карусель управления (только если больше 1 фото)
-            hasMultipleImages && h('div', { className: 'carousel-controls' },
-              h('button', { 
-                onClick: this.handlePrevImage.bind(this),
-                disabled: currentIndex === 0,
-                'aria-label': 'Предыдущее фото'
-              }, '‹'),
-              h('span', { className: 'carousel-counter' }, 
-                (currentIndex + 1) + ' / ' + images.length),
-              h('button', { 
-                onClick: this.handleNextImage.bind(this, images.length - 1),
-                disabled: currentIndex === images.length - 1,
-                'aria-label': 'Следующее фото'
-              }, '›')
-            )
-          ),
-          h('div', { className: 'content' },
-            h('h3', { className: 'name' }, product.name || 'Без названия'),
-            product.desc && h('p', { className: 'desc' }, product.desc),
-            h('div', { className: 'price' }, price),
-            product.models && product.models.length > 0 && 
-              h('div', { className: 'models' },
-                product.models.map(function(model) {
-                  return h('span', { className: 'model-badge', key: model }, model);
-                })
-              ),
-            h('div', { className: stockClass }, stock),
-            product.sku && product.sku !== '-' &&
-              h('div', { style: { fontSize: '13px', color: '#9fb2c3', marginTop: '8px' } },
-                'Артикул: ' + product.sku),
-            product.kaspi && 
-              h('div', { style: { marginTop: '12px' } },
-                h('a', { 
-                  href: product.kaspi, 
-                  target: '_blank',
-                  rel: 'noopener noreferrer',
-                  style: { color: '#aa8643', fontSize: '14px', textDecoration: 'none' }
-                }, 'Ссылка на Kaspi →')
-              )
-          )
-        );
-      }
-    }));
-    
-    // Вспомогательная функция для создания React-like элементов
-    function h(tag, props) {
-      const children = Array.prototype.slice.call(arguments, 2);
-      return CMS.h.apply(null, [tag, props].concat(children));
+  <header>
+    <div class="wrap">
+      <div class="title">
+        <img class="logo" src="https://res.cloudinary.com/djjcxxgfm/image/upload/f_png,q_100,h_120/v1757929669/%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%82%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80_geely_coolray_okavango_azkarra_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_9_avfuii.png" alt="Damu Auto" decoding="async" fetchpriority="high" />
+        <h1>Каталог 1TYRES | Damu Auto</h1>
+        <div class="updated" id="updated"></div>
+      </div>
+      <div class="controls">
+        <div class="select">
+          <span style="color:#9ab1c8;font-size:14px">Модели</span>
+          <div class="chips" id="modelChips"></div>
+        </div>
+        <div class="search-container" id="searchContainer" style="display:none">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Поиск по названию товара..." autocomplete="off">
+            <button type="button" id="clearSearch" class="clear-btn" style="display:none">×</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty" style="display:none">Ничего не найдено. Сбросьте фильтры или проверьте запрос.</div>
+  </main>
+
+  <footer>
+    Следите за обновлениями! 
+    <br><br>
+    <a href="privacy-policy.html" style="color: #8ea7c2; text-decoration: none; font-size: 14px;">Политика конфиденциальности</a>
+  </footer>
+
+<script>
+// ====== ЗАГРУЗКА ДАННЫХ ИЗ 5 ФАЙЛОВ ======
+let allProducts = [];
+let monjaroProducts = [];
+let okavangoProducts = [];
+let coolrayProducts = [];
+
+Promise.all([
+  fetch('/atlas.json').then(r => r.json()),
+  fetch('/monjaro.json').then(r => r.json()),
+  fetch('/okavango.json').then(r => r.json()),
+  fetch('/coolray.json').then(r => r.json()),
+  fetch('/common.json').then(r => r.json())
+])
+.then(([atlas, monjaro, okavango, coolray, common]) => {
+  // Объединяем все товары (дедупликация по ID)
+  const productMap = new Map();
+  [...(atlas.items || []), ...(monjaro.items || []), ...(okavango.items || []), ...(coolray.items || []), ...(common.items || [])]
+    .forEach(p => productMap.set(p.id, p));
+  
+  allProducts = Array.from(productMap.values());
+  
+  // Фильтруем по моделям
+  monjaroProducts = allProducts.filter(p => p.models && p.models.includes('Monjaro'));
+  okavangoProducts = allProducts.filter(p => p.models && p.models.includes('Okavango'));
+  coolrayProducts = allProducts.filter(p => p.models && p.models.includes('Coolray'));
+  
+  render();
+})
+.catch(err => {
+  console.error('Ошибка загрузки товаров:', err);
+  elEmpty.textContent = 'Ошибка загрузки каталога';
+  elEmpty.style.display = 'block';
+});
+</script>
+<script>
+// ====== CLOUDINARY HELPERS ======
+const CLD_SIZES  = '(max-width: 800px) 95vw, (max-width: 1100px) 45vw, 25vw';
+const CLD_WIDTHS = [400, 800, 1200, 1600];
+
+function cldUrl(url, w){
+  try{
+    const marker = '/image/upload/';
+    const i = url.indexOf(marker);
+    if (i === -1) return url;
+    const prefix = url.slice(0, i + marker.length);
+    const nextSlash = url.indexOf('/', i + marker.length);
+    const rest = nextSlash !== -1 ? url.slice(nextSlash + 1) : '';
+    return `${prefix}f_auto,q_auto,dpr_auto,w_${w}/${rest}`;
+  }catch(_){ return url; }
+}
+
+function cldSrcSet(url){
+  return CLD_WIDTHS.map(w => `${cldUrl(url, w)} ${w}w`).join(', ');
+}
+</script>
+<script>
+// ====== ЛОГИКА РЕНДЕРА ======
+const MODEL_CHIPS = [
+  {label:'Atlas FX11', keys:['Atlas']},
+  {label:'Monjaro KX11', keys:['Monjaro']},
+  {label:'Okavango VX11 (рест)', keys:['Okavango']},
+  {label:'Coolray SX11A3 (рест)', keys:['Coolray']},
+];
+const state = { models:new Set(), searchQuery:'' };
+
+const elGrid = document.getElementById('grid');
+const elEmpty = document.getElementById('empty');
+const elUpdated = document.getElementById('updated');
+const elSearchContainer = document.getElementById('searchContainer');
+const elSearchInput = document.getElementById('searchInput');
+const elClearSearch = document.getElementById('clearSearch');
+
+elUpdated.textContent = `Обновлено: ${new Date().toLocaleDateString('ru-RU')}\u00A0${new Date().toLocaleTimeString('ru-RU', {hour:'2-digit', minute:'2-digit'})}`;
+
+// чипсы моделей
+const chips = document.getElementById('modelChips');
+const chipElements = [];
+MODEL_CHIPS.forEach(c=>{
+  const el = document.createElement('span');
+  el.className = 'chip';
+  el.textContent = c.label;
+  el.addEventListener('click', ()=>{
+    const wasActive = el.classList.contains('active');
+    chipElements.forEach(chip => chip.classList.remove('active'));
+    state.models.clear();
+    if (!wasActive) {
+      el.classList.add('active');
+      state.models.add(c.label);
     }
-    
-    function createClass(spec) {
-      return CMS.createClass(spec);
+    updateSearchVisibility();
+    render();
+  });
+  chips.appendChild(el);
+  chipElements.push(el);
+});
+
+function priceFmt(val){ if(val==null) return '—'; return new Intl.NumberFormat('ru-RU').format(val)+" ₸" }
+
+function updateSearchVisibility(){
+  if (state.models.size > 0) {
+    elSearchContainer.style.display = 'flex';
+  } else {
+    elSearchContainer.style.display = 'none';
+    state.searchQuery = '';
+    elSearchInput.value = '';
+    elClearSearch.style.display = 'none';
+  }
+}
+
+function setupSearchHandlers(){
+  elSearchInput.addEventListener('input', (e) => {
+    state.searchQuery = e.target.value.toLowerCase().trim();
+    elClearSearch.style.display = state.searchQuery ? 'flex' : 'none';
+    render();
+  });
+  
+  elClearSearch.addEventListener('click', () => {
+    state.searchQuery = '';
+    elSearchInput.value = '';
+    elClearSearch.style.display = 'none';
+    render();
+  });
+  
+  elSearchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      state.searchQuery = '';
+      elSearchInput.value = '';
+      elClearSearch.style.display = 'none';
+      render();
     }
-  </script>
+  });
+}
+
+function matches(p){
+  if (state.models.size===0) return true;
+  
+  const allowed = new Set();
+  MODEL_CHIPS.forEach(c=>{ if(state.models.has(c.label)) c.keys.forEach(k=>allowed.add(k)); });
+  const modelMatch = p.models.some(m=>allowed.has(m));
+  
+  const searchMatch = !state.searchQuery || 
+    p.name.toLowerCase().includes(state.searchQuery) ||
+    (p.desc && p.desc.toLowerCase().includes(state.searchQuery));
+  
+  return modelMatch && searchMatch;
+}
+
+function imgTagOrCarousel(p){
+  const list = Array.isArray(p.imgs) && p.imgs.length ? p.imgs : (p.img ? [p.img] : []);
+  if (list.length === 0){
+    const svg = encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120' width='160' height='120'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#0e203d'/><stop offset='1' stop-color='#17345e'/></linearGradient></defs><rect fill='url(#g)' width='100%' height='100%'/><g fill='#9fc2ff' font-size='10' font-family='Arial, sans-serif'><text x='10' y='22'>Фото пока не добавлено</text><rect x='10' y='30' width='40' height='30' fill='none' stroke='#9fc2ff'/><circle cx='85' cy='55' r='18' fill='none' stroke='#9fc2ff'/></g></svg>`);
+    return `<img alt='' src='data:image/svg+xml,${svg}'>`;
+  }
+
+  if (list.length === 1){
+    const u = list[0];
+    return `<img
+      src="${cldUrl(u, 800)}"
+      srcset="${cldSrcSet(u)}"
+      sizes="${CLD_SIZES}"
+      loading="lazy"
+      decoding="async"
+      alt=""
+    >`;
+  }
+
+  const id = `c${p.id}`;
+  const slides = list.map((u,i)=>`
+    <div class='slide${i===0?" active":""}'>
+      <img
+        src="${cldUrl(u, 800)}"
+        srcset="${cldSrcSet(u)}"
+        sizes="${CLD_SIZES}"
+        loading="lazy"
+        decoding="async"
+        alt=""
+      >
+    </div>`).join('');
+
+  const arrows = `
+    <div class='nav'>
+      <span class='arrow' onclick='carouselPrev("${id}")' aria-label='Назад'>
+        <svg viewBox='0 0 24 24'><path d='M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z'/></svg>
+      </span>
+      <span class='arrow' onclick='carouselNext("${id}")' aria-label='Вперёд'>
+        <svg viewBox='0 0 24 24'><path d='M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z'/></svg>
+      </span>
+    </div>`;
+
+  return `<div class='carousel' id='${id}'>${slides}${arrows}</div>`;
+}
+
+function carouselGo(id, idx){
+  const root = document.getElementById(id);
+  if(!root) return;
+  const slides = root.querySelectorAll('.slide');
+  slides.forEach((s,i)=> s.classList.toggle('active', i===idx));
+}
+
+function carouselIndex(root){
+  const slides = root.querySelectorAll('.slide');
+  for(let i=0;i<slides.length;i++) if(slides[i].classList.contains('active')) return i;
+  return 0;
+}
+
+function carouselNext(id){
+  const root = document.getElementById(id);
+  if(!root) return;
+  const slides = root.querySelectorAll('.slide');
+  const cur = carouselIndex(root);
+  const next = (cur + 1) % slides.length;
+  carouselGo(id, next);
+}
+
+function carouselPrev(id){
+  const root = document.getElementById(id);
+  if(!root) return;
+  const slides = root.querySelectorAll('.slide');
+  const cur = carouselIndex(root);
+  const prev = (cur - 1 + slides.length) % slides.length;
+  carouselGo(id, prev);
+}
+
+function card(p){
+  const low = Number.isFinite(p.stock) && p.stock<=2;
+  const stockText = p.stock==null? 'Под заказ' : (p.stock+" шт");
+  const stockCls = 'stock'+(low?' low':'');
+  const btnLabel = p.kaspi? 'Перейти на Каспи' : 'Ссылка появится позже';
+  const btnAttrs = p.kaspi? `href='${p.kaspi}' target='_blank' rel='noopener'` : `href='javascript:void(0)'`;
+  return `
+  <article class='card'>
+    <div class='imgwrap'>${imgTagOrCarousel(p)}</div>
+    
+    <div class='content'>
+      <h3 class='name'>${p.name}</h3>
+      <p class='desc'>${p.desc||''}</p>
+      <div class='row'>
+        <div class='price'>${priceFmt(p.price)}</div>
+      </div>
+      <div class='btns'>
+        <a class='btn primary' ${btnAttrs}>${btnLabel}</a>
+      </div>
+    </div>
+  </article>`;
+}
+
+function render(){
+  if (state.models.size === 0) {
+    elGrid.innerHTML = '';
+    elEmpty.textContent = 'Выберите модель, чтобы увидеть товары.';
+    elEmpty.style.display = 'block';
+    return;
+  }
+  
+  let items;
+  if (state.models.has('Monjaro KX11')) {
+    items = monjaroProducts.filter(matches);
+  } else if (state.models.has('Okavango VX11 (рест)')) {
+    items = okavangoProducts.filter(matches);
+  } else if (state.models.has('Coolray SX11A3 (рест)')) {
+    items = coolrayProducts.filter(matches);
+  } else {
+    items = allProducts.filter(matches);
+  }
+  
+  elGrid.innerHTML = items.map(card).join('');
+  elEmpty.textContent = 'Ничего не найдено. Сбросьте фильтры или проверьте запрос.';
+  elEmpty.style.display = items.length? 'none':'block';
+}
+
+setupSearchHandlers();
+render();
+</script>
 </body>
 </html>

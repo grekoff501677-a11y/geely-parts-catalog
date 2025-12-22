@@ -10,81 +10,171 @@ media_library:
   name: cloudinary
   config:
     cloud_name: djjcxxgfm
-    api_key: 899658184497377  # Вставь свой
-    api secret: EGP8ur_4h9uepVRNOOfpzKeHV3M
+    api_key: 899658184497377
     multiple: false
 
 collections:
-  - name: "catalog"
-    label: "Каталог"
+  # Atlas FX11
+  - name: "atlas"
+    label: "Atlas FX11"
     files:
-      - name: "products"
-        label: "Товары"
-        file: "products.json"
+      - name: "atlas-products"
+        label: "Товары Atlas"
+        file: "atlas.json"
         fields:
           - label: "Товары"
             name: "items"
             widget: "list"
             summary: '{{fields.name}} (ID: {{fields.id}})'
+            add_to_top: true
             fields:
-              - label: "ID"
-                name: "id"
-                widget: "number"
-                hint: "Уникальный номер товара (следующий свободный)"
-                
-              - label: "Название"
-                name: "name"
-                widget: "string"
-                
-              - label: "Описание"
-                name: "desc"
-                widget: "text"
-                required: false
-                
-              - label: "Цена (₸)"
-                name: "price"
-                widget: "number"
-                required: false
-                hint: "Оставьте пустым если цена не указана"
-                
-              - label: "Остаток (шт)"
-                name: "stock"
-                widget: "number"
-                required: false
-                hint: "Оставьте пустым для 'Под заказ'"
-                
-              - label: "Модели автомобилей"
+              - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Название", name: "name", widget: "string"}
+              - {label: "Описание", name: "desc", widget: "text", required: false}
+              - {label: "Цена (₸)", name: "price", widget: "number", required: false}
+              - {label: "Остаток (шт)", name: "stock", widget: "number", required: false, hint: "Пусто = под заказ"}
+              - label: "Модели"
                 name: "models"
                 widget: "list"
                 hint: "Добавьте модели: Atlas, Monjaro, Okavango, Coolray"
-                field:
-                  label: "Модель"
-                  name: "model"
-                  widget: "select"
-                  options: ["Atlas", "Monjaro", "Okavango", "Coolray"]
-                
-              - label: "Артикул"
-                name: "sku"
-                widget: "string"
-                default: "-"
-                
-              - label: "Главное фото"
-                name: "img"
-                widget: "image"
-                hint: "Выберите фото из Cloudinary Media Library"
-                
-              - label: "Дополнительные фото"
+                field: {label: "Модель", name: "model", widget: "select", options: ["Atlas", "Monjaro", "Okavango", "Coolray"]}
+              - {label: "Артикул", name: "sku", widget: "string", default: "-"}
+              - {label: "Главное фото", name: "img", widget: "image"}
+              - label: "Доп. фото"
                 name: "imgs"
                 widget: "list"
                 required: false
-                hint: "Добавьте дополнительные ракурсы товара"
-                field:
-                  label: "Фото"
-                  name: "url"
-                  widget: "image"
-                  
-              - label: "Ссылка на Kaspi.kz"
-                name: "kaspi"
-                widget: "string"
+                field: {label: "Фото", name: "url", widget: "image"}
+              - {label: "Ссылка Kaspi", name: "kaspi", widget: "string", required: false}
+
+  # Monjaro KX11
+  - name: "monjaro"
+    label: "Monjaro KX11"
+    files:
+      - name: "monjaro-products"
+        label: "Товары Monjaro"
+        file: "monjaro.json"
+        fields:
+          - label: "Товары"
+            name: "items"
+            widget: "list"
+            summary: '{{fields.name}} (ID: {{fields.id}})'
+            add_to_top: true
+            fields:
+              - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Название", name: "name", widget: "string"}
+              - {label: "Описание", name: "desc", widget: "text", required: false}
+              - {label: "Цена (₸)", name: "price", widget: "number", required: false}
+              - {label: "Остаток (шт)", name: "stock", widget: "number", required: false, hint: "Пусто = под заказ"}
+              - label: "Модели"
+                name: "models"
+                widget: "list"
+                hint: "Добавьте модели: Atlas, Monjaro, Okavango, Coolray"
+                field: {label: "Модель", name: "model", widget: "select", options: ["Atlas", "Monjaro", "Okavango", "Coolray"]}
+              - {label: "Артикул", name: "sku", widget: "string", default: "-"}
+              - {label: "Главное фото", name: "img", widget: "image"}
+              - label: "Доп. фото"
+                name: "imgs"
+                widget: "list"
                 required: false
-                hint: "Полная ссылка на товар в Kaspi"
+                field: {label: "Фото", name: "url", widget: "image"}
+              - {label: "Ссылка Kaspi", name: "kaspi", widget: "string", required: false}
+
+  # Okavango VX11
+  - name: "okavango"
+    label: "Okavango VX11"
+    files:
+      - name: "okavango-products"
+        label: "Товары Okavango"
+        file: "okavango.json"
+        fields:
+          - label: "Товары"
+            name: "items"
+            widget: "list"
+            summary: '{{fields.name}} (ID: {{fields.id}})'
+            add_to_top: true
+            fields:
+              - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Название", name: "name", widget: "string"}
+              - {label: "Описание", name: "desc", widget: "text", required: false}
+              - {label: "Цена (₸)", name: "price", widget: "number", required: false}
+              - {label: "Остаток (шт)", name: "stock", widget: "number", required: false, hint: "Пусто = под заказ"}
+              - label: "Модели"
+                name: "models"
+                widget: "list"
+                hint: "Добавьте модели: Atlas, Monjaro, Okavango, Coolray"
+                field: {label: "Модель", name: "model", widget: "select", options: ["Atlas", "Monjaro", "Okavango", "Coolray"]}
+              - {label: "Артикул", name: "sku", widget: "string", default: "-"}
+              - {label: "Главное фото", name: "img", widget: "image"}
+              - label: "Доп. фото"
+                name: "imgs"
+                widget: "list"
+                required: false
+                field: {label: "Фото", name: "url", widget: "image"}
+              - {label: "Ссылка Kaspi", name: "kaspi", widget: "string", required: false}
+
+  # Coolray SX11A3
+  - name: "coolray"
+    label: "Coolray SX11A3"
+    files:
+      - name: "coolray-products"
+        label: "Товары Coolray"
+        file: "coolray.json"
+        fields:
+          - label: "Товары"
+            name: "items"
+            widget: "list"
+            summary: '{{fields.name}} (ID: {{fields.id}})'
+            add_to_top: true
+            fields:
+              - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Название", name: "name", widget: "string"}
+              - {label: "Описание", name: "desc", widget: "text", required: false}
+              - {label: "Цена (₸)", name: "price", widget: "number", required: false}
+              - {label: "Остаток (шт)", name: "stock", widget: "number", required: false, hint: "Пусто = под заказ"}
+              - label: "Модели"
+                name: "models"
+                widget: "list"
+                hint: "Добавьте модели: Atlas, Monjaro, Okavango, Coolray"
+                field: {label: "Модель", name: "model", widget: "select", options: ["Atlas", "Monjaro", "Okavango", "Coolray"]}
+              - {label: "Артикул", name: "sku", widget: "string", default: "-"}
+              - {label: "Главное фото", name: "img", widget: "image"}
+              - label: "Доп. фото"
+                name: "imgs"
+                widget: "list"
+                required: false
+                field: {label: "Фото", name: "url", widget: "image"}
+              - {label: "Ссылка Kaspi", name: "kaspi", widget: "string", required: false}
+
+  # Общие товары
+  - name: "common"
+    label: "Общие товары"
+    files:
+      - name: "common-products"
+        label: "Универсальные товары"
+        file: "common.json"
+        fields:
+          - label: "Товары"
+            name: "items"
+            widget: "list"
+            summary: '{{fields.name}} (ID: {{fields.id}})'
+            add_to_top: true
+            fields:
+              - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Название", name: "name", widget: "string"}
+              - {label: "Описание", name: "desc", widget: "text", required: false}
+              - {label: "Цена (₸)", name: "price", widget: "number", required: false}
+              - {label: "Остаток (шт)", name: "stock", widget: "number", required: false, hint: "Пусто = под заказ"}
+              - label: "Модели"
+                name: "models"
+                widget: "list"
+                hint: "Добавьте модели: Atlas, Monjaro, Okavango, Coolray"
+                field: {label: "Модель", name: "model", widget: "select", options: ["Atlas", "Monjaro", "Okavango", "Coolray"]}
+              - {label: "Артикул", name: "sku", widget: "string", default: "-"}
+              - {label: "Главное фото", name: "img", widget: "image"}
+              - label: "Доп. фото"
+                name: "imgs"
+                widget: "list"
+                required: false
+                field: {label: "Фото", name: "url", widget: "image"}
+              - {label: "Ссылка Kaspi", name: "kaspi", widget: "string", required: false}
