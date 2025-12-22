@@ -899,6 +899,23 @@
       "stock": 14,
       "id": 58,
       "sku": "OX1206D"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1765974351/20251217_172456_wzv9hy.jpg",
+      "price": 14999,
+      "models": [
+        "Atlas",
+        "Monjaro"
+      ],
+      "name": "Тест",
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1765974126/Gemini_Generated_Image_sxdgztsxdgztsxdg_ddwpal.png"
+      ],
+      "desc": "Тест для проверки",
+      "kaspi": "https://spainstinct.ru/masters/amina/",
+      "stock": 5,
+      "id": 59,
+      "sku": "-"
     }
   ]
 }
