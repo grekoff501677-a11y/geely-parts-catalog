@@ -1,0 +1,303 @@
+{
+  "items": [
+    {
+      "id": 14,
+      "name": "Футляр для очков",
+      "desc": "Универсальный футляр для очков.",
+      "price": 6500,
+      "stock": null,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango",
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108433/%D0%A8%D1%82%D0%BE%D1%80%D0%BA%D0%B0_2_%D0%B1%D0%B5%D0%B7_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8_1_ibj32d.png"
+      ],
+      "kaspi": "https://kaspi.kz/shop/p/futljar-dlja-ochkov-geely-129664373/?m=30090572"
+    },
+    {
+      "id": 15,
+      "name": "Бронечехол",
+      "desc": "Защитный чехол.",
+      "price": 5400,
+      "stock": null,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango",
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108055/%D0%91%D1%80%D0%BE%D0%BD%D0%B5%D1%87%D0%B5%D1%85%D0%BE%D0%BB_zpuxa3.png",
+      "imgs": [],
+      "kaspi": "https://kaspi.kz/shop/p/chehol-bronechehol-dlja-kljucha-geely-142038818/?m=30090572"
+    },
+    {
+      "id": 16,
+      "name": "Пластиковый чехол",
+      "desc": "Прочный пластиковый чехол.",
+      "price": 4500,
+      "stock": null,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango",
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108036/%D0%A7%D0%B5%D1%85%D0%BE%D0%BB_rhhly8.png",
+      "imgs": [],
+      "kaspi": "https://kaspi.kz/shop/p/chehol-dlja-kljucha-geely-128136682/?m=30090572"
+    },
+    {
+      "id": 17,
+      "name": "Оплётка из кожи Чёрная",
+      "desc": "Кожаная оплётка руля (чёрная).",
+      "price": 7939,
+      "stock": null,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango",
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108036/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D1%87%D1%91%D1%80%D0%BD%D0%B0%D1%8F_vsuhjn.png",
+      "imgs": [],
+      "kaspi": "https://kaspi.kz/shop/p/opljotka-dlja-rulja-geely-chjornaja-124479590/?m=30090572"
+    },
+    {
+      "id": 18,
+      "name": "Оплётка из кожи Чёрная, красный шов",
+      "desc": "Кожаная оплётка руля с красной прострочкой.",
+      "price": 7500,
+      "stock": null,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango",
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108056/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_thrpld.png",
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108056/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_thrpld.png",
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_2_rbg5uv.png"
+      ],
+      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-g37-37-39-sm-m-chernyi-krasnyi-144460481/?m=30090572"
+    },
+    {
+      "id": 19,
+      "name": "Оплётка из кожи Чёрная, зелёная",
+      "desc": "Кожаная оплётка руля с зелёной прострочкой.",
+      "price": 7500,
+      "stock": null,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango",
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_qchuft.png",
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_qchuft.png",
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108068/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%B7%D0%B5%D0%BB%D0%B5%D0%BD%D0%B0%D1%8F_2_zuoucw.png"
+      ],
+      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-gam1-37-39-sm-m-chernyi-zelenyi-144652251/?m=30090572"
+    },
+    {
+      "id": 20,
+      "name": "Подушка трансформер",
+      "desc": "Комфортная подушка-трансформер.",
+      "price": 10200,
+      "stock": null,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango",
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108037/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_2_otxlwg.png"
+      ],
+      "kaspi": "https://kaspi.kz/shop/p/podushka-odejalo-2-v-1-geely-144402043/?m=30090572"
+    },
+    {
+      "id": 47,
+      "name": "Коврик на центральную консоль",
+      "desc": "Антискользящий коврик для Coolray.",
+      "price": 8200,
+      "stock": null,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758192043/%D0%91%D1%80%D1%8B%D0%B7%D0%B3_%D0%9E_1_r4efv5.png",
+      "imgs": [],
+      "kaspi": "https://kaspi.kz/shop/p/4139487289-geely-coolray-2023-2025-chernyi-145986592/?m=30090572"
+    },
+    {
+      "id": 48,
+      "name": "Защита (коврики) багажника Премиум",
+      "desc": "Премиальные коврики в багажник для Coolray.",
+      "price": 24500,
+      "stock": null,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108047/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%9A%D1%83%D0%BB%D1%80%D0%B5%D0%B9_cq30j3.png",
+      "imgs": [],
+      "kaspi": "https://kaspi.kz/shop/p/zaschita-bagazhnika-geely-534385126-geely-coolray-2023-2024-chernyi-seryi-131891916/?m=30090572"
+    },
+    {
+      "id": 49,
+      "name": "Защита (коврики) багажника Базовый",
+      "desc": "Базовые коврики в багажник для Coolray.",
+      "price": 18380,
+      "stock": null,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758192212/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%9A_2_nfguww.png",
+      "imgs": [],
+      "kaspi": "https://kaspi.kz/shop/p/6908026-573068507-geely-coolray-2023-2025-chernyi-139060861/?m=30090572"
+    },
+    {
+      "id": 50,
+      "name": "Штатный видеорегистратор",
+      "desc": "Видеорегистратор для Coolray.",
+      "price": 45000,
+      "stock": null,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108043/%D0%A8%D1%82%D0%B0%D1%82%D0%BD%D1%8B%D0%B9_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3_%D0%9A_ronmwv.png",
+      "imgs": [],
+      "kaspi": "https://kaspi.kz/shop/p/shtatnyi-videoregistrator-dlja-geely-coolray-chernyi-136217551/?m=30090572"
+    },
+    {
+      "id": 51,
+      "name": "Органайзер в подлокотник",
+      "desc": "Вставка в подлокотник для Coolray.",
+      "price": 4950,
+      "stock": null,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758192370/%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%BF%D0%BE%D0%B4%D0%BB%D0%BE%D0%BA_%D0%9A_qmm8zi.png",
+      "imgs": [],
+      "kaspi": "https://kaspi.kz/shop/p/organaizer-v-podlokotnik-geely-coolray-140558424/?m=30090572"
+    },
+    {
+      "id": 52,
+      "name": "Брызговики",
+      "desc": "Комплект брызговиков для Coolray.",
+      "price": 4800,
+      "stock": null,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108040/%D0%91%D1%80%D1%8B%D0%B7%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D0%9A%D1%83%D0%BB%D1%80%D0%B5%D0%B9_cjb32g.png",
+      "imgs": [],
+      "kaspi": "https://kaspi.kz/shop/p/dlja-geely-coolray-136162225/?m=30090572"
+    },
+    {
+      "id": 53,
+      "name": "Пороги на штатные места",
+      "desc": "Пороги на штатные места для Coolray.",
+      "price": 85000,
+      "stock": null,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "-",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758192989/%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%BF%D0%BE%D0%B4%D0%BB%D0%BE%D0%BA_%D0%9A_1_klf7qy.png",
+      "imgs": [],
+      "kaspi": ""
+    },
+    {
+      "id": 54,
+      "name": "Масляный фильтр (оригинал) Geely",
+      "desc": "Оригинальный масляный фильтр для Coolray.",
+      "price": 5000,
+      "stock": 5,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "1056025900",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108032/%D0%9C%D0%B0%D1%81%D0%BB%D1%8F%D0%BD%D1%8B%D0%B9_%D0%9A_%D0%AD_s9vda0.png",
+      "imgs": [],
+      "kaspi": ""
+    },
+    {
+      "id": 55,
+      "name": "Воздушный фильтр (оригинал) Mann",
+      "desc": "Воздушный фильтр MANN C25082 для Coolray.",
+      "price": 7800,
+      "stock": 4,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "C25082",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108034/%D0%92%D0%BE%D0%B7%D0%B4%D1%83%D1%85_%D0%9A_ca14kc.png",
+      "imgs": [],
+      "kaspi": ""
+    },
+    {
+      "id": 56,
+      "name": "Салонный фильтр (оригинал) Mann",
+      "desc": "Салонный фильтр MANN CUK 29010M для Coolray.",
+      "price": 7800,
+      "stock": 5,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "CUK29010M",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108027/%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD_%D0%9A_zhqypl.png",
+      "imgs": [],
+      "kaspi": ""
+    },
+    {
+      "id": 57,
+      "name": "Топливный фильтр (оригинал) Geely",
+      "desc": "Оригинальный топливный фильтр для Coolray.",
+      "price": 7000,
+      "stock": 10,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "2013037300",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108034/%D0%A2%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB_%D0%9A_%D0%AD_afw9se.png",
+      "imgs": [],
+      "kaspi": ""
+    },
+    {
+      "id": 58,
+      "name": "Масляный фильтр (оригинал) Mahle",
+      "desc": "Аналог оригинала Mahle для Coolray.",
+      "price": 4500,
+      "stock": 14,
+      "models": [
+        "Coolray"
+      ],
+      "sku": "OX1206D",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108036/%D0%9C%D0%B0%D1%81%D0%BB%D1%8F%D0%BD%D1%8B%D0%B9_%D0%9C%D0%B0%D0%BB%D0%B5%D0%BA_%D0%9A_%D0%AD_bsofbw.png",
+      "imgs": [],
+      "kaspi": ""
+    }
+  ]
+}
