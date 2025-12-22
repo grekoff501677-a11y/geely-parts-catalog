@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1765974351/20251217_172456_wzv9hy.jpg",
+      "price": 14999,
+      "models": [
+        "Atlas",
+        "Monjaro"
+      ],
+      "name": "Тест",
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1765974126/Gemini_Generated_Image_sxdgztsxdgztsxdg_ddwpal.png"
+      ],
+      "desc": "Тест для проверки",
+      "kaspi": "https://spainstinct.ru/masters/amina/",
+      "stock": 5,
+      "id": 59,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758016501/%D1%88%D1%82%D0%BE%D1%80%D0%BA%D0%B0_aeordw.png",
       "price": 30000,
       "models": [
@@ -899,23 +916,6 @@
       "stock": 14,
       "id": 58,
       "sku": "OX1206D"
-    },
-    {
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1765974351/20251217_172456_wzv9hy.jpg",
-      "price": 14999,
-      "models": [
-        "Atlas",
-        "Monjaro"
-      ],
-      "name": "Тест",
-      "imgs": [
-        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1765974126/Gemini_Generated_Image_sxdgztsxdgztsxdg_ddwpal.png"
-      ],
-      "desc": "Тест для проверки",
-      "kaspi": "https://spainstinct.ru/masters/amina/",
-      "stock": 5,
-      "id": 59,
-      "sku": "-"
     }
   ]
 }
