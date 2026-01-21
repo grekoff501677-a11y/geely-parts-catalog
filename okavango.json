@@ -1,327 +1,327 @@
 {
   "items": [
     {
-      "id": 14,
-      "name": "Футляр для очков",
-      "desc": "Универсальный футляр для очков.",
-      "price": 6500,
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108038/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3_%D0%9E_iniguc.png",
+      "price": 50000,
+      "models": [
+        "Okavango"
+      ],
+      "name": "Штатный видеорегистратор",
+      "imgs": [],
+      "desc": "Видеорегистратор для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/shtatnyi-videoregistrator-geely-okavango-chernyi-136217560/?m=30090572",
       "stock": null,
+      "id": 38,
+      "sku": "-"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
+      "price": 6500,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
+      "name": "Футляр для очков",
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108433/%D0%A8%D1%82%D0%BE%D1%80%D0%BA%D0%B0_2_%D0%B1%D0%B5%D0%B7_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8_1_ibj32d.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/futljar-dlja-ochkov-geely-129664373/?m=30090572"
+      "desc": "Универсальный футляр для очков.",
+      "kaspi": "https://kaspi.kz/shop/p/futljar-dlja-ochkov-geely-129664373/?m=30090572",
+      "stock": null,
+      "id": 14,
+      "sku": "-"
     },
     {
-      "id": 15,
-      "name": "Бронечехол",
-      "desc": "Защитный чехол.",
-      "price": 5400,
-      "stock": null,
-      "models": [
-        "Atlas",
-        "Monjaro",
-        "Okavango",
-        "Coolray"
-      ],
-      "sku": "-",
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108055/%D0%91%D1%80%D0%BE%D0%BD%D0%B5%D1%87%D0%B5%D1%85%D0%BE%D0%BB_zpuxa3.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/chehol-bronechehol-dlja-kljucha-geely-142038818/?m=30090572"
-    },
-    {
-      "id": 16,
-      "name": "Пластиковый чехол",
-      "desc": "Прочный пластиковый чехол.",
-      "price": 4500,
-      "stock": null,
+      "price": 5400,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
+      "name": "Бронечехол",
+      "imgs": [],
+      "desc": "Защитный чехол.",
+      "kaspi": "https://kaspi.kz/shop/p/chehol-bronechehol-dlja-kljucha-geely-142038818/?m=30090572",
+      "stock": null,
+      "id": 15,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108036/%D0%A7%D0%B5%D1%85%D0%BE%D0%BB_rhhly8.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/chehol-dlja-kljucha-geely-128136682/?m=30090572"
-    },
-    {
-      "id": 17,
-      "name": "Оплётка из кожи Чёрная",
-      "desc": "Кожаная оплётка руля (чёрная).",
-      "price": 7939,
-      "stock": null,
+      "price": 4500,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
+      "name": "Пластиковый чехол",
+      "imgs": [],
+      "desc": "Прочный пластиковый чехол.",
+      "kaspi": "https://kaspi.kz/shop/p/chehol-dlja-kljucha-geely-128136682/?m=30090572",
+      "stock": null,
+      "id": 16,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108036/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D1%87%D1%91%D1%80%D0%BD%D0%B0%D1%8F_vsuhjn.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/opljotka-dlja-rulja-geely-chjornaja-124479590/?m=30090572"
-    },
-    {
-      "id": 18,
-      "name": "Оплётка из кожи Чёрная, красный шов",
-      "desc": "Кожаная оплётка руля с красной прострочкой.",
-      "price": 7500,
-      "stock": null,
+      "price": 7939,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
+      "name": "Оплётка из кожи Чёрная",
+      "imgs": [],
+      "desc": "Кожаная оплётка руля (чёрная).",
+      "kaspi": "https://kaspi.kz/shop/p/opljotka-dlja-rulja-geely-chjornaja-124479590/?m=30090572",
+      "stock": null,
+      "id": 17,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108056/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_thrpld.png",
+      "price": 7500,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango",
+        "Coolray"
+      ],
+      "name": "Оплётка из кожи Чёрная, красный шов",
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108056/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_thrpld.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_2_rbg5uv.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-g37-37-39-sm-m-chernyi-krasnyi-144460481/?m=30090572"
+      "desc": "Кожаная оплётка руля с красной прострочкой.",
+      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-g37-37-39-sm-m-chernyi-krasnyi-144460481/?m=30090572",
+      "stock": null,
+      "id": 18,
+      "sku": "-"
     },
     {
-      "id": 19,
-      "name": "Оплётка из кожи Чёрная, зелёная",
-      "desc": "Кожаная оплётка руля с зелёной прострочкой.",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_qchuft.png",
       "price": 7500,
-      "stock": null,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_qchuft.png",
+      "name": "Оплётка из кожи Чёрная, зелёная",
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_qchuft.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108068/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%B7%D0%B5%D0%BB%D0%B5%D0%BD%D0%B0%D1%8F_2_zuoucw.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-gam1-37-39-sm-m-chernyi-zelenyi-144652251/?m=30090572"
+      "desc": "Кожаная оплётка руля с зелёной прострочкой.",
+      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-gam1-37-39-sm-m-chernyi-zelenyi-144652251/?m=30090572",
+      "stock": null,
+      "id": 19,
+      "sku": "-"
     },
     {
-      "id": 20,
-      "name": "Подушка трансформер",
-      "desc": "Комфортная подушка-трансформер.",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
       "price": 10200,
-      "stock": null,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
+      "name": "Подушка трансформер",
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108037/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_2_otxlwg.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/podushka-odejalo-2-v-1-geely-144402043/?m=30090572"
-    },
-    {
-      "id": 21,
-      "name": "Масляный фильтр (оригинал) Geely",
-      "desc": "Оригинальный масляный фильтр.",
-      "price": 6500,
-      "stock": 5,
-      "models": [
-        "Atlas",
-        "Monjaro",
-        "Okavango"
-      ],
-      "sku": "1056025900",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032742/%D0%9C%D0%B0%D1%81%D0%BB%D1%8F%D0%BD%D1%8B%D0%B9_%D0%90_%D0%9C_%D0%9E_%D0%A2_jrfbbv.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-1056025900-dlja-geely-atlas-geely-monjaro-geely-okavango-142038741/?m=30090572"
-    },
-    {
-      "id": 22,
-      "name": "Масляный фильтр (оригинал) Mahle",
-      "desc": "Аналог оригинала Mahle.",
-      "price": 5200,
-      "stock": 14,
-      "models": [
-        "Atlas",
-        "Monjaro",
-        "Okavango"
-      ],
-      "sku": "OX1206D",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045900/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5_vgpa5l.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-mahle-ox-1206d-dlja-geely-atlas-geely-monjaro-geely-okavango-142761858/?m=30090572"
-    },
-    {
-      "id": 36,
-      "name": "Коврик на центральную консоль",
-      "desc": "Антискользящий коврик для Okavango.",
-      "price": 10200,
+      "desc": "Комфортная подушка-трансформер.",
+      "kaspi": "https://kaspi.kz/shop/p/podushka-odejalo-2-v-1-geely-144402043/?m=30090572",
       "stock": null,
+      "id": 20,
+      "sku": "-"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032742/%D0%9C%D0%B0%D1%81%D0%BB%D1%8F%D0%BD%D1%8B%D0%B9_%D0%90_%D0%9C_%D0%9E_%D0%A2_jrfbbv.png",
+      "price": 6500,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango"
+      ],
+      "name": "Масляный фильтр (оригинал) Geely",
+      "imgs": [],
+      "desc": "Оригинальный масляный фильтр.",
+      "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-1056025900-dlja-geely-atlas-geely-monjaro-geely-okavango-142038741/?m=30090572",
+      "stock": 5,
+      "id": 21,
+      "sku": "1056025900"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045900/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5_vgpa5l.png",
+      "price": 5200,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango"
+      ],
+      "name": "Масляный фильтр (оригинал) Mahle",
+      "imgs": [],
+      "desc": "Аналог оригинала Mahle.",
+      "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-mahle-ox-1206d-dlja-geely-atlas-geely-monjaro-geely-okavango-142761858/?m=30090572",
+      "stock": 14,
+      "id": 22,
+      "sku": "OX1206D"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108049/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D0%B8_%D0%9E_qbff8n.png",
+      "price": 10200,
       "models": [
         "Okavango"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108049/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D0%B8_%D0%9E_qbff8n.png",
+      "name": "Коврик на центральную консоль",
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108049/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D0%B8_%D0%9E_qbff8n.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108065/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D0%B8_%D0%9E_2_rurcow.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/kovrik-zaschita-na-tsentral-nuju-konsol-geely-okavango-144381676/?m=30090572"
+      "desc": "Антискользящий коврик для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/kovrik-zaschita-na-tsentral-nuju-konsol-geely-okavango-144381676/?m=30090572",
+      "stock": null,
+      "id": 36,
+      "sku": "-"
     },
     {
-      "id": 37,
-      "name": "Защита (коврики) в багажник",
-      "desc": "Коврики в багажник для Okavango.",
-      "price": 28000,
-      "stock": null,
-      "models": [
-        "Okavango"
-      ],
-      "sku": "-",
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108032/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%B1%D0%B0%D0%B3%D0%B0%D0%B6%D0%BD%D0%B8%D0%BA%D0%B0_%D0%9E_pwfffc.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/kovriki-zaschita-v-bagazhnik-geely-okavango-chjornyi-zolotistyi-144174997/?m=30090572"
-    },
-    {
-      "id": 38,
-      "name": "Штатный видеорегистратор",
-      "desc": "Видеорегистратор для Okavango.",
-      "price": 50000,
-      "stock": null,
+      "price": 28000,
       "models": [
         "Okavango"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108038/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3_%D0%9E_iniguc.png",
+      "name": "Защита (коврики) в багажник",
       "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/shtatnyi-videoregistrator-geely-okavango-chernyi-136217560/?m=30090572"
+      "desc": "Коврики в багажник для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/kovriki-zaschita-v-bagazhnik-geely-okavango-chjornyi-zolotistyi-144174997/?m=30090572",
+      "stock": null,
+      "id": 37,
+      "sku": "-"
     },
     {
-      "id": 39,
-      "name": "Брызговики и доп. подкрылки",
-      "desc": "Комплект для Okavango.",
-      "price": 13790,
-      "stock": null,
-      "models": [
-        "Okavango"
-      ],
-      "sku": "-",
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758185570/%D0%94%D0%BE%D0%BF_%D0%BF%D0%BE%D0%B4%D0%BA%D1%80%D1%8B%D0%BB%D0%BA%D0%B8_%D0%B1%D1%80%D1%8B%D0%B7%D0%B3_n1mth8.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/geely-komplekt-dlja-geely-okavango-2023-2024-131937044/?m=30090572"
-    },
-    {
-      "id": 40,
-      "name": "Брызговики",
-      "desc": "Комплект брызговиков для Okavango.",
-      "price": 6000,
-      "stock": null,
+      "price": 13790,
       "models": [
         "Okavango"
       ],
-      "sku": "-",
+      "name": "Брызговики и доп. подкрылки",
+      "imgs": [],
+      "desc": "Комплект для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/geely-komplekt-dlja-geely-okavango-2023-2024-131937044/?m=30090572",
+      "stock": null,
+      "id": 39,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758185568/%D0%91%D1%80%D1%8B%D0%B7%D0%B3_%D0%9E_dh8f6y.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/geely-100103003-dlja-geely-okavango-2023-2024-131848107/?m=30090572"
-    },
-    {
-      "id": 41,
-      "name": "Доп. подкрылки",
-      "desc": "Дополнительные подкрылки для Okavango.",
-      "price": 7890,
-      "stock": null,
+      "price": 6000,
       "models": [
         "Okavango"
       ],
-      "sku": "-",
+      "name": "Брызговики",
+      "imgs": [],
+      "desc": "Комплект брызговиков для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/geely-100103003-dlja-geely-okavango-2023-2024-131848107/?m=30090572",
+      "stock": null,
+      "id": 40,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758185568/%D0%9F%D0%BE%D0%B4%D0%BA%D1%80%D1%8B%D0%BB%D0%BA%D0%B8_%D0%9E_uwli5m.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/dopolnitel-nye-podkrylki-1001003004-dlja-geely-okavango-2023-2024-131937061/?m=30090572"
-    },
-    {
-      "id": 42,
-      "name": "Коврики в салон Delform",
-      "desc": "Премиальные коврики для Okavango.",
-      "price": 45000,
-      "stock": null,
+      "price": 7890,
       "models": [
         "Okavango"
       ],
-      "sku": "-",
+      "name": "Доп. подкрылки",
+      "imgs": [],
+      "desc": "Дополнительные подкрылки для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/dopolnitel-nye-podkrylki-1001003004-dlja-geely-okavango-2023-2024-131937061/?m=30090572",
+      "stock": null,
+      "id": 41,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%9A%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8_%D0%94%D0%B5%D0%BB%D1%8C_n6ajdj.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/kovriki-poliki-delform-evs-0508-dlja-geely-okavango-143597260/?m=30090572"
-    },
-    {
-      "id": 43,
-      "name": "Пороги на штатные места",
-      "desc": "Пороги на штатные места для Okavango.",
-      "price": 90000,
-      "stock": null,
+      "price": 45000,
       "models": [
         "Okavango"
       ],
-      "sku": "-",
+      "name": "Коврики в салон Delform",
+      "imgs": [],
+      "desc": "Премиальные коврики для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/kovriki-poliki-delform-evs-0508-dlja-geely-okavango-143597260/?m=30090572",
+      "stock": null,
+      "id": 42,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108038/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%9E_azwtfk.png",
+      "price": 90000,
+      "models": [
+        "Okavango"
+      ],
+      "name": "Пороги на штатные места",
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108038/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%9E_azwtfk.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108045/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%9E_2_dbwg40.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/geely-009-25784-geely-okavango-2023-2024-136993706/?m=30090572"
+      "desc": "Пороги на штатные места для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/geely-009-25784-geely-okavango-2023-2024-136993706/?m=30090572",
+      "stock": null,
+      "id": 43,
+      "sku": "-"
     },
     {
-      "id": 44,
-      "name": "Воздушный фильтр (оригинал) Mann",
-      "desc": "Воздушный фильтр MANN C25082 для Okavango.",
-      "price": 7800,
-      "stock": 4,
-      "models": [
-        "Okavango"
-      ],
-      "sku": "C25082",
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108025/%D0%92%D0%BE%D0%B7%D0%B4%D1%83%D1%85_%D0%9E_gi0tfa.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/vozdushnyi-fil-tr-mann-c30042-dlja-geely-okavango-144173888/?m=30090572"
-    },
-    {
-      "id": 45,
-      "name": "Салонный фильтр (оригинал) Mann",
-      "desc": "Салонный фильтр MANN CUK 29010M для Okavango.",
       "price": 7800,
-      "stock": 5,
       "models": [
         "Okavango"
       ],
-      "sku": "CUK29010M",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108025/%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD_%D0%9E_neypru.png",
+      "name": "Воздушный фильтр (оригинал) Mann",
       "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/salonnyi-fil-tr-mann-cuk21034-dlja-geely-okavango-144173962/?m=30090572"
+      "desc": "Воздушный фильтр MANN C25082 для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/vozdushnyi-fil-tr-mann-c30042-dlja-geely-okavango-144173888/?m=30090572",
+      "stock": 4,
+      "id": 44,
+      "sku": "C25082"
     },
     {
-      "id": 46,
-      "name": "Топливный фильтр (оригинал) Geely",
-      "desc": "Оригинальный топливный фильтр для Okavango.",
-      "price": 7000,
-      "stock": 10,
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108025/%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD_%D0%9E_neypru.png",
+      "price": 7800,
       "models": [
         "Okavango"
       ],
-      "sku": "2013037300",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108034/%D0%A2%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB_%D0%9A_%D0%AD_afw9se.png",
+      "name": "Салонный фильтр (оригинал) Mann",
       "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/toplivnyi-fil-tr-2013021700-dlja-geely-coolray-geely-okavango-142038540/?m=30090572"
+      "desc": "Салонный фильтр MANN CUK 29010M для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/salonnyi-fil-tr-mann-cuk21034-dlja-geely-okavango-144173962/?m=30090572",
+      "stock": 5,
+      "id": 45,
+      "sku": "CUK29010M"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108034/%D0%A2%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB_%D0%9A_%D0%AD_afw9se.png",
+      "price": 7000,
+      "models": [
+        "Okavango"
+      ],
+      "name": "Топливный фильтр (оригинал) Geely",
+      "imgs": [],
+      "desc": "Оригинальный топливный фильтр для Okavango.",
+      "kaspi": "https://kaspi.kz/shop/p/toplivnyi-fil-tr-2013021700-dlja-geely-coolray-geely-okavango-142038540/?m=30090572",
+      "stock": 10,
+      "id": 46,
+      "sku": "2013037300"
     }
   ]
 }
