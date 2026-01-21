@@ -398,6 +398,9 @@ function render(){
     items = allProducts.filter(matches);
   }
   
+  // ДОБАВЛЯЕМ СОРТИРОВКУ ПО ПОЛЮ ORDER
+  items = items.sort((a, b) => (a.order || 100) - (b.order || 100));
+  
   elGrid.innerHTML = items.map(card).join('');
   elEmpty.textContent = 'Ничего не найдено. Сбросьте фильтры или проверьте запрос.';
   elEmpty.style.display = items.length? 'none':'block';
