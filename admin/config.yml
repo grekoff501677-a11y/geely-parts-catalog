@@ -29,6 +29,7 @@ collections:
             add_to_top: true
             fields:
               - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Порядок", name: "order", widget: "number", default: 100, hint: "Чем меньше число, тем выше в списке"}
               - {label: "Название", name: "name", widget: "string"}
               - {label: "Описание", name: "desc", widget: "text", required: false}
               - {label: "Цена (₸)", name: "price", widget: "number", required: false}
@@ -62,6 +63,7 @@ collections:
             add_to_top: true
             fields:
               - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Порядок", name: "order", widget: "number", default: 100, hint: "Чем меньше число, тем выше в списке"}
               - {label: "Название", name: "name", widget: "string"}
               - {label: "Описание", name: "desc", widget: "text", required: false}
               - {label: "Цена (₸)", name: "price", widget: "number", required: false}
@@ -95,6 +97,7 @@ collections:
             add_to_top: true
             fields:
               - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Порядок", name: "order", widget: "number", default: 100, hint: "Чем меньше число, тем выше в списке"}
               - {label: "Название", name: "name", widget: "string"}
               - {label: "Описание", name: "desc", widget: "text", required: false}
               - {label: "Цена (₸)", name: "price", widget: "number", required: false}
@@ -128,6 +131,7 @@ collections:
             add_to_top: true
             fields:
               - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Порядок", name: "order", widget: "number", default: 100, hint: "Чем меньше число, тем выше в списке"}
               - {label: "Название", name: "name", widget: "string"}
               - {label: "Описание", name: "desc", widget: "text", required: false}
               - {label: "Цена (₸)", name: "price", widget: "number", required: false}
@@ -161,6 +165,7 @@ collections:
             add_to_top: true
             fields:
               - {label: "ID", name: "id", widget: "number", hint: "Уникальный номер товара"}
+              - {label: "Порядок", name: "order", widget: "number", default: 100, hint: "Чем меньше число, тем выше в списке"}
               - {label: "Название", name: "name", widget: "string"}
               - {label: "Описание", name: "desc", widget: "text", required: false}
               - {label: "Цена (₸)", name: "price", widget: "number", required: false}
