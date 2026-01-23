@@ -7,7 +7,6 @@
 <meta name="theme-color" content="#aa8643">
 <meta name="msapplication-TileColor" content="#aa8643">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="https://res.cloudinary.com/djjcxxgfm/image/upload/f_png,w_32,h_32,c_fill/v1757929669/%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%82%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80_geely_coolray_okavango_azkarra_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_9_avfuii.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/djjcxxgfm/image/upload/f_png,w_180,h_180,c_fill/v1757929669/%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%82%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80_geely_coolray_okavango_azkarra_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_9_avfuii.png">
 
@@ -58,21 +57,25 @@
   .card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.35)}
   .imgwrap{aspect-ratio:4/3;background:#0c1322;display:flex;align-items:center;justify-content:center}
   .imgwrap img{max-width:100%;max-height:100%;object-fit:contain}
+  
   /* carousel */
   .carousel{position:relative;width:100%;height:100%;touch-action:pan-y}
   .slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s, transform .2s}
   .slide img{max-width:100%;max-height:100%;object-fit:contain}
   .slide.active{opacity:1}
   .carousel.swiping .slide{transition:none}
+  
   /* arrows */
   .nav{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;padding:0 6px;pointer-events:none}
   .arrow{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid var(--border);background:rgba(17,33,49,.8);color:#eaf3ff;cursor:pointer;user-select:none}
   .arrow:hover{filter:brightness(1.1);border-color:var(--brand)}
   .arrow svg{width:18px;height:18px;fill:currentColor}
+  
   .badges{position:absolute;inset:auto 10px 10px auto;display:flex;gap:6px}
   .badge{font-size:12px;padding:5px 8px;border-radius:10px;border:1px solid var(--border);background:#12203a;color:#cbe2ff}
   .models{position:absolute;left:10px;bottom:10px;display:flex;gap:6px;flex-wrap:wrap}
   .model{font-size:11px;padding:4px 7px;border-radius:9px;border:1px solid var(--border);background:#101d35;color:#a7c3e8}
+  
   .content{padding:12px 14px 14px;display:flex;flex-direction:column;flex:1}
   .name{margin:0 0 6px;font-weight:600}
   .desc{margin:0;color:var(--muted);font-size:13px}
@@ -133,41 +136,41 @@
   </footer>
 
 <script>
-// ====== ЗАГРУЗКА ДАННЫХ ИЗ 5 ФАЙЛОВ ======
-let allProducts = [];
-let monjaroProducts = [];
-let okavangoProducts = [];
-let coolrayProducts = [];
+// ====== КОНФИГУРАЦИЯ И СОСТОЯНИЕ ======
+// dbKey соответствует ключу в объекте db ниже, modelKey - строка в поле "models" JSON файла
+const MODEL_CHIPS = [
+  {label:'Atlas FX11', dbKey:'atlas', modelKey:'Atlas'},
+  {label:'Monjaro KX11', dbKey:'monjaro', modelKey:'Monjaro'},
+  {label:'Okavango VX11 (рест)', dbKey:'okavango', modelKey:'Okavango'},
+  {label:'Coolray SX11A3 (рест)', dbKey:'coolray', modelKey:'Coolray'},
+];
 
-Promise.all([
-  fetch('/atlas.json').then(r => r.json()),
-  fetch('/monjaro.json').then(r => r.json()),
-  fetch('/okavango.json').then(r => r.json()),
-  fetch('/coolray.json').then(r => r.json()),
-  fetch('/common.json').then(r => r.json())
-])
-.then(([atlas, monjaro, okavango, coolray, common]) => {
-  // Объединяем все товары (дедупликация по ID)
-  const productMap = new Map();
-  [...(atlas.items || []), ...(monjaro.items || []), ...(okavango.items || []), ...(coolray.items || []), ...(common.items || [])]
-    .forEach(p => productMap.set(p.id, p));
-  
-  allProducts = Array.from(productMap.values());
-  
-  // Фильтруем по моделям
-  monjaroProducts = allProducts.filter(p => p.models && p.models.includes('Monjaro'));
-  okavangoProducts = allProducts.filter(p => p.models && p.models.includes('Okavango'));
-  coolrayProducts = allProducts.filter(p => p.models && p.models.includes('Coolray'));
-  
-  render();
-})
-.catch(err => {
-  console.error('Ошибка загрузки товаров:', err);
-  elEmpty.textContent = 'Ошибка загрузки каталога';
-  elEmpty.style.display = 'block';
-});
-</script>
-<script>
+const state = { 
+  activeModel: null, 
+  searchQuery: '' 
+};
+
+// Хранилище сырых данных
+const db = {
+  atlas: [],
+  monjaro: [],
+  okavango: [],
+  coolray: [],
+  common: []
+};
+
+// Элементы DOM
+const elGrid = document.getElementById('grid');
+const elEmpty = document.getElementById('empty');
+const elUpdated = document.getElementById('updated');
+const elSearchContainer = document.getElementById('searchContainer');
+const elSearchInput = document.getElementById('searchInput');
+const elClearSearch = document.getElementById('clearSearch');
+const elChips = document.getElementById('modelChips');
+
+// Дата обновления
+elUpdated.textContent = `Обновлено: ${new Date().toLocaleDateString('ru-RU')}\u00A0${new Date().toLocaleTimeString('ru-RU', {hour:'2-digit', minute:'2-digit'})}`;
+
 // ====== CLOUDINARY HELPERS ======
 const CLD_SIZES  = '(max-width: 800px) 95vw, (max-width: 1100px) 45vw, 25vw';
 const CLD_WIDTHS = [400, 800, 1200, 1600];
@@ -187,101 +190,156 @@ function cldUrl(url, w){
 function cldSrcSet(url){
   return CLD_WIDTHS.map(w => `${cldUrl(url, w)} ${w}w`).join(', ');
 }
-</script>
-<script>
-// ====== ЛОГИКА РЕНДЕРА ======
-const MODEL_CHIPS = [
-  {label:'Atlas FX11', keys:['Atlas']},
-  {label:'Monjaro KX11', keys:['Monjaro']},
-  {label:'Okavango VX11 (рест)', keys:['Okavango']},
-  {label:'Coolray SX11A3 (рест)', keys:['Coolray']},
-];
-const state = { models:new Set(), searchQuery:'' };
 
-const elGrid = document.getElementById('grid');
-const elEmpty = document.getElementById('empty');
-const elUpdated = document.getElementById('updated');
-const elSearchContainer = document.getElementById('searchContainer');
-const elSearchInput = document.getElementById('searchInput');
-const elClearSearch = document.getElementById('clearSearch');
+// ====== ЗАГРУЗКА ДАННЫХ ======
+Promise.all([
+  fetch('/atlas.json').then(r => r.json()),
+  fetch('/monjaro.json').then(r => r.json()),
+  fetch('/okavango.json').then(r => r.json()),
+  fetch('/coolray.json').then(r => r.json()),
+  fetch('/common.json').then(r => r.json())
+])
+.then(([atlas, monjaro, okavango, coolray, common]) => {
+  // Сохраняем "сырые" данные раздельно
+  db.atlas = atlas.items || [];
+  db.monjaro = monjaro.items || [];
+  db.okavango = okavango.items || [];
+  db.coolray = coolray.items || [];
+  db.common = common.items || [];
 
-elUpdated.textContent = `Обновлено: ${new Date().toLocaleDateString('ru-RU')}\u00A0${new Date().toLocaleTimeString('ru-RU', {hour:'2-digit', minute:'2-digit'})}`;
+  render();
+})
+.catch(err => {
+  console.error('Ошибка загрузки товаров:', err);
+  elEmpty.textContent = 'Ошибка загрузки каталога';
+  elEmpty.style.display = 'block';
+});
 
-// чипсы моделей
-const chips = document.getElementById('modelChips');
+// ====== ЛОГИКА ОБЪЕДИНЕНИЯ И СОРТИРОВКИ ======
+function getProductsForCurrentView() {
+  if (!state.activeModel) return [];
+
+  const config = MODEL_CHIPS.find(c => c.label === state.activeModel);
+  if (!config) return [];
+
+  // 1. Берем специфичный список для выбранной модели
+  const specificList = db[config.dbKey] || [];
+  
+  // 2. Создаем Map для объединения
+  const productMap = new Map();
+
+  // Шаг А: Добавляем подходящие товары из Common
+  db.common.forEach(p => {
+    if (p.models && p.models.includes(config.modelKey)) {
+      productMap.set(p.id, { ...p }); // Клонируем
+    }
+  });
+
+  // Шаг Б: Накладываем специфичные товары
+  // Они перезапишут Order на тот, что указан в админке в коллекции модели
+  specificList.forEach(p => {
+    const existing = productMap.get(p.id);
+    if (existing) {
+      // Обновляем существующий (важно для переопределения Order)
+      productMap.set(p.id, { ...existing, ...p });
+    } else {
+      // Если товара нет в Common, проверяем, подходит ли он к модели
+      // Если он лежит в файле модели (например atlas.json), считаем что он подходит
+      productMap.set(p.id, { ...p });
+    }
+  });
+
+  let results = Array.from(productMap.values());
+
+  // 3. Фильтрация поиском
+  if (state.searchQuery) {
+    const q = state.searchQuery;
+    results = results.filter(p => 
+      p.name.toLowerCase().includes(q) ||
+      (p.desc && p.desc.toLowerCase().includes(q))
+    );
+  }
+
+  // 4. Сортировка по Order (возрастание)
+  results.sort((a, b) => {
+    const orderA = (a.order === undefined || a.order === null) ? 100 : Number(a.order);
+    const orderB = (b.order === undefined || b.order === null) ? 100 : Number(b.order);
+    return orderA - orderB;
+  });
+
+  return results;
+}
+
+// ====== UI И ВЗАИМОДЕЙСТВИЕ ======
+
+// Генерация кнопок (чипсов) моделей
 const chipElements = [];
-MODEL_CHIPS.forEach(c=>{
+MODEL_CHIPS.forEach(c => {
   const el = document.createElement('span');
   el.className = 'chip';
   el.textContent = c.label;
-  el.addEventListener('click', ()=>{
+  el.addEventListener('click', () => {
     const wasActive = el.classList.contains('active');
+    
+    // Сброс всех чипсов
     chipElements.forEach(chip => chip.classList.remove('active'));
-    state.models.clear();
+    state.activeModel = null;
+    
     if (!wasActive) {
       el.classList.add('active');
-      state.models.add(c.label);
+      state.activeModel = c.label;
     }
+    
     updateSearchVisibility();
     render();
   });
-  chips.appendChild(el);
+  elChips.appendChild(el);
   chipElements.push(el);
 });
 
-function priceFmt(val){ if(val==null) return '—'; return new Intl.NumberFormat('ru-RU').format(val)+" ₸" }
+function priceFmt(val){ 
+  if(val == null) return '—'; 
+  return new Intl.NumberFormat('ru-RU').format(val) + " ₸"; 
+}
 
 function updateSearchVisibility(){
-  if (state.models.size > 0) {
+  if (state.activeModel) {
     elSearchContainer.style.display = 'flex';
   } else {
     elSearchContainer.style.display = 'none';
-    state.searchQuery = '';
-    elSearchInput.value = '';
-    elClearSearch.style.display = 'none';
+    resetSearch();
   }
 }
 
-function setupSearchHandlers(){
-  elSearchInput.addEventListener('input', (e) => {
-    state.searchQuery = e.target.value.toLowerCase().trim();
-    elClearSearch.style.display = state.searchQuery ? 'flex' : 'none';
-    render();
-  });
-  
-  elClearSearch.addEventListener('click', () => {
-    state.searchQuery = '';
-    elSearchInput.value = '';
-    elClearSearch.style.display = 'none';
-    render();
-  });
-  
-  elSearchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      state.searchQuery = '';
-      elSearchInput.value = '';
-      elClearSearch.style.display = 'none';
-      render();
-    }
-  });
+function resetSearch() {
+  state.searchQuery = '';
+  elSearchInput.value = '';
+  elClearSearch.style.display = 'none';
 }
 
-function matches(p){
-  if (state.models.size===0) return true;
-  
-  const allowed = new Set();
-  MODEL_CHIPS.forEach(c=>{ if(state.models.has(c.label)) c.keys.forEach(k=>allowed.add(k)); });
-  const modelMatch = p.models.some(m=>allowed.has(m));
-  
-  const searchMatch = !state.searchQuery || 
-    p.name.toLowerCase().includes(state.searchQuery) ||
-    (p.desc && p.desc.toLowerCase().includes(state.searchQuery));
-  
-  return modelMatch && searchMatch;
-}
+// Обработчики поиска
+elSearchInput.addEventListener('input', (e) => {
+  state.searchQuery = e.target.value.toLowerCase().trim();
+  elClearSearch.style.display = state.searchQuery ? 'flex' : 'none';
+  render();
+});
 
+elClearSearch.addEventListener('click', () => {
+  resetSearch();
+  render();
+});
+
+elSearchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    resetSearch();
+    render();
+  }
+});
+
+// Карточка товара и Карусель
 function imgTagOrCarousel(p){
   const list = Array.isArray(p.imgs) && p.imgs.length ? p.imgs : (p.img ? [p.img] : []);
+  
   if (list.length === 0){
     const svg = encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 120' width='160' height='120'><defs><linearGradient id='g' x1='0' x2='1'><stop offset='0' stop-color='#0e203d'/><stop offset='1' stop-color='#17345e'/></linearGradient></defs><rect fill='url(#g)' width='100%' height='100%'/><g fill='#9fc2ff' font-size='10' font-family='Arial, sans-serif'><text x='10' y='22'>Фото пока не добавлено</text><rect x='10' y='30' width='40' height='30' fill='none' stroke='#9fc2ff'/><circle cx='85' cy='55' r='18' fill='none' stroke='#9fc2ff'/></g></svg>`);
     return `<img alt='' src='data:image/svg+xml,${svg}'>`;
@@ -289,35 +347,22 @@ function imgTagOrCarousel(p){
 
   if (list.length === 1){
     const u = list[0];
-    return `<img
-      src="${cldUrl(u, 800)}"
-      srcset="${cldSrcSet(u)}"
-      sizes="${CLD_SIZES}"
-      loading="lazy"
-      decoding="async"
-      alt=""
-    >`;
+    return `<img src="${cldUrl(u, 800)}" srcset="${cldSrcSet(u)}" sizes="${CLD_SIZES}" loading="lazy" decoding="async" alt="">`;
   }
 
-  const id = `c${p.id}`;
+  const id = `c${p.id}`; // Уникальный ID для карусели
   const slides = list.map((u,i)=>`
     <div class='slide${i===0?" active":""}'>
-      <img
-        src="${cldUrl(u, 800)}"
-        srcset="${cldSrcSet(u)}"
-        sizes="${CLD_SIZES}"
-        loading="lazy"
-        decoding="async"
-        alt=""
-      >
+      <img src="${cldUrl(u, 800)}" srcset="${cldSrcSet(u)}" sizes="${CLD_SIZES}" loading="lazy" decoding="async" alt="">
     </div>`).join('');
 
+  // Кнопки карусели с event.stopPropagation() чтобы не нажималась сама карточка (если нужно)
   const arrows = `
     <div class='nav'>
-      <span class='arrow' onclick='carouselPrev("${id}")' aria-label='Назад'>
+      <span class='arrow' onclick='event.stopPropagation(); carouselPrev("${id}")' aria-label='Назад'>
         <svg viewBox='0 0 24 24'><path d='M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z'/></svg>
       </span>
-      <span class='arrow' onclick='carouselNext("${id}")' aria-label='Вперёд'>
+      <span class='arrow' onclick='event.stopPropagation(); carouselNext("${id}")' aria-label='Вперёд'>
         <svg viewBox='0 0 24 24'><path d='M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z'/></svg>
       </span>
     </div>`;
@@ -325,47 +370,42 @@ function imgTagOrCarousel(p){
   return `<div class='carousel' id='${id}'>${slides}${arrows}</div>`;
 }
 
-function carouselGo(id, idx){
+// Глобальные функции для управления каруселью через onclick
+window.carouselGo = function(id, idx){
   const root = document.getElementById(id);
   if(!root) return;
   const slides = root.querySelectorAll('.slide');
   slides.forEach((s,i)=> s.classList.toggle('active', i===idx));
 }
 
-function carouselIndex(root){
-  const slides = root.querySelectorAll('.slide');
-  for(let i=0;i<slides.length;i++) if(slides[i].classList.contains('active')) return i;
-  return 0;
-}
-
-function carouselNext(id){
+window.carouselNext = function(id){
   const root = document.getElementById(id);
   if(!root) return;
   const slides = root.querySelectorAll('.slide');
-  const cur = carouselIndex(root);
+  let cur = 0;
+  slides.forEach((s,i) => { if(s.classList.contains('active')) cur = i; });
   const next = (cur + 1) % slides.length;
-  carouselGo(id, next);
+  window.carouselGo(id, next);
 }
 
-function carouselPrev(id){
+window.carouselPrev = function(id){
   const root = document.getElementById(id);
   if(!root) return;
   const slides = root.querySelectorAll('.slide');
-  const cur = carouselIndex(root);
+  let cur = 0;
+  slides.forEach((s,i) => { if(s.classList.contains('active')) cur = i; });
   const prev = (cur - 1 + slides.length) % slides.length;
-  carouselGo(id, prev);
+  window.carouselGo(id, prev);
 }
 
 function card(p){
-  const low = Number.isFinite(p.stock) && p.stock<=2;
-  const stockText = p.stock==null? 'Под заказ' : (p.stock+" шт");
-  const stockCls = 'stock'+(low?' low':'');
-  const btnLabel = p.kaspi? 'Перейти на Каспи' : 'Ссылка появится позже';
-  const btnAttrs = p.kaspi? `href='${p.kaspi}' target='_blank' rel='noopener'` : `href='javascript:void(0)'`;
+  const low = Number.isFinite(p.stock) && p.stock <= 2;
+  const btnLabel = p.kaspi ? 'Перейти на Каспи' : 'Ссылка появится позже';
+  const btnAttrs = p.kaspi ? `href='${p.kaspi}' target='_blank' rel='noopener'` : `href='javascript:void(0)'`;
+  
   return `
   <article class='card'>
     <div class='imgwrap'>${imgTagOrCarousel(p)}</div>
-    
     <div class='content'>
       <h3 class='name'>${p.name}</h3>
       <p class='desc'>${p.desc||''}</p>
@@ -380,34 +420,19 @@ function card(p){
 }
 
 function render(){
-  if (state.models.size === 0) {
+  if (!state.activeModel) {
     elGrid.innerHTML = '';
     elEmpty.textContent = 'Выберите модель, чтобы увидеть товары.';
     elEmpty.style.display = 'block';
     return;
   }
   
-  let items;
-  if (state.models.has('Monjaro KX11')) {
-    items = monjaroProducts.filter(matches);
-  } else if (state.models.has('Okavango VX11 (рест)')) {
-    items = okavangoProducts.filter(matches);
-  } else if (state.models.has('Coolray SX11A3 (рест)')) {
-    items = coolrayProducts.filter(matches);
-  } else {
-    items = allProducts.filter(matches);
-  }
-  
-  // ДОБАВЛЯЕМ СОРТИРОВКУ ПО ПОЛЮ ORDER
-  items = items.sort((a, b) => (a.order || 100) - (b.order || 100));
+  const items = getProductsForCurrentView();
   
   elGrid.innerHTML = items.map(card).join('');
   elEmpty.textContent = 'Ничего не найдено. Сбросьте фильтры или проверьте запрос.';
-  elEmpty.style.display = items.length? 'none':'block';
+  elEmpty.style.display = items.length ? 'none' : 'block';
 }
-
-setupSearchHandlers();
-render();
 </script>
 </body>
 </html>
