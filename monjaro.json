@@ -1,403 +1,440 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "Шторка багажника",
-      "desc": "Рулонная шторка багажника.",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80_e43t7h.png",
+      "price": 42000,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Штатный видеорегистратор",
+      "order": 1,
+      "desc": "Штатный видеорегистратор в разрешением 4К\nКарта памяти в комплекте",
+      "kaspi": "https://kaspi.kz/shop/p/videoregistrator-shtatnyi-geely-monjaro-chernyi-133293156/",
+      "id": 36,
+      "sku": "544230086"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758016501/%D1%88%D1%82%D0%BE%D1%80%D0%BA%D0%B0_aeordw.png",
       "price": 30000,
-      "stock": 15,
       "models": [
         "Atlas",
         "Monjaro"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758016501/%D1%88%D1%82%D0%BE%D1%80%D0%BA%D0%B0_aeordw.png",
+      "name": "Шторка багажника",
+      "order": 2,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758016501/%D1%88%D1%82%D0%BE%D1%80%D0%BA%D0%B0_aeordw.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108025/%D0%A8%D1%82%D0%BE%D1%80%D0%BA%D0%B0_2_%D0%B1%D0%B5%D0%B7_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8_kzqjxd.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758016505/%D0%A8%D1%82%D0%BE%D1%80%D0%BA%D0%B0_3_vtycjz.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/shtorka-bagazhnika-geely-atlas-monjaro-124210667/?c=551010000&m=30090572&sr=1&qid=05aa2d8c2ee47fce2ef956236557ee62&ref=shared_link"
+      "desc": "Рулонная шторка багажника.",
+      "kaspi": "https://kaspi.kz/shop/p/shtorka-bagazhnika-geely-atlas-monjaro-124210667/?c=551010000&m=30090572&sr=1&qid=05aa2d8c2ee47fce2ef956236557ee62&ref=shared_link",
+      "stock": 15,
+      "id": 1,
+      "sku": "-"
     },
     {
-      "id": 13,
-      "name": "Доп. подсветка багажника",
-      "desc": "Модульная подсветка багажника.",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045955/%D0%9F%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%B0_liyfpv.png",
       "price": 8400,
-      "stock": 4,
       "models": [
         "Atlas",
         "Monjaro"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045955/%D0%9F%D0%BE%D0%B4%D1%81%D0%B2%D0%B5%D1%82%D0%BA%D0%B0_liyfpv.png",
+      "name": "Доп. подсветка багажника",
+      "order": 13,
       "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/dop-podsvetka-bagazhnika-dlja-geely-atlas-monjaro-139721288/?m=30090572"
+      "desc": "Модульная подсветка багажника.",
+      "kaspi": "https://kaspi.kz/shop/p/dop-podsvetka-bagazhnika-dlja-geely-atlas-monjaro-139721288/?m=30090572",
+      "stock": 4,
+      "id": 13,
+      "sku": "-"
     },
     {
-      "id": 14,
-      "name": "Футляр для очков",
-      "desc": "Универсальный футляр для очков.",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
       "price": 6500,
-      "stock": null,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
+      "name": "Футляр для очков",
+      "order": 12,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108433/%D0%A8%D1%82%D0%BE%D1%80%D0%BA%D0%B0_2_%D0%B1%D0%B5%D0%B7_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8_1_ibj32d.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/futljar-dlja-ochkov-geely-129664373/?m=30090572"
+      "desc": "Универсальный футляр для очков.",
+      "kaspi": "https://kaspi.kz/shop/p/futljar-dlja-ochkov-geely-129664373/?m=30090572",
+      "stock": null,
+      "id": 14,
+      "sku": "-"
     },
     {
-      "id": 15,
-      "name": "Бронечехол",
-      "desc": "Защитный чехол.",
-      "price": 5400,
-      "stock": null,
-      "models": [
-        "Atlas",
-        "Monjaro",
-        "Okavango",
-        "Coolray"
-      ],
-      "sku": "-",
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108055/%D0%91%D1%80%D0%BE%D0%BD%D0%B5%D1%87%D0%B5%D1%85%D0%BE%D0%BB_zpuxa3.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/chehol-bronechehol-dlja-kljucha-geely-142038818/?m=30090572"
-    },
-    {
-      "id": 16,
-      "name": "Пластиковый чехол",
-      "desc": "Прочный пластиковый чехол.",
-      "price": 4500,
-      "stock": null,
+      "price": 5400,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
+      "name": "Бронечехол",
+      "order": 11,
+      "imgs": [],
+      "desc": "Защитный чехол.",
+      "kaspi": "https://kaspi.kz/shop/p/chehol-bronechehol-dlja-kljucha-geely-142038818/?m=30090572",
+      "stock": null,
+      "id": 15,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108036/%D0%A7%D0%B5%D1%85%D0%BE%D0%BB_rhhly8.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/chehol-dlja-kljucha-geely-128136682/?m=30090572"
-    },
-    {
-      "id": 17,
-      "name": "Оплётка из кожи Чёрная",
-      "desc": "Кожаная оплётка руля (чёрная).",
-      "price": 7939,
-      "stock": null,
+      "price": 4500,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
+      "name": "Пластиковый чехол",
+      "order": 10,
+      "imgs": [],
+      "desc": "Прочный пластиковый чехол.",
+      "kaspi": "https://kaspi.kz/shop/p/chehol-dlja-kljucha-geely-128136682/?m=30090572",
+      "stock": null,
+      "id": 16,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108036/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D1%87%D1%91%D1%80%D0%BD%D0%B0%D1%8F_vsuhjn.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/opljotka-dlja-rulja-geely-chjornaja-124479590/?m=30090572"
-    },
-    {
-      "id": 18,
-      "name": "Оплётка из кожи Чёрная, красный шов",
-      "desc": "Кожаная оплётка руля с красной прострочкой.",
-      "price": 7500,
-      "stock": null,
+      "price": 7939,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
+      "name": "Оплётка из кожи Чёрная",
+      "order": 9,
+      "imgs": [],
+      "desc": "Кожаная оплётка руля (чёрная).",
+      "kaspi": "https://kaspi.kz/shop/p/opljotka-dlja-rulja-geely-chjornaja-124479590/?m=30090572",
+      "stock": null,
+      "id": 17,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108056/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_thrpld.png",
+      "price": 7500,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango",
+        "Coolray"
+      ],
+      "name": "Оплётка из кожи Чёрная, красный шов",
+      "order": 14,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108056/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_thrpld.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_2_rbg5uv.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-g37-37-39-sm-m-chernyi-krasnyi-144460481/?m=30090572"
+      "desc": "Кожаная оплётка руля с красной прострочкой.",
+      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-g37-37-39-sm-m-chernyi-krasnyi-144460481/?m=30090572",
+      "stock": null,
+      "id": 18,
+      "sku": "-"
     },
     {
-      "id": 19,
-      "name": "Оплётка из кожи Чёрная, зелёная",
-      "desc": "Кожаная оплётка руля с зелёной прострочкой.",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_qchuft.png",
       "price": 7500,
-      "stock": null,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_qchuft.png",
+      "name": "Оплётка из кожи Чёрная, зелёная",
+      "order": 15,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_qchuft.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108068/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%B7%D0%B5%D0%BB%D0%B5%D0%BD%D0%B0%D1%8F_2_zuoucw.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-gam1-37-39-sm-m-chernyi-zelenyi-144652251/?m=30090572"
+      "desc": "Кожаная оплётка руля с зелёной прострочкой.",
+      "kaspi": "https://kaspi.kz/shop/p/geely-opletka-leather-gam1-37-39-sm-m-chernyi-zelenyi-144652251/?m=30090572",
+      "stock": null,
+      "id": 19,
+      "sku": "-"
     },
     {
-      "id": 20,
-      "name": "Подушка трансформер",
-      "desc": "Комфортная подушка-трансформер.",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
       "price": 10200,
-      "stock": null,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango",
         "Coolray"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
+      "name": "Подушка трансформер",
+      "order": 16,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108037/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_2_otxlwg.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/podushka-odejalo-2-v-1-geely-144402043/?m=30090572"
+      "desc": "Комфортная подушка-трансформер.",
+      "kaspi": "https://kaspi.kz/shop/p/podushka-odejalo-2-v-1-geely-144402043/?m=30090572",
+      "stock": null,
+      "id": 20,
+      "sku": "-"
     },
     {
-      "id": 21,
-      "name": "Масляный фильтр (оригинал) Geely",
-      "desc": "Оригинальный масляный фильтр.",
-      "price": 6500,
-      "stock": 5,
-      "models": [
-        "Atlas",
-        "Monjaro",
-        "Okavango"
-      ],
-      "sku": "1056025900",
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032742/%D0%9C%D0%B0%D1%81%D0%BB%D1%8F%D0%BD%D1%8B%D0%B9_%D0%90_%D0%9C_%D0%9E_%D0%A2_jrfbbv.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-1056025900-dlja-geely-atlas-geely-monjaro-geely-okavango-142038741/?m=30090572"
-    },
-    {
-      "id": 22,
-      "name": "Масляный фильтр (оригинал) Mahle",
-      "desc": "Аналог оригинала Mahle.",
-      "price": 5200,
-      "stock": 14,
+      "price": 6500,
       "models": [
         "Atlas",
         "Monjaro",
         "Okavango"
       ],
-      "sku": "OX1206D",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045900/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5_vgpa5l.png",
+      "name": "Масляный фильтр (оригинал) Geely",
+      "order": 17,
       "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-mahle-ox-1206d-dlja-geely-atlas-geely-monjaro-geely-okavango-142761858/?m=30090572"
-    },
-    {
-      "id": 23,
-      "name": "Воздушный фильтр (оригинал) Mann",
-      "desc": "Воздушный фильтр MANN C25082.",
-      "price": 7800,
-      "stock": 4,
-      "models": [
-        "Atlas",
-        "Monjaro"
-      ],
-      "sku": "C25082",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85_%D0%90_ivpdoc.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/vozdushnyi-fil-tr-mann-c25082-dlja-geely-monjaro-geely-atlas-144172093/?m=30090572"
-    },
-    {
-      "id": 24,
-      "name": "Салонный фильтр (оригинал) Mann",
-      "desc": "Салонный фильтр MANN CUK 29010M.",
-      "price": 7800,
+      "desc": "Оригинальный масляный фильтр.",
+      "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-1056025900-dlja-geely-atlas-geely-monjaro-geely-okavango-142038741/?m=30090572",
       "stock": 5,
+      "id": 21,
+      "sku": "1056025900"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045900/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5_vgpa5l.png",
+      "price": 5200,
+      "models": [
+        "Atlas",
+        "Monjaro",
+        "Okavango"
+      ],
+      "name": "Масляный фильтр (оригинал) Mahle",
+      "order": 18,
+      "imgs": [],
+      "desc": "Аналог оригинала Mahle.",
+      "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-mahle-ox-1206d-dlja-geely-atlas-geely-monjaro-geely-okavango-142761858/?m=30090572",
+      "stock": 14,
+      "id": 22,
+      "sku": "OX1206D"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85_%D0%90_ivpdoc.png",
+      "price": 7800,
       "models": [
         "Atlas",
         "Monjaro"
       ],
-      "sku": "CUK29010M",
+      "name": "Воздушный фильтр (оригинал) Mann",
+      "order": 25,
+      "imgs": [],
+      "desc": "Воздушный фильтр MANN C25082.",
+      "kaspi": "https://kaspi.kz/shop/p/vozdushnyi-fil-tr-mann-c25082-dlja-geely-monjaro-geely-atlas-144172093/?m=30090572",
+      "stock": 4,
+      "id": 23,
+      "sku": "C25082"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045900/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D1%81%D0%B0%D0%BB%D0%BE%D0%BD_%D0%90_huw5l2.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/salonnyi-fil-tr-mann-cuk29010m-dlja-geely-monjaro-geely-atlas-144174075/?m=30090572"
-    },
-    {
-      "id": 25,
-      "name": "Топливный фильтр (оригинал) Geely",
-      "desc": "Оригинальный топливный фильтр.",
-      "price": 7000,
-      "stock": 10,
+      "price": 7800,
       "models": [
         "Atlas",
         "Monjaro"
       ],
-      "sku": "2013037300",
+      "name": "Салонный фильтр (оригинал) Mann",
+      "order": 19,
+      "imgs": [],
+      "desc": "Салонный фильтр MANN CUK 29010M.",
+      "kaspi": "https://kaspi.kz/shop/p/salonnyi-fil-tr-mann-cuk29010m-dlja-geely-monjaro-geely-atlas-144174075/?m=30090572",
+      "stock": 5,
+      "id": 24,
+      "sku": "CUK29010M"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032746/%D0%A2%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_qb620s.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/toplivnyi-fil-tr-2013037300-dlja-geely-atlas-geely-monjaro-142038517/?m=30090572"
-    },
-    {
-      "id": 26,
-      "name": "Коврик на центральную консоль",
-      "desc": "Антискользящий коврик для Monjaro.",
-      "price": 7650,
-      "stock": null,
+      "price": 7000,
       "models": [
+        "Atlas",
         "Monjaro"
       ],
-      "sku": "-",
+      "name": "Топливный фильтр (оригинал) Geely",
+      "order": 20,
+      "imgs": [],
+      "desc": "Оригинальный топливный фильтр.",
+      "kaspi": "https://kaspi.kz/shop/p/toplivnyi-fil-tr-2013037300-dlja-geely-atlas-geely-monjaro-142038517/?m=30090572",
+      "stock": 10,
+      "id": 25,
+      "sku": "2013037300"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108046/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%BA%D0%BE%D0%BD%D1%81%D0%BE%D0%BB%D0%B8_%D0%9C_khkksa.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/zaschita-tsentral-noi-konsoli-geely-monjaro-134352497/?m=30090572"
-    },
-    {
-      "id": 27,
-      "name": "Брызговики и доп. подкрылки",
-      "desc": "Комплект для Monjaro.",
-      "price": 13790,
-      "stock": null,
+      "price": 7650,
       "models": [
         "Monjaro"
       ],
-      "sku": "-",
+      "name": "Коврик на центральную консоль",
+      "order": 3,
+      "imgs": [],
+      "desc": "Антискользящий коврик для Monjaro.",
+      "kaspi": "https://kaspi.kz/shop/p/zaschita-tsentral-noi-konsoli-geely-monjaro-134352497/?m=30090572",
+      "stock": null,
+      "id": 26,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758182325/%D0%94%D0%BE%D0%BF_%D0%BF%D0%BE%D0%B4%D0%BA%D1%80%D1%8B%D0%BB%D0%BA%D0%B8_%D0%B8_%D0%B1%D1%80%D1%8B%D0%B7%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_M_yooypl.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/i-dop-podkrylki-geely-monjaro-137228346/?m=30090572"
-    },
-    {
-      "id": 28,
-      "name": "Брызговики",
-      "desc": "Комплект брызговиков для Monjaro.",
-      "price": 5000,
-      "stock": null,
+      "price": 13790,
       "models": [
         "Monjaro"
       ],
-      "sku": "-",
+      "name": "Брызговики и доп. подкрылки",
+      "order": 8,
+      "imgs": [],
+      "desc": "Комплект для Monjaro.",
+      "kaspi": "https://kaspi.kz/shop/p/i-dop-podkrylki-geely-monjaro-137228346/?m=30090572",
+      "stock": null,
+      "id": 27,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108045/%D0%91%D1%80%D1%8B%D0%B7%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D0%9C%D0%BE%D0%BD%D0%B6%D0%B0%D1%80%D0%BE_xcxy3k.png",
+      "price": 5000,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Брызговики",
+      "order": 6,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108045/%D0%91%D1%80%D1%8B%D0%B7%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D0%9C%D0%BE%D0%BD%D0%B6%D0%B0%D1%80%D0%BE_xcxy3k.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108029/%D0%91%D1%80%D1%8B%D0%B7%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D0%9C%D0%BE%D0%BD%D0%B6%D0%B0%D1%80%D0%BE_2_vamjor.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/geely-komplekt-dlja-geely-monjaro-2023-2024-134049613/?m=30090572"
+      "desc": "Комплект брызговиков для Monjaro.",
+      "kaspi": "https://kaspi.kz/shop/p/geely-komplekt-dlja-geely-monjaro-2023-2024-134049613/?m=30090572",
+      "stock": null,
+      "id": 28,
+      "sku": "-"
     },
     {
-      "id": 29,
-      "name": "Органайзер в багажник",
-      "desc": "Перегородки в нишу багажника для Monjaro.",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183263/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%BC%D0%BE%D0%BD%D1%8D%D0%B0%D1%80%D0%BE_eqlmac.png",
       "price": 10800,
-      "stock": null,
       "models": [
         "Monjaro"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183263/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%BC%D0%BE%D0%BD%D1%8D%D0%B0%D1%80%D0%BE_eqlmac.png",
+      "name": "Органайзер в багажник",
+      "order": 21,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183263/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%BC%D0%BE%D0%BD%D1%8D%D0%B0%D1%80%D0%BE_eqlmac.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108051/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%9C_2_va2qr0.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108044/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%9C_3_aloez2.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/organaizer-v-bagazhnik-geely-monjaro-128330161/?m=30090572"
+      "desc": "Перегородки в нишу багажника для Monjaro.",
+      "kaspi": "https://kaspi.kz/shop/p/organaizer-v-bagazhnik-geely-monjaro-128330161/?m=30090572",
+      "stock": null,
+      "id": 29,
+      "sku": "-"
     },
     {
-      "id": 30,
-      "name": "Органайзер в подлокотник",
-      "desc": "Вставка в подлокотник для Monjaro.",
-      "price": 4500,
-      "stock": null,
-      "models": [
-        "Monjaro"
-      ],
-      "sku": "-",
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183265/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%BF%D0%BE%D0%B4%D0%BB%D0%BE%D0%BA_%D0%9C_bu6xw7.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/organaizer-v-podlokotnik-geely-monjaro-129664397/?m=30090572"
-    },
-    {
-      "id": 31,
-      "name": "Коврики в салон Delform",
-      "desc": "Премиальные коврики для Monjaro.",
-      "price": 42000,
-      "stock": null,
+      "price": 4500,
       "models": [
         "Monjaro"
       ],
-      "sku": "-",
+      "name": "Органайзер в подлокотник",
+      "order": 22,
+      "imgs": [],
+      "desc": "Вставка в подлокотник для Monjaro.",
+      "kaspi": "https://kaspi.kz/shop/p/organaizer-v-podlokotnik-geely-monjaro-129664397/?m=30090572",
+      "stock": null,
+      "id": 30,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%9A%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8_%D0%94%D0%B5%D0%BB%D1%8C_n6ajdj.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/delform-evs-0504-geely-monjaro-2021-2025-chernyi-114700895/?m=30090572"
-    },
-    {
-      "id": 32,
-      "name": "Ветровики (чёрные) 6 фрагментов",
-      "desc": "Дефлекторы окон чёрные для Monjaro.",
-      "price": 20000,
-      "stock": null,
+      "price": 42000,
       "models": [
         "Monjaro"
       ],
-      "sku": "-",
+      "name": "Коврики в салон Delform",
+      "order": 5,
+      "imgs": [],
+      "desc": "Премиальные коврики для Monjaro.",
+      "kaspi": "https://kaspi.kz/shop/p/delform-evs-0504-geely-monjaro-2021-2025-chernyi-114700895/?m=30090572",
+      "stock": null,
+      "id": 31,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183045/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_mm7wpk.png",
+      "price": 20000,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Ветровики (чёрные) 6 фрагментов",
+      "order": 23,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183045/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_mm7wpk.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183045/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D1%87%D1%91%D1%80%D0%BD%D1%8B%D0%B5_2_sguhaz.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/deflektory-vetroviki-dlja-geely-monjaro-134048883/?m=30090572"
+      "desc": "Дефлекторы окон чёрные для Monjaro.",
+      "kaspi": "https://kaspi.kz/shop/p/deflektory-vetroviki-dlja-geely-monjaro-134048883/?m=30090572",
+      "stock": null,
+      "id": 32,
+      "sku": "-"
     },
     {
-      "id": 33,
-      "name": "Ветровики (серебристые) 6 фрагментов",
-      "desc": "Дефлекторы окон серебристые для Monjaro.",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183045/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE_vdfdmi.png",
       "price": 22500,
-      "stock": null,
       "models": [
         "Monjaro"
       ],
-      "sku": "-",
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183045/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE_vdfdmi.png",
+      "name": "Ветровики (серебристые) 6 фрагментов",
+      "order": 24,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183045/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE_vdfdmi.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183045/%D0%92%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE_2_eytfqz.png"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/deflektory-vetroviki-dlja-geely-monjaro-134048741/?m=30090572"
+      "desc": "Дефлекторы окон серебристые для Monjaro.",
+      "kaspi": "https://kaspi.kz/shop/p/deflektory-vetroviki-dlja-geely-monjaro-134048741/?m=30090572",
+      "stock": null,
+      "id": 33,
+      "sku": "-"
     },
     {
-      "id": 34,
-      "name": "Доп. подкрылки Geely Monjaro",
-      "desc": "Дополнительные подкрылки для Monjaro.",
-      "price": 7400,
-      "stock": null,
-      "models": [
-        "Monjaro"
-      ],
-      "sku": "-",
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758182325/%D0%94%D0%BE%D0%BF_%D0%BF%D0%BE%D0%B4%D0%BA%D1%80%D1%8B%D0%BB%D0%BA%D0%B8_M_jnyena.png",
-      "imgs": [],
-      "kaspi": "https://kaspi.kz/shop/p/geely-zadnie-dlja-geely-monjaro-2025-2024-138367920/?m=30090572"
-    },
-    {
-      "id": 35,
-      "name": "Пороги на штатные места",
-      "desc": "Пороги на штатные места для Monjaro.",
-      "price": 90000,
-      "stock": null,
+      "price": 7400,
       "models": [
         "Monjaro"
       ],
-      "sku": "-",
+      "name": "Доп. подкрылки Geely Monjaro",
+      "order": 7,
+      "imgs": [],
+      "desc": "Дополнительные подкрылки для Monjaro.",
+      "kaspi": "https://kaspi.kz/shop/p/geely-zadnie-dlja-geely-monjaro-2025-2024-138367920/?m=30090572",
+      "stock": null,
+      "id": 34,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183044/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_sewsuy.png",
+      "price": 90000,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Пороги на штатные места",
+      "order": 4,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758183044/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_sewsuy.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108032/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%9C%D0%BE%D0%BD%D0%B6%D0%B0%D1%80%D0%BE_2_ei6ti4.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108032/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%9C%D0%BE%D0%BD%D0%B6%D0%B0%D1%80%D0%BE_3_p2kfce.png"
       ],
-      "kaspi": ""
+      "desc": "Пороги на штатные места для Monjaro.",
+      "kaspi": "",
+      "stock": null,
+      "id": 35,
+      "sku": "-"
     }
   ]
 }
