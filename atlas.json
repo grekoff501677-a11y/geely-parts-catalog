@@ -1,6 +1,38 @@
 {
   "items": [
     {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543471/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_syvlx6.png",
+      "price": 10199,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Защитная накладка дерево",
+      "order": 31,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543462/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_2_b9ayhi.png"
+      ],
+      "desc": "Защитная накладка на центральную консоль",
+      "kaspi": "https://kaspi.kz/shop/p/geely-117237-dlja-geely-atlas-2023-2026-korichnevyi-156898917/",
+      "id": 27,
+      "sku": "117237"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543468/%D0%BA%D0%B0%D1%80%D0%B1%D0%BE%D0%BD_jahch0.png",
+      "price": 10200,
+      "models": [
+        "Atlas"
+      ],
+      "name": "Защитная накладка (Карбон)",
+      "order": 30,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543460/%D0%BA%D0%B0%D1%80%D0%B1%D0%BE%D0%BD_2_moypze.png"
+      ],
+      "desc": "Стильная накладка на центральную консоль",
+      "kaspi": "https://kaspi.kz/shop/p/geely-117237-dlja-geely-atlas-2023-2026-chernyi-156899007/",
+      "id": 26,
+      "sku": "117237"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758016501/%D1%88%D1%82%D0%BE%D1%80%D0%BA%D0%B0_aeordw.png",
       "price": 30000,
       "models": [
