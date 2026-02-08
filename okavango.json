@@ -1,6 +1,36 @@
 {
   "items": [
     {
+      "price": 8900,
+      "models": [
+        "Okavango"
+      ],
+      "name": "Свечи зажигания (оригинал) 2036014400",
+      "order": 50,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543470/%D0%A1%D0%B2%D0%B5%D1%87%D0%B8_2036014400_xorxpx.png"
+      ],
+      "desc": "Оригинальные свечи зажигания GEELY (Torch) 2036014400",
+      "kaspi": "https://kaspi.kz/shop/p/svecha-zazhiganija-geely-2036014400-157133363/",
+      "id": 50,
+      "sku": "2036014400"
+    },
+    {
+      "price": 9300,
+      "models": [
+        "Okavango"
+      ],
+      "name": "Воздушный фильтр (оригинал) 2032053900",
+      "order": 40,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543464/%D0%92%D0%BE%D0%B7%D0%B4%D1%83%D1%85_2032053900_idi6zb.png"
+      ],
+      "desc": "Оригинальный воздушный фильтр GEELY (Hengbo) 2032053900",
+      "kaspi": "https://kaspi.kz/shop/p/geely-vozdushnyi-fil-tr-2032053900-156909291/",
+      "id": 45,
+      "sku": "2032053900"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108038/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3_%D0%9E_iniguc.png",
       "price": 50000,
       "models": [
@@ -263,39 +293,6 @@
       "kaspi": "https://kaspi.kz/shop/p/dopolnitel-nye-podkrylki-1001003004-dlja-geely-okavango-2023-2024-131937061/?m=30090572",
       "stock": null,
       "id": 41,
-      "sku": "-"
-    },
-    {
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%9A%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8_%D0%94%D0%B5%D0%BB%D1%8C_n6ajdj.png",
-      "price": 45000,
-      "models": [
-        "Okavango"
-      ],
-      "name": "Коврики в салон Delform",
-      "order": 7,
-      "imgs": [],
-      "desc": "Премиальные коврики для Okavango.",
-      "kaspi": "https://kaspi.kz/shop/p/kovriki-poliki-delform-evs-0508-dlja-geely-okavango-143597260/?m=30090572",
-      "stock": null,
-      "id": 42,
-      "sku": "-"
-    },
-    {
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108038/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%9E_azwtfk.png",
-      "price": 90000,
-      "models": [
-        "Okavango"
-      ],
-      "name": "Пороги на штатные места",
-      "order": 8,
-      "imgs": [
-        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108038/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%9E_azwtfk.png",
-        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108045/%D0%9F%D0%BE%D1%80%D0%BE%D0%B3%D0%B8_%D0%9E_2_dbwg40.png"
-      ],
-      "desc": "Пороги на штатные места для Okavango.",
-      "kaspi": "https://kaspi.kz/shop/p/geely-009-25784-geely-okavango-2023-2024-136993706/?m=30090572",
-      "stock": null,
-      "id": 43,
       "sku": "-"
     },
     {
