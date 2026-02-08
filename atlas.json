@@ -1,14 +1,92 @@
 {
   "items": [
     {
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543471/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_syvlx6.png",
-      "price": 10199,
+      "price": 8500,
+      "models": [
+        "Atlas"
+      ],
+      "name": "Салонный фильтр MicronAir",
+      "order": 36,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543460/%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D0%BD_j8chud.png"
+      ],
+      "desc": "Максимальная защита, благодаря противовирусной пропитке и угольной крошке",
+      "kaspi": "https://kaspi.kz/shop/p/freudenberg-salonnyi-fil-tr-bl376-156903834/",
+      "id": 32,
+      "sku": "BL376"
+    },
+    {
+      "price": 5200,
+      "models": [
+        "Atlas"
+      ],
+      "name": "Чехлы на дверные ручки",
+      "order": 35,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543467/%D1%80%D1%83%D1%87%D0%BA%D0%B8_fer5wn.png",
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543457/%D1%80%D1%83%D1%87%D0%BA%D0%B8_2_w703i6.png"
+      ],
+      "desc": "Защитные чехлы на дверные ручки (внутренние)",
+      "kaspi": "https://kaspi.kz/shop/p/geely-233174-dlja-geely-atlas-2023-2026-seryi-156903256/",
+      "id": 31,
+      "sku": "233174"
+    },
+    {
+      "price": 6700,
+      "models": [
+        "Atlas"
+      ],
+      "name": "Накладки на пульт стеклоподъёмников (Дерево)",
+      "order": 34,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543461/%D0%BD%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8_%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE_hfdgsp.png",
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543457/%D1%80%D1%83%D1%87%D0%BA%D0%B8_2_w703i6.png"
+      ],
+      "desc": "Защитные накладки на пульты управления стеклоподъёмников (4 шт)",
+      "kaspi": "https://kaspi.kz/shop/p/geely-117233-dlja-geely-atlas-2023-2026-korichnevyi-156899630/",
+      "id": 30,
+      "sku": "117233"
+    },
+    {
+      "price": 8900,
+      "models": [
+        "Atlas"
+      ],
+      "name": "Свечи зажигания (оригинал) 2036014400",
+      "order": 33,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543470/%D0%A1%D0%B2%D0%B5%D1%87%D0%B8_2036014400_xorxpx.png"
+      ],
+      "desc": "Оригинальный свечи зажигания GEELY (Torch) 2036014400",
+      "kaspi": "https://kaspi.kz/shop/p/svecha-zazhiganija-geely-2036014400-157133363/",
+      "id": 29,
+      "sku": "2036014400"
+    },
+    {
+      "price": 9300,
+      "models": [
+        "Atlas"
+      ],
+      "name": "Воздушный фильтр (оригинал) 2032061800",
+      "order": 32,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543464/%D0%92%D0%BE%D0%B7%D0%B4%D1%83%D1%85_2032061800_i2v2ss.png"
+      ],
+      "desc": "Оригинальный воздушный фильтр GEELY (Hengbo)",
+      "kaspi": "https://kaspi.kz/shop/p/geely-vozdushnyi-fil-tr-2032061800-156907831/",
+      "id": 28,
+      "sku": "2032061800"
+    },
+    {
+      "img": "",
+      "price": 10200,
       "models": [
         "Monjaro"
       ],
-      "name": "Защитная накладка дерево",
+      "name": "Защитная накладка (Дерево)",
       "order": 31,
       "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543471/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_syvlx6.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543462/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_2_b9ayhi.png"
       ],
       "desc": "Защитная накладка на центральную консоль",
@@ -17,7 +95,7 @@
       "sku": "117237"
     },
     {
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543468/%D0%BA%D0%B0%D1%80%D0%B1%D0%BE%D0%BD_jahch0.png",
+      "img": "",
       "price": 10200,
       "models": [
         "Atlas"
@@ -25,6 +103,7 @@
       "name": "Защитная накладка (Карбон)",
       "order": 30,
       "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543468/%D0%BA%D0%B0%D1%80%D0%B1%D0%BE%D0%BD_jahch0.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543460/%D0%BA%D0%B0%D1%80%D0%B1%D0%BE%D0%BD_2_moypze.png"
       ],
       "desc": "Стильная накладка на центральную консоль",
