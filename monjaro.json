@@ -1,6 +1,80 @@
 {
   "items": [
     {
+      "order": 36,
+      "sku": "777248763",
+      "id": 30,
+      "name": "Защитная накладка на крышку багажника",
+      "price": 5200,
+      "models": [
+        "Monjaro"
+      ],
+      "kaspi": "https://kaspi.kz/shop/p/kovrik-zaschita-na-kryshku-bagazhnika-geely-monjaro-146694940/",
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770545257/%D0%BD%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%BA%D1%80%D1%8B%D1%88%D0%BA%D1%83_%D0%9C_yflgtl.png"
+      ]
+    },
+    {
+      "price": 13500,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Накидка на приборную панель",
+      "order": 34,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770545250/%D1%82%D0%BE%D1%80%D0%BF%D0%B5%D0%B4%D0%B0_%D0%9C_ibubri.png"
+      ],
+      "desc": "Высококачественная накидка с перфорацией (кожа из микрофибры) ",
+      "kaspi": "https://kaspi.kz/shop/p/nakidka-na-pribornuju-panel-geely-monjaro-s-proektsiei--146693806/",
+      "id": 29,
+      "sku": "125247247"
+    },
+    {
+      "price": 8500,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Салонный фильтр MicronAir",
+      "order": 33,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543460/%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D0%BD_j8chud.png"
+      ],
+      "desc": "Максимальная защита, благодаря противовирусной пропитке и угольной крошке",
+      "kaspi": "https://kaspi.kz/shop/p/freudenberg-salonnyi-fil-tr-bl376-156903834/",
+      "id": 28,
+      "sku": "BL376"
+    },
+    {
+      "price": 8900,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Свечи зажигания (оригинал) 2036014400",
+      "order": 31,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543470/%D0%A1%D0%B2%D0%B5%D1%87%D0%B8_2036014400_xorxpx.png"
+      ],
+      "desc": "Оригинальные свечи зажигания GEELY (Torch) 2036014400",
+      "kaspi": "https://kaspi.kz/shop/p/svecha-zazhiganija-geely-2036014400-157133363/",
+      "id": 27,
+      "sku": "-"
+    },
+    {
+      "price": 9300,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Воздушный фильтр (оригинал) 2032061800",
+      "order": 30,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543464/%D0%92%D0%BE%D0%B7%D0%B4%D1%83%D1%85_2032061800_i2v2ss.png"
+      ],
+      "desc": "Оригинальный воздушный фильтр GEELY (Hengbo) 2032061800",
+      "kaspi": "https://kaspi.kz/shop/p/geely-vozdushnyi-fil-tr-2032061800-156907831/",
+      "id": 26,
+      "sku": "2032061800"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80_e43t7h.png",
       "price": 42000,
       "models": [
@@ -349,21 +423,6 @@
       "kaspi": "https://kaspi.kz/shop/p/organaizer-v-podlokotnik-geely-monjaro-129664397/?m=30090572",
       "stock": null,
       "id": 30,
-      "sku": "-"
-    },
-    {
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%9A%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8_%D0%94%D0%B5%D0%BB%D1%8C_n6ajdj.png",
-      "price": 42000,
-      "models": [
-        "Monjaro"
-      ],
-      "name": "Коврики в салон Delform",
-      "order": 5,
-      "imgs": [],
-      "desc": "Премиальные коврики для Monjaro.",
-      "kaspi": "https://kaspi.kz/shop/p/delform-evs-0504-geely-monjaro-2021-2025-chernyi-114700895/?m=30090572",
-      "stock": null,
-      "id": 31,
       "sku": "-"
     },
     {
