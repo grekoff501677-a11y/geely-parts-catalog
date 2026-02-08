@@ -1,6 +1,34 @@
 {
   "items": [
     {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770545250/%D0%BD%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%BA%D1%80%D1%8B%D1%88%D0%BA%D1%83_%D0%90_kmk6yy.png",
+      "price": 5200,
+      "models": [
+        "Atlas"
+      ],
+      "name": "Защитная накладка на крышку багажника",
+      "order": 41,
+      "desc": "",
+      "kaspi": "https://kaspi.kz/shop/p/kovrik-zaschita-na-kryshku-bagazhnika-geely-atlas-146695049/",
+      "id": 34,
+      "sku": "641640246"
+    },
+    {
+      "price": 13499,
+      "models": [
+        "Atlas"
+      ],
+      "name": "Накидка на приборную панель (с проекцией)",
+      "order": 38,
+      "imgs": [
+        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770545249/%D1%82%D0%BE%D1%80%D0%BF%D0%B5%D0%B4%D0%B0_%D0%90_fdppnf.png"
+      ],
+      "desc": "Высококачественная накидка с перфорацией (кожа из микрофибры)",
+      "kaspi": "https://kaspi.kz/shop/p/nakidka-na-pribornuju-panel-geely-atlas-s-proektsiei--146694146/",
+      "id": 33,
+      "sku": "4361361461"
+    },
+    {
       "price": 8500,
       "models": [
         "Atlas"
