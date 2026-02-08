@@ -1,13 +1,25 @@
 {
   "items": [
     {
+      "order": 3,
+      "sku": "049.105",
+      "id": 100,
+      "name": "Газовые упоры капота",
+      "price": 18000,
+      "models": [
+        "Atlas"
+      ],
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032746/%D0%A3%D0%BF%D0%BE%D1%80%D1%8B_%D0%90%D1%82%D0%BB%D0%B0%D1%81_uldpxd.png",
+      "kaspi": "https://kaspi.kz/shop/p/geely-049-105-upor-kapota-dlja-geely-atlas-2023-2024-chernyi-130210952/"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770545250/%D0%BD%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%BA%D1%80%D1%8B%D1%88%D0%BA%D1%83_%D0%90_kmk6yy.png",
       "price": 5200,
       "models": [
         "Atlas"
       ],
       "name": "Защитная накладка на крышку багажника",
-      "order": 41,
+      "order": 11,
       "desc": "",
       "kaspi": "https://kaspi.kz/shop/p/kovrik-zaschita-na-kryshku-bagazhnika-geely-atlas-146695049/",
       "id": 34,
@@ -19,7 +31,7 @@
         "Atlas"
       ],
       "name": "Накидка на приборную панель (с проекцией)",
-      "order": 38,
+      "order": 10,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770545249/%D1%82%D0%BE%D1%80%D0%BF%D0%B5%D0%B4%D0%B0_%D0%90_fdppnf.png"
       ],
@@ -34,7 +46,7 @@
         "Atlas"
       ],
       "name": "Салонный фильтр MicronAir",
-      "order": 36,
+      "order": 34,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543460/%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D0%BD_j8chud.png"
       ],
@@ -49,7 +61,7 @@
         "Atlas"
       ],
       "name": "Чехлы на дверные ручки",
-      "order": 35,
+      "order": 12,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543467/%D1%80%D1%83%D1%87%D0%BA%D0%B8_fer5wn.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543457/%D1%80%D1%83%D1%87%D0%BA%D0%B8_2_w703i6.png"
@@ -65,7 +77,7 @@
         "Atlas"
       ],
       "name": "Накладки на пульт стеклоподъёмников (Дерево)",
-      "order": 34,
+      "order": 9,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543461/%D0%BD%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8_%D1%81%D1%82%D0%B5%D0%BA%D0%BB%D0%BE_hfdgsp.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543457/%D1%80%D1%83%D1%87%D0%BA%D0%B8_2_w703i6.png"
@@ -81,7 +93,7 @@
         "Atlas"
       ],
       "name": "Свечи зажигания (оригинал) 2036014400",
-      "order": 33,
+      "order": 28,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543470/%D0%A1%D0%B2%D0%B5%D1%87%D0%B8_2036014400_xorxpx.png"
       ],
@@ -96,7 +108,7 @@
         "Atlas"
       ],
       "name": "Воздушный фильтр (оригинал) 2032061800",
-      "order": 32,
+      "order": 29,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543464/%D0%92%D0%BE%D0%B7%D0%B4%D1%83%D1%85_2032061800_i2v2ss.png"
       ],
@@ -112,7 +124,7 @@
         "Monjaro"
       ],
       "name": "Защитная накладка (Дерево)",
-      "order": 31,
+      "order": 6,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543471/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_syvlx6.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543462/%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_2_b9ayhi.png"
@@ -129,7 +141,7 @@
         "Atlas"
       ],
       "name": "Защитная накладка (Карбон)",
-      "order": 30,
+      "order": 5,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543468/%D0%BA%D0%B0%D1%80%D0%B1%D0%BE%D0%BD_jahch0.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543460/%D0%BA%D0%B0%D1%80%D0%B1%D0%BE%D0%BD_2_moypze.png"
@@ -147,7 +159,7 @@
         "Monjaro"
       ],
       "name": "Шторка багажника",
-      "order": 1,
+      "order": 2,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758016501/%D1%88%D1%82%D0%BE%D1%80%D0%BA%D0%B0_aeordw.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108025/%D0%A8%D1%82%D0%BE%D1%80%D0%BA%D0%B0_2_%D0%B1%D0%B5%D0%B7_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8_kzqjxd.png",
@@ -161,12 +173,12 @@
     },
     {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80_e43t7h.png",
-      "price": 46000,
+      "price": 42000,
       "models": [
         "Atlas"
       ],
       "name": "Штатный видеорегистратор 4К",
-      "order": 2,
+      "order": 1,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80_e43t7h.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%BE%D1%80_2_rpik6h.png"
@@ -184,7 +196,7 @@
         "Atlas"
       ],
       "name": "Защита (коврик) для центральной консоли",
-      "order": 3,
+      "order": 4,
       "imgs": [],
       "desc": "Антискользящий коврик в центральную консоль.",
       "kaspi": "https://kaspi.kz/shop/p/zaschita-tsentral-noi-konsoli-dlja-geely-atlas-chernyi-134352490/?m=30090572",
@@ -199,7 +211,7 @@
         "Atlas"
       ],
       "name": "Коврики в ниши салона",
-      "order": 4,
+      "order": 7,
       "imgs": [],
       "desc": "Набор вставок в ниши.",
       "kaspi": "https://kaspi.kz/shop/p/kovriki-v-nishi-salona-geely-atlas-svetonakopitel-nye--140154131/?m=30090572",
@@ -214,7 +226,7 @@
         "Atlas"
       ],
       "name": "Защита (коврики) багажника Премиум",
-      "order": 5,
+      "order": 13,
       "imgs": [],
       "desc": "Ковёр/поддон багажника.",
       "kaspi": "https://kaspi.kz/shop/p/zaschita-bagazhnika-dlja-geely-atlas-chernyi-128136609/?m=30090572",
@@ -245,7 +257,7 @@
         "Monjaro"
       ],
       "name": "Доп. подсветка багажника",
-      "order": 7,
+      "order": 15,
       "imgs": [],
       "desc": "Модульная подсветка багажника.",
       "kaspi": "https://kaspi.kz/shop/p/dop-podsvetka-bagazhnika-dlja-geely-atlas-monjaro-139721288/?m=30090572",
@@ -260,7 +272,7 @@
         "Atlas"
       ],
       "name": "Комплект: брызговики + доп. подкрылки",
-      "order": 8,
+      "order": 16,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032892/%D0%91%D1%80%D1%8B%D0%B7_%D0%BF%D0%BE%D0%B4%D0%BA%D1%80%D1%8B%D0%BB%D0%BA%D0%B8_uwarob.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032919/%D0%91%D1%80%D1%8B%D0%B7%D0%B3_%D0%B8_%D0%BF%D0%BE%D0%B4%D0%BA%D1%80%D1%8B%D0%BB%D0%BA%D0%B8_%D0%90_fmrn3z.png"
@@ -278,7 +290,7 @@
         "Atlas"
       ],
       "name": "Брызговики",
-      "order": 9,
+      "order": 17,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032737/%D0%91%D1%80%D1%8B%D0%B7%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_yzzuih.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032740/%D0%91%D1%80%D1%8B%D0%B7%D0%B3_2_qditkf.png"
@@ -296,7 +308,7 @@
         "Atlas"
       ],
       "name": "Доп. подкрылки",
-      "order": 10,
+      "order": 18,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032735/%D0%9F%D0%BE%D0%B4%D0%BA%D1%80%D1%8B%D0%BB%D0%BA%D0%B8_ts0u26.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032740/%D0%9F%D0%BE%D0%B4%D0%BA%D1%80%D1%8B%D0%BB%D0%BA%D0%B8_2_wqyawb.png"
@@ -314,7 +326,7 @@
         "Atlas"
       ],
       "name": "Органайзер в багажник",
-      "order": 11,
+      "order": 19,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758030524/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%90%D1%82%D0%BB%D0%B0%D1%81_asrodu.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758030534/%D0%9E%D1%80%D0%B3%D0%B0%D0%BD%D0%B0%D0%B9%D0%B7%D0%B5%D1%80_%D0%90%D1%82%D0%BB%D0%B0%D1%81_2_1_ipa12l.png",
@@ -333,31 +345,13 @@
         "Atlas"
       ],
       "name": "Органайзер в подлокотник",
-      "order": 12,
+      "order": 20,
       "imgs": [],
       "desc": "Вставка в подлокотник.",
       "kaspi": "https://kaspi.kz/shop/p/organaizer-v-podlokotnik-geely-atlas-128027820/?m=30090572",
       "stock": 5,
       "id": 10,
       "sku": "-"
-    },
-    {
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%9A%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8_%D0%94%D0%B5%D0%BB%D1%8C_n6ajdj.png",
-      "price": 45000,
-      "models": [
-        "Atlas"
-      ],
-      "name": "Коврики (полики) Delform в салон",
-      "order": 13,
-      "imgs": [
-        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045899/%D0%9A%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8_%D0%94%D0%B5%D0%BB%D1%8C_n6ajdj.png",
-        "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758046154/%D0%9A%D0%BE%D0%B2%D1%80%D0%B8%D0%BA%D0%B8_%D0%94%D0%B5%D0%BB%D1%8C_2_i5aewd.png"
-      ],
-      "desc": "Премиальные коврики в салон.",
-      "kaspi": "https://kaspi.kz/shop/p/kovriki-poliki-delform-evs-0507-dlja-geely-atlas-143597567/?m=30090572",
-      "stock": 2,
-      "id": 8,
-      "sku": "EVS-0507"
     },
     {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
@@ -369,7 +363,7 @@
         "Coolray"
       ],
       "name": "Футляр для очков",
-      "order": 14,
+      "order": 21,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108433/%D0%A8%D1%82%D0%BE%D1%80%D0%BA%D0%B0_2_%D0%B1%D0%B5%D0%B7_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8_1_ibj32d.png"
@@ -390,7 +384,7 @@
         "Coolray"
       ],
       "name": "Бронечехол",
-      "order": 15,
+      "order": 22,
       "imgs": [],
       "desc": "Защитный чехол.",
       "kaspi": "https://kaspi.kz/shop/p/chehol-bronechehol-dlja-kljucha-geely-142038818/?m=30090572",
@@ -408,7 +402,7 @@
         "Coolray"
       ],
       "name": "Пластиковый чехол",
-      "order": 16,
+      "order": 23,
       "imgs": [],
       "desc": "Прочный пластиковый чехол.",
       "kaspi": "https://kaspi.kz/shop/p/chehol-dlja-kljucha-geely-128136682/?m=30090572",
@@ -426,7 +420,7 @@
         "Coolray"
       ],
       "name": "Оплётка из кожи Чёрная",
-      "order": 17,
+      "order": 24,
       "imgs": [],
       "desc": "Кожаная оплётка руля (чёрная).",
       "kaspi": "https://kaspi.kz/shop/p/opljotka-dlja-rulja-geely-chjornaja-124479590/?m=30090572",
@@ -444,7 +438,7 @@
         "Coolray"
       ],
       "name": "Оплётка из кожи Чёрная, красный шов",
-      "order": 18,
+      "order": 25,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108056/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_thrpld.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%BA%D1%80%D0%B0%D1%81%D0%BD%D0%B0%D1%8F_2_rbg5uv.png"
@@ -465,7 +459,7 @@
         "Coolray"
       ],
       "name": "Оплётка из кожи Чёрная, зелёная",
-      "order": 19,
+      "order": 26,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108060/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_qchuft.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108068/%D0%9E%D0%BF%D0%BB%D1%91%D1%82%D0%BA%D0%B0_%D0%B7%D0%B5%D0%BB%D0%B5%D0%BD%D0%B0%D1%8F_2_zuoucw.png"
@@ -486,7 +480,7 @@
         "Coolray"
       ],
       "name": "Подушка трансформер",
-      "order": 20,
+      "order": 27,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108037/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_2_otxlwg.png"
@@ -506,7 +500,7 @@
         "Okavango"
       ],
       "name": "Масляный фильтр (оригинал) Geely",
-      "order": 21,
+      "order": 30,
       "imgs": [],
       "desc": "Оригинальный масляный фильтр.",
       "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-1056025900-dlja-geely-atlas-geely-monjaro-geely-okavango-142038741/?m=30090572",
@@ -523,7 +517,7 @@
         "Okavango"
       ],
       "name": "Масляный фильтр (оригинал) Mahle",
-      "order": 22,
+      "order": 33,
       "imgs": [],
       "desc": "Аналог оригинала Mahle.",
       "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-mahle-ox-1206d-dlja-geely-atlas-geely-monjaro-geely-okavango-142761858/?m=30090572",
@@ -539,7 +533,7 @@
         "Monjaro"
       ],
       "name": "Воздушный фильтр (оригинал) Mann",
-      "order": 23,
+      "order": 31,
       "imgs": [],
       "desc": "Воздушный фильтр MANN C25082.",
       "kaspi": "https://kaspi.kz/shop/p/vozdushnyi-fil-tr-mann-c25082-dlja-geely-monjaro-geely-atlas-144172093/?m=30090572",
@@ -555,7 +549,7 @@
         "Monjaro"
       ],
       "name": "Салонный фильтр (оригинал) Mann",
-      "order": 24,
+      "order": 32,
       "imgs": [],
       "desc": "Салонный фильтр MANN CUK 29010M.",
       "kaspi": "https://kaspi.kz/shop/p/salonnyi-fil-tr-mann-cuk29010m-dlja-geely-monjaro-geely-atlas-144174075/?m=30090572",
@@ -571,7 +565,7 @@
         "Monjaro"
       ],
       "name": "Топливный фильтр (оригинал) Geely",
-      "order": 25,
+      "order": 35,
       "imgs": [],
       "desc": "Оригинальный топливный фильтр.",
       "kaspi": "https://kaspi.kz/shop/p/toplivnyi-fil-tr-2013037300-dlja-geely-atlas-geely-monjaro-142038517/?m=30090572",
