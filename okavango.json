@@ -1,12 +1,39 @@
 {
   "items": [
     {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770632979/%D1%81%D0%B0%D0%BB%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_mahle_jnivsh.png",
+      "price": 6500,
+      "models": [
+        "Okavango"
+      ],
+      "name": "Салонный фильтр MAHLE LAK1586",
+      "order": 22,
+      "imgs": [],
+      "desc": "Оригинальный салонный фильтр Mahle для Geely Okavango",
+      "kaspi": "https://kaspi.kz/shop/p/mahle-salonnyi-fil-tr-lak-1586-132885262/?m=30090572&isPromoted=true",
+      "id": 56,
+      "sku": "LAK1586"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770632978/%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85_%D0%9C%D0%B0%D0%BB%D0%B5_%D0%9E_paeoyr.png",
+      "price": 6500,
+      "models": [
+        "Okavango"
+      ],
+      "name": "Воздушный фильтр MAHLE LX 5198",
+      "order": 21,
+      "desc": "Оригинальный воздушный фильтр Mahle для Geely Okavango",
+      "kaspi": "https://kaspi.kz/shop/p/mahle-vozdushnyi-fil-tr-lx-5198-132885240/?m=30090572&isPromoted=true",
+      "id": 54,
+      "sku": "LX 5198"
+    },
+    {
       "price": 8900,
       "models": [
         "Okavango"
       ],
       "name": "Свечи зажигания (оригинал) 2036014400",
-      "order": 50,
+      "order": 14,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543470/%D0%A1%D0%B2%D0%B5%D1%87%D0%B8_2036014400_xorxpx.png"
       ],
@@ -21,7 +48,7 @@
         "Okavango"
       ],
       "name": "Воздушный фильтр (оригинал) 2032053900",
-      "order": 40,
+      "order": 18,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543464/%D0%92%D0%BE%D0%B7%D0%B4%D1%83%D1%85_2032053900_idi6zb.png"
       ],
@@ -55,7 +82,7 @@
         "Coolray"
       ],
       "name": "Футляр для очков",
-      "order": 9,
+      "order": 7,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108058/%D0%9E%D1%87%D1%91%D1%87%D0%BD%D0%B8%D0%BA_1_z9zutr.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108433/%D0%A8%D1%82%D0%BE%D1%80%D0%BA%D0%B0_2_%D0%B1%D0%B5%D0%B7_%D0%BB%D0%B8%D0%BD%D0%B8%D0%B8_1_ibj32d.png"
@@ -76,7 +103,7 @@
         "Coolray"
       ],
       "name": "Бронечехол",
-      "order": 14,
+      "order": 8,
       "imgs": [],
       "desc": "Защитный чехол.",
       "kaspi": "https://kaspi.kz/shop/p/chehol-bronechehol-dlja-kljucha-geely-142038818/?m=30090572",
@@ -94,7 +121,7 @@
         "Coolray"
       ],
       "name": "Пластиковый чехол",
-      "order": 15,
+      "order": 9,
       "imgs": [],
       "desc": "Прочный пластиковый чехол.",
       "kaspi": "https://kaspi.kz/shop/p/chehol-dlja-kljucha-geely-128136682/?m=30090572",
@@ -209,7 +236,7 @@
         "Okavango"
       ],
       "name": "Масляный фильтр (оригинал) Mahle",
-      "order": 17,
+      "order": 20,
       "imgs": [],
       "desc": "Аналог оригинала Mahle.",
       "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-mahle-ox-1206d-dlja-geely-atlas-geely-monjaro-geely-okavango-142761858/?m=30090572",
@@ -257,7 +284,7 @@
         "Okavango"
       ],
       "name": "Брызговики и доп. подкрылки",
-      "order": 4,
+      "order": 6,
       "imgs": [],
       "desc": "Комплект для Okavango.",
       "kaspi": "https://kaspi.kz/shop/p/geely-komplekt-dlja-geely-okavango-2023-2024-131937044/?m=30090572",
@@ -272,7 +299,7 @@
         "Okavango"
       ],
       "name": "Брызговики",
-      "order": 6,
+      "order": 4,
       "imgs": [],
       "desc": "Комплект брызговиков для Okavango.",
       "kaspi": "https://kaspi.kz/shop/p/geely-100103003-dlja-geely-okavango-2023-2024-131848107/?m=30090572",
@@ -302,7 +329,7 @@
         "Okavango"
       ],
       "name": "Воздушный фильтр (оригинал) Mann",
-      "order": 18,
+      "order": 17,
       "imgs": [],
       "desc": "Воздушный фильтр MANN C25082 для Okavango.",
       "kaspi": "https://kaspi.kz/shop/p/vozdushnyi-fil-tr-mann-c30042-dlja-geely-okavango-144173888/?m=30090572",
@@ -317,7 +344,7 @@
         "Okavango"
       ],
       "name": "Салонный фильтр (оригинал) Mann",
-      "order": 19,
+      "order": 18,
       "imgs": [],
       "desc": "Салонный фильтр MANN CUK 29010M для Okavango.",
       "kaspi": "https://kaspi.kz/shop/p/salonnyi-fil-tr-mann-cuk21034-dlja-geely-okavango-144173962/?m=30090572",
@@ -332,7 +359,7 @@
         "Okavango"
       ],
       "name": "Топливный фильтр (оригинал) Geely",
-      "order": 21,
+      "order": 19,
       "imgs": [],
       "desc": "Оригинальный топливный фильтр для Okavango.",
       "kaspi": "https://kaspi.kz/shop/p/toplivnyi-fil-tr-2013021700-dlja-geely-coolray-geely-okavango-142038540/?m=30090572",
