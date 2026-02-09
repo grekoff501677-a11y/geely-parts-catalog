@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770632979/%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85_%D0%9C%D0%B0%D0%BB%D0%B5_%D0%90_gzd2fo.png",
+      "price": 6500,
+      "models": [
+        "Atlas",
+        "Monjaro"
+      ],
+      "name": "Воздушный фильтр MAHLE LX 4821",
+      "order": 33,
+      "desc": "Оригинальный воздушный фильтр MAHLE для Geely Monjar/Atlas",
+      "kaspi": "https://kaspi.kz/shop/p/mahle-vozdushnyi-fil-tr-lx-4821-132966414/?m=30090572&isPromoted=true",
+      "id": 77,
+      "sku": "LX 4821"
+    },
+    {
       "order": 3,
       "sku": "049.105",
       "id": 100,
@@ -46,7 +60,7 @@
         "Atlas"
       ],
       "name": "Салонный фильтр MicronAir",
-      "order": 34,
+      "order": 35,
       "imgs": [],
       "desc": "Максимальная защита, благодаря противовирусной пропитке и угольной крошке",
       "kaspi": "https://kaspi.kz/shop/p/freudenberg-salonnyi-fil-tr-bl376-156903834/",
@@ -504,7 +518,7 @@
         "Okavango"
       ],
       "name": "Масляный фильтр (оригинал) Mahle",
-      "order": 33,
+      "order": 34,
       "imgs": [],
       "desc": "Аналог оригинала Mahle.",
       "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-mahle-ox-1206d-dlja-geely-atlas-geely-monjaro-geely-okavango-142761858/?m=30090572",
@@ -529,17 +543,17 @@
       "sku": "C25082"
     },
     {
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758045900/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D1%81%D0%B0%D0%BB%D0%BE%D0%BD_%D0%90_huw5l2.png",
-      "price": 7800,
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770632979/%D1%81%D0%B0%D0%BB%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_mahle_jnivsh.png",
+      "price": 6500,
       "models": [
         "Atlas",
         "Monjaro"
       ],
-      "name": "Салонный фильтр (оригинал) Mann",
+      "name": "Салонный фильтр MAHLE LAK 1803",
       "order": 32,
       "imgs": [],
-      "desc": "Салонный фильтр MANN CUK 29010M.",
-      "kaspi": "https://kaspi.kz/shop/p/salonnyi-fil-tr-mann-cuk29010m-dlja-geely-monjaro-geely-atlas-144174075/?m=30090572",
+      "desc": "Оригинальный салонный фильтр Mahle для Geely Monjaro/Atlas",
+      "kaspi": "https://kaspi.kz/shop/p/mahle-salonnyi-fil-tr-lak-1803-132885423/?m=30090572&isPromoted=true",
       "stock": 5,
       "id": 24,
       "sku": "CUK29010M"
@@ -552,7 +566,7 @@
         "Monjaro"
       ],
       "name": "Топливный фильтр (оригинал) Geely",
-      "order": 35,
+      "order": 36,
       "imgs": [],
       "desc": "Оригинальный топливный фильтр.",
       "kaspi": "https://kaspi.kz/shop/p/toplivnyi-fil-tr-2013037300-dlja-geely-atlas-geely-monjaro-142038517/?m=30090572",
