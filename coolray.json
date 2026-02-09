@@ -1,7 +1,20 @@
 {
   "items": [
     {
-      "img": "",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770632978/%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85_%D0%9C%D0%B0%D0%BB%D0%B5_%D0%9A_zqerej.png",
+      "price": 6500,
+      "models": [
+        "Coolray"
+      ],
+      "name": "Воздушный фильтр MAHLE LX 5046",
+      "order": 25,
+      "desc": "Оригинальный воздушный фильтр MAHLE для Geely Coolrat",
+      "kaspi": "https://kaspi.kz/shop/p/mahle-vozdushnyi-fil-tr-lx-5046-132966570/?m=30090572&isPromoted=true",
+      "id": 88,
+      "sku": "LX 5046"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770547048/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3_xiwhxj.png",
       "price": 37500,
       "models": [
         "Coolray"
@@ -12,12 +25,12 @@
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770547048/%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE%D1%80%D0%B5%D0%B3_xiwhxj.png"
       ],
       "desc": "Видеорегистратор для базовых комплектаций",
-      "kaspi": "https://kaspi.kz/shop/p/universal-nyi-videoregistrator-dlja-geely-coolray-geely-okavango-142980181/",
+      "kaspi": "https://kaspi.kz/shop/p/universal-nyi-videoregistrator-dlja-geely-coolray-geely-okavango-142980181/?m=30090572&isPromoted=true",
       "id": 75,
       "sku": "858119551"
     },
     {
-      "img": "",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032746/%D0%A3%D0%BF%D0%BE%D1%80%D1%8B_%D0%90%D1%82%D0%BB%D0%B0%D1%81_uldpxd.png",
       "price": 16000,
       "models": [
         "Coolray"
@@ -28,7 +41,7 @@
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758032746/%D0%A3%D0%BF%D0%BE%D1%80%D1%8B_%D0%90%D1%82%D0%BB%D0%B0%D1%81_uldpxd.png"
       ],
       "desc": "Газовые упоры капота на штатные крепления",
-      "kaspi": "https://kaspi.kz/shop/p/3r53252-upor-kapota-dlja-geely-coolray-2023-2025-chernyi-147029061/",
+      "kaspi": "https://kaspi.kz/shop/p/3r53252-upor-kapota-dlja-geely-coolray-2023-2025-chernyi-147029061/?m=30090572&isPromoted=true",
       "id": 74,
       "sku": "926674295"
     },
@@ -41,7 +54,7 @@
       "name": "Свечи зажигания (оригинал) 5511695967",
       "order": 18,
       "desc": "Оригинальные свечи зажигания GEELY (Torch/NGK) 5511695967",
-      "kaspi": "https://kaspi.kz/shop/p/svecha-zazhiganija-geely-5511695967-157133437/",
+      "kaspi": "https://kaspi.kz/shop/p/svecha-zazhiganija-geely-5511695967-157133437/?m=30090572&isPromoted=true",
       "id": 73,
       "sku": "5511695967"
     },
@@ -54,37 +67,39 @@
       "name": "Воздушный фильтр (оригинал) 2032040500",
       "order": 19,
       "desc": "Оригинальный воздушный фильтр GEELY (Hengbo) 2032040500",
-      "kaspi": "https://kaspi.kz/shop/p/geely-vozdushnyi-fil-tr-2032040500-156910104/",
+      "kaspi": "https://kaspi.kz/shop/p/geely-vozdushnyi-fil-tr-2032040500-156910104/?m=30090572&isPromoted=true",
       "id": 72,
       "sku": "2032040500"
     },
     {
-      "order": 6,
-      "sku": "092030609",
-      "id": 71,
-      "name": "Защитная накладка на крышку багажника",
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770545250/%D0%BD%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%BA%D1%80%D1%8B%D1%88%D0%BA%D1%83_%D0%9A_oowrfk.png",
       "price": 5200,
       "models": [
         "Coolray"
       ],
-      "kaspi": "https://kaspi.kz/shop/p/5632516145-dlja-geely-coolray-2023-2025-chernyi-147463439/",
+      "name": "Защитная накладка на крышку багажника",
+      "order": 6,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770545250/%D0%BD%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0_%D0%BD%D0%B0_%D0%BA%D1%80%D1%8B%D1%88%D0%BA%D1%83_%D0%9A_oowrfk.png"
-      ]
+      ],
+      "kaspi": "https://kaspi.kz/shop/p/5632516145-dlja-geely-coolray-2023-2025-chernyi-147463439/",
+      "id": 71,
+      "sku": "092030609"
     },
     {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770546485/%D1%82%D0%BE%D1%80%D0%BF%D0%B5%D0%B4%D0%B0_%D0%9A_lpjrpg.png",
       "price": 13500,
       "models": [
         "Coolray"
       ],
       "name": "Накидка на приборную панель",
-      "order": 8,
+      "order": 5,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770546485/%D1%82%D0%BE%D1%80%D0%BF%D0%B5%D0%B4%D0%B0_%D0%9A_lpjrpg.png"
       ],
       "desc": "Высококачественная накидка с перфорацией (кожа из микрофибры)",
       "kaspi": "https://kaspi.kz/shop/p/15634674287-geely-coolray-2023-2025-chernyi-krasnyi-146871137/",
-      "id": 70,
+      "id": 65,
       "sku": "587483277"
     },
     {
@@ -214,7 +229,7 @@
         "Coolray"
       ],
       "name": "Подушка трансформер",
-      "order": 16,
+      "order": 9,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108042/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B5%D1%80_hjrde1.png",
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108037/%D0%9F%D0%BE%D0%B4%D1%83%D1%88%D0%BA%D0%B0_2_otxlwg.png"
@@ -232,7 +247,7 @@
         "Coolray"
       ],
       "name": "Коврик на центральную консоль",
-      "order": 3,
+      "order": 6,
       "imgs": [],
       "desc": "Антискользящий коврик для Coolray.",
       "kaspi": "https://kaspi.kz/shop/p/4139487289-geely-coolray-2023-2025-chernyi-145986592/?m=30090572",
@@ -247,17 +262,17 @@
         "Coolray"
       ],
       "name": "Защита (коврики) багажника Премиум",
-      "order": 5,
+      "order": 7,
       "imgs": [],
       "desc": "Премиальные коврики в багажник для Coolray.",
-      "kaspi": "https://kaspi.kz/shop/p/zaschita-bagazhnika-geely-534385126-geely-coolray-2023-2024-chernyi-seryi-131891916/?m=30090572",
+      "kaspi": "https://kaspi.kz/shop/p/zaschita-bagazhnika-geely-534385126-geely-coolray-2023-2024-chernyi-seryi-131891916/?m=30090572&isPromoted=true",
       "stock": null,
       "id": 48,
       "sku": "-"
     },
     {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758192212/%D0%97%D0%B0%D1%89%D0%B8%D1%82%D0%B0_%D0%9A_2_nfguww.png",
-      "price": 18380,
+      "price": 16000,
       "models": [
         "Coolray"
       ],
@@ -265,7 +280,7 @@
       "order": 4,
       "imgs": [],
       "desc": "Базовые коврики в багажник для Coolray.",
-      "kaspi": "https://kaspi.kz/shop/p/6908026-573068507-geely-coolray-2023-2025-chernyi-139060861/?m=30090572",
+      "kaspi": "https://kaspi.kz/shop/p/6908026-573068507-geely-coolray-2023-2025-chernyi-139060861/?m=30090572&isPromoted=true",
       "stock": null,
       "id": 49,
       "sku": "-"
@@ -280,7 +295,7 @@
       "order": 1,
       "imgs": [],
       "desc": "Видеорегистратор для Coolray.",
-      "kaspi": "https://kaspi.kz/shop/p/shtatnyi-videoregistrator-dlja-geely-coolray-chernyi-136217551/?m=30090572",
+      "kaspi": "https://kaspi.kz/shop/p/shtatnyi-videoregistrator-dlja-geely-coolray-chernyi-136217551/?m=30090572&isPromoted=true",
       "stock": null,
       "id": 50,
       "sku": "-"
@@ -292,17 +307,17 @@
         "Coolray"
       ],
       "name": "Органайзер в подлокотник",
-      "order": 9,
+      "order": 16,
       "imgs": [],
       "desc": "Вставка в подлокотник для Coolray.",
-      "kaspi": "https://kaspi.kz/shop/p/organaizer-v-podlokotnik-geely-coolray-140558424/?m=30090572",
+      "kaspi": "https://kaspi.kz/shop/p/organaizer-v-podlokotnik-geely-coolray-140558424/?m=30090572&isPromoted=true",
       "stock": null,
       "id": 51,
       "sku": "-"
     },
     {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108040/%D0%91%D1%80%D1%8B%D0%B7%D0%B3%D0%BE%D0%B2%D0%B8%D0%BA%D0%B8_%D0%9A%D1%83%D0%BB%D1%80%D0%B5%D0%B9_cjb32g.png",
-      "price": 4800,
+      "price": 4190,
       "models": [
         "Coolray"
       ],
@@ -310,7 +325,7 @@
       "order": 17,
       "imgs": [],
       "desc": "Комплект брызговиков для Coolray.",
-      "kaspi": "https://kaspi.kz/shop/p/dlja-geely-coolray-136162225/?m=30090572",
+      "kaspi": "https://kaspi.kz/shop/p/komplekt-dlja-geely-coolray-2023-2024-135980840/?m=30090572&isPromoted=true",
       "stock": null,
       "id": 52,
       "sku": "-"
@@ -325,7 +340,7 @@
       "order": 20,
       "imgs": [],
       "desc": "Оригинальный масляный фильтр для Coolray.",
-      "kaspi": "",
+      "kaspi": "https://kaspi.kz/shop/p/masljanyi-fil-tr-1016056847-dlja-geely-coolray-geely-emgrand-142038610/?m=30090572&isPromoted=true",
       "stock": 5,
       "id": 54,
       "sku": "1056025900"
@@ -340,29 +355,29 @@
       "order": 22,
       "imgs": [],
       "desc": "Воздушный фильтр MANN C25082 для Coolray.",
-      "kaspi": "",
+      "kaspi": "https://kaspi.kz/shop/p/vozdushnyi-fil-tr-mann-c25071-dlja-geely-coolray-144171714/?m=30090572&isPromoted=true",
       "stock": 4,
       "id": 55,
       "sku": "C25082"
     },
     {
-      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108027/%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD_%D0%9A_zhqypl.png",
-      "price": 7800,
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770632979/%D1%81%D0%B0%D0%BB%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_mahle_jnivsh.png",
+      "price": 6500,
       "models": [
         "Coolray"
       ],
-      "name": "Салонный фильтр (оригинал) Mann",
+      "name": "Салонный фильтр (оригинал) Mahle",
       "order": 23,
       "imgs": [],
-      "desc": "Салонный фильтр MANN CUK 29010M для Coolray.",
-      "kaspi": "",
+      "desc": "Салонный фильтр Mahle LAK 1585 для Coolray.",
+      "kaspi": "https://kaspi.kz/shop/p/mahle-salonnyi-fil-tr-lak-1585-132885112/?m=30090572&isPromoted=true",
       "stock": 5,
       "id": 56,
-      "sku": "CUK29010M"
+      "sku": "LAK 1585"
     },
     {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1758108034/%D0%A2%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB_%D0%9A_%D0%AD_afw9se.png",
-      "price": 7000,
+      "price": 8200,
       "models": [
         "Coolray"
       ],
@@ -370,7 +385,7 @@
       "order": 21,
       "imgs": [],
       "desc": "Оригинальный топливный фильтр для Coolray.",
-      "kaspi": "",
+      "kaspi": "https://kaspi.kz/shop/p/toplivnyi-fil-tr-2013021700-dlja-geely-coolray-geely-okavango-142038540/?m=30090572&isPromoted=true",
       "stock": 10,
       "id": 57,
       "sku": "2013037300"
