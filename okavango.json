@@ -50,12 +50,12 @@
         "Okavango"
       ],
       "name": "Воздушный фильтр (оригинал) 2032053900",
-      "order": 18,
+      "order": 15,
       "imgs": [
         "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770543464/%D0%92%D0%BE%D0%B7%D0%B4%D1%83%D1%85_2032053900_idi6zb.png"
       ],
       "desc": "Оригинальный воздушный фильтр GEELY (Hengbo) 2032053900",
-      "kaspi": "https://kaspi.kz/shop/p/geely-vozdushnyi-fil-tr-2032053900-156909291/",
+      "kaspi": "https://kaspi.kz/shop/p/geely-vozdushnyi-fil-tr-2032053900-156909291/?m=30090572&isPromoted=true",
       "id": 45,
       "sku": "2032053900"
     },
@@ -331,7 +331,7 @@
         "Okavango"
       ],
       "name": "Воздушный фильтр (оригинал) Mann",
-      "order": 17,
+      "order": 19,
       "imgs": [],
       "desc": "Воздушный фильтр MANN C25082 для Okavango.",
       "kaspi": "https://kaspi.kz/shop/p/vozdushnyi-fil-tr-mann-c30042-dlja-geely-okavango-144173888/?m=30090572",
@@ -366,7 +366,7 @@
       "desc": "Оригинальный топливный фильтр для Okavango.",
       "kaspi": "https://kaspi.kz/shop/p/toplivnyi-fil-tr-2013021700-dlja-geely-coolray-geely-okavango-142038540/?m=30090572",
       "stock": 10,
-      "id": 46,
+      "id": 44,
       "sku": "2013037300"
     }
   ]
