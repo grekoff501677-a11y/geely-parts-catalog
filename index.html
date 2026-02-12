@@ -17,8 +17,8 @@
   
   /* --- HEADER (ШТОРКА) --- */
   header{
-    position:sticky; top:0; z-index:100;
-    background:rgba(10,28,43,0.98); /* Почти непрозрачный для читаемости */
+    position:sticky; top:0; z-index:1000; /* Высокий z-index, чтобы ничего не перекрывало */
+    background:rgba(10,28,43,0.98);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--brand);
     transition: all 0.3s ease;
@@ -33,7 +33,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    cursor: pointer; /* Клик по шапке тоже может открывать/закрывать */
+    cursor: pointer;
+    min-height: 60px;
   }
 
   .logo-area { display: flex; align-items: center; gap: 12px; }
@@ -41,18 +42,18 @@
   .app-title { font-size: 16px; font-weight: bold; line-height: 1.2; }
   .app-subtitle { font-size: 11px; color: var(--muted); }
 
-  /* Кнопка-индикатор состояния */
   .toggle-icon {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--brand);
-    transition: transform 0.3s;
+    transition: transform 0.4s;
+    padding: 10px; /* Увеличил область нажатия */
   }
   
   /* Скрываемая часть (Шторка) */
   .header-body {
-    max-height: 1000px; /* Достаточно много, чтобы влез контент */
+    max-height: 1000px;
     overflow: hidden;
-    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
     opacity: 1;
   }
 
@@ -63,25 +64,26 @@
     margin: 0;
   }
   header.collapsed .toggle-icon {
-    transform: rotate(180deg); /* Переворот стрелки */
+    transform: rotate(180deg);
   }
   header.collapsed {
-    border-bottom-color: var(--border); /* Менее яркая граница когда свернуто */
+    border-bottom-color: var(--border);
   }
 
-  /* Язычок управления (снизу шапки) */
+  /* Язычок управления (УВЕЛИЧЕН для удобства) */
   .toggle-bar {
     text-align: center;
     background: rgba(255,255,255,0.03);
     color: var(--muted);
-    font-size: 11px;
-    padding: 4px;
+    font-size: 10px;
+    padding: 12px; /* Сделал кнопку выше, чтобы легко попадать пальцем */
     cursor: pointer;
     user-select: none;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border-top: 1px solid rgba(255,255,255,0.05);
   }
-  .toggle-bar:hover { color: var(--brand); background: rgba(170,134,67,0.1); }
+  .toggle-bar:active { background: rgba(170,134,67,0.2); }
 
   /* --- ВНУТРЕННОСТИ ШТОРКИ --- */
   .club-banner {
@@ -133,10 +135,10 @@
   
   .c-arr{
     position:absolute; top:50%; transform:translateY(-50%);
-    width:30px; height:30px; border-radius:50%;
+    width:35px; height:35px; border-radius:50%; /* Чуть больше кнопки */
     background:rgba(0,0,0,0.6); color:#fff; border:none;
     cursor:pointer; display:flex; align-items:center; justify-content:center;
-    z-index:2; font-size:18px; line-height:1;
+    z-index:2; font-size:20px; line-height:1;
   }
   .c-arr.prev{left:5px;} .c-arr.next{right:5px;}
   .c-dots{position:absolute; bottom:5px; width:100%; text-align:center; z-index:2; pointer-events:none;}
@@ -218,21 +220,34 @@
   </footer>
 
 <script>
-// === ЛОГИКА ШТОРКИ ===
+// === ЛОГИКА ШТОРКИ (ИСПРАВЛЕНА) ===
 const header = document.getElementById('mainHeader');
+let isAnimating = false; // Блокировка от скролла
 
 function toggleHeader() {
+  if (isAnimating) return; // Не даем спамить кнопку
+  
+  isAnimating = true; // Включаем защиту
   header.classList.toggle('collapsed');
+  
+  // Выключаем защиту через 500мс (когда анимация кончится)
+  setTimeout(() => {
+    isAnimating = false;
+  }, 500);
 }
 
-// Авто-сворачивание при прокрутке вниз (опционально, для удобства)
+// Умный скролл
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
+  if (isAnimating) return; // Если сейчас идет анимация открытия - игнорируем скролл!
+
   const currentScroll = window.pageYOffset;
+  
+  // Сворачиваем ТОЛЬКО если скроллим ВНИЗ и проехали больше 100px
   if (currentScroll > 100 && currentScroll > lastScroll && !header.classList.contains('collapsed')) {
-    // Если крутим вниз и проехали 100px - сворачиваем
     header.classList.add('collapsed');
   }
+  
   lastScroll = currentScroll;
 });
 
@@ -293,7 +308,7 @@ MODEL_CHIPS.forEach(c => {
   el.className = 'chip';
   el.textContent = c.label;
   el.onclick = (e) => {
-    e.stopPropagation(); // Чтобы клик не закрывал шторку сразу
+    e.stopPropagation(); 
     selectModel(c.label);
   };
   elChips.appendChild(el);
@@ -324,11 +339,14 @@ function selectModel(label){
     elSearchInput.value = '';
   } else {
     elSearchContainer.style.display = 'flex';
-    // ХИТРОСТЬ: Если выбрали модель, сворачиваем шторку через 0.5 сек,
-    // чтобы пользователь мог сразу смотреть товары
+    // Авто-сворачивание после выбора (удобно)
     setTimeout(() => {
-        header.classList.add('collapsed');
-    }, 500);
+        if(!isAnimating) { // Проверка безопасности
+          isAnimating = true;
+          header.classList.add('collapsed');
+          setTimeout(()=>isAnimating=false, 500);
+        }
+    }, 600);
   }
   render();
 }
