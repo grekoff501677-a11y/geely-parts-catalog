@@ -17,7 +17,7 @@
   
   /* --- HEADER (ШТОРКА) --- */
   header{
-    position:sticky; top:0; z-index:1000; /* Высокий z-index, чтобы ничего не перекрывало */
+    position:sticky; top:0; z-index:1000;
     background:rgba(10,28,43,0.98);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--brand);
@@ -46,7 +46,7 @@
     font-size: 20px;
     color: var(--brand);
     transition: transform 0.4s;
-    padding: 10px; /* Увеличил область нажатия */
+    padding: 10px;
   }
   
   /* Скрываемая часть (Шторка) */
@@ -57,7 +57,6 @@
     opacity: 1;
   }
 
-  /* Состояние "Свернуто" */
   header.collapsed .header-body {
     max-height: 0;
     opacity: 0;
@@ -70,13 +69,13 @@
     border-bottom-color: var(--border);
   }
 
-  /* Язычок управления (УВЕЛИЧЕН для удобства) */
+  /* Язычок управления */
   .toggle-bar {
     text-align: center;
     background: rgba(255,255,255,0.03);
     color: var(--muted);
     font-size: 10px;
-    padding: 12px; /* Сделал кнопку выше, чтобы легко попадать пальцем */
+    padding: 12px;
     cursor: pointer;
     user-select: none;
     text-transform: uppercase;
@@ -85,19 +84,30 @@
   }
   .toggle-bar:active { background: rgba(170,134,67,0.2); }
 
-  /* --- ВНУТРЕННОСТИ ШТОРКИ --- */
+  /* --- БАННЕР INSTAGRAM --- */
   .club-banner {
     background: linear-gradient(90deg, rgba(170, 134, 67, 0.15) 0%, rgba(10, 28, 43, 0) 100%);
     border: 1px solid rgba(170, 134, 67, 0.3);
-    padding: 10px 12px;
-    margin-bottom: 12px;
-    font-size: 13px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
     color: #e9f0f7;
     border-radius: 8px;
     text-align: center;
+    line-height: 1.6;
   }
-  .club-link { color: var(--brand); font-weight: 800; text-decoration: underline; }
+  .ig-link {
+    display: inline-flex; align-items: center; gap: 4px;
+    color: var(--brand); font-weight: 700; text-decoration: none;
+    border-bottom: 1px dashed var(--brand);
+    transition: 0.2s; margin: 0 4px;
+  }
+  .ig-link:hover { color: #fff; border-bottom-style: solid; }
+  
+  /* Иконка Инстаграм (SVG) */
+  .ig-icon { width: 16px; height: 16px; fill: currentColor; transform: translateY(2px); }
 
+  /* Управление и Чипсы */
   .controls-row { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
   .select-group { flex: 1; min-width: 0; }
   .select-label { color:#9ab1c8; font-size:12px; margin-bottom:6px; display:block; }
@@ -135,7 +145,7 @@
   
   .c-arr{
     position:absolute; top:50%; transform:translateY(-50%);
-    width:35px; height:35px; border-radius:50%; /* Чуть больше кнопки */
+    width:35px; height:35px; border-radius:50%;
     background:rgba(0,0,0,0.6); color:#fff; border:none;
     cursor:pointer; display:flex; align-items:center; justify-content:center;
     z-index:2; font-size:20px; line-height:1;
@@ -182,7 +192,22 @@
       <div class="header-body">
         
         <div class="club-banner">
-          🔥 Для <a href="https://www.instagram.com/geely_club_pavlodar/" target="_blank" class="club-link">Geely Club Pavlodar</a> скидка!
+          <svg style="display:none">
+            <symbol id="icon-insta" viewBox="0 0 448 512">
+              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+            </symbol>
+          </svg>
+
+          🔥 Скидка для 
+          <a href="https://www.instagram.com/geely_club_pavlodar/" target="_blank" class="ig-link">
+            <svg class="ig-icon"><use xlink:href="#icon-insta"></use></svg>
+            Geely Club
+          </a> 
+          от 
+          <a href="https://www.instagram.com/damu_auto_kz/" target="_blank" class="ig-link">
+             <svg class="ig-icon"><use xlink:href="#icon-insta"></use></svg>
+             Damu Auto
+          </a>
         </div>
 
         <div class="controls-row">
@@ -220,38 +245,28 @@
   </footer>
 
 <script>
-// === ЛОГИКА ШТОРКИ (ИСПРАВЛЕНА) ===
+// === ЛОГИКА ШТОРКИ ===
 const header = document.getElementById('mainHeader');
-let isAnimating = false; // Блокировка от скролла
+let isAnimating = false;
 
 function toggleHeader() {
-  if (isAnimating) return; // Не даем спамить кнопку
-  
-  isAnimating = true; // Включаем защиту
+  if (isAnimating) return;
+  isAnimating = true;
   header.classList.toggle('collapsed');
-  
-  // Выключаем защиту через 500мс (когда анимация кончится)
-  setTimeout(() => {
-    isAnimating = false;
-  }, 500);
+  setTimeout(() => { isAnimating = false; }, 500);
 }
 
-// Умный скролл
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
-  if (isAnimating) return; // Если сейчас идет анимация открытия - игнорируем скролл!
-
+  if (isAnimating) return;
   const currentScroll = window.pageYOffset;
-  
-  // Сворачиваем ТОЛЬКО если скроллим ВНИЗ и проехали больше 100px
   if (currentScroll > 100 && currentScroll > lastScroll && !header.classList.contains('collapsed')) {
     header.classList.add('collapsed');
   }
-  
   lastScroll = currentScroll;
 });
 
-// === КОНФИГУРАЦИЯ КАТАЛОГА ===
+// === КОНФИГУРАЦИЯ ===
 const MODEL_CHIPS = [
   {label:'Monjaro KX11', dbKey:'monjaro', modelKey:'Monjaro'},
   {label:'Coolray (New)', dbKey:'coolray', modelKey:'Coolray'},
@@ -272,11 +287,20 @@ const elChips = document.getElementById('modelChips');
 
 elUpdated.textContent = `Обновлено: ${new Date().toLocaleDateString('ru-RU')}`;
 
-// Оптимизация картинок Cloudinary
+// === ИСПРАВЛЕННАЯ ФУНКЦИЯ КАРТИНОК ===
+// w - ширина (необязательно). Если не передать, будет оригинал.
 function cldUrl(url, w){
   try{
     if(!url || !url.includes('cloudinary.com')) return url;
-    return url.replace('/upload/', `/upload/f_auto,q_auto,w_${w}/`);
+    
+    // Если ширина задана -> сжимаем (для иконок и превью)
+    if(w) {
+      return url.replace('/upload/', `/upload/f_auto,q_auto,w_${w}/`);
+    } 
+    // Если ширина НЕ задана -> ТОЛЬКО оптимизация формата (качество оригинала)
+    else {
+      return url.replace('/upload/', `/upload/f_auto,q_auto/`);
+    }
   }catch(_){ return url; }
 }
 
@@ -339,9 +363,8 @@ function selectModel(label){
     elSearchInput.value = '';
   } else {
     elSearchContainer.style.display = 'flex';
-    // Авто-сворачивание после выбора (удобно)
     setTimeout(() => {
-        if(!isAnimating) { // Проверка безопасности
+        if(!isAnimating) { 
           isAnimating = true;
           header.classList.add('collapsed');
           setTimeout(()=>isAnimating=false, 500);
@@ -404,12 +427,16 @@ function renderGallery(p) {
   if (p.img) images.push(p.img);
   if (p.imgs && Array.isArray(p.imgs)) images.push(...p.imgs);
   images = [...new Set(images)].filter(Boolean);
+  
   if (images.length === 0) return `<img src="https://via.placeholder.com/300" class="slide-img active">`;
+
+  // ЗДЕСЬ МЫ НЕ ПЕРЕДАЕМ ВТОРОЙ АРГУМЕНТ В cldUrl
+  // Значит, картинки будут грузиться в оригинальном размере!
   if (images.length === 1) {
-    return `<img src="${cldUrl(images[0], 400)}" class="slide-img active" alt="${p.name}">`;
+    return `<img src="${cldUrl(images[0])}" class="slide-img active" alt="${p.name}">`;
   }
   const slidesHtml = images.map((url, i) => 
-    `<img src="${cldUrl(url, 400)}" class="slide-img ${i===0?'active':''}" loading="lazy">`
+    `<img src="${cldUrl(url)}" class="slide-img ${i===0?'active':''}" loading="lazy">`
   ).join('');
   const dotsHtml = images.map((_, i) => 
     `<span class="c-dot ${i===0?'active':''}"></span>`
