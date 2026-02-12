@@ -11,173 +11,232 @@
 <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
 
 <style>
-  :root{ --bg:#0a1c2b; --card:#0f1d2a; --muted:#9fb2c3; --text:#e9f0f7; --brand:#aa8643; --accent:#aa8643; --danger:#ff6b6b; --border:#1e3040; --chip:#122233; --chip-active:#16283a; --focus:#aa8643; }
+  :root{ --bg:#0a1c2b; --card:#0f1d2a; --muted:#9fb2c3; --text:#e9f0f7; --brand:#aa8643; --border:#1e3040; --chip:#122233; }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui, -apple-system, sans-serif}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui, -apple-system, sans-serif; padding-top: 0;}
   
-  /* Header */
-  header{position:sticky;top:0;z-index:100;background:rgba(10,28,43,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding-bottom:12px}
+  /* --- HEADER (ШТОРКА) --- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(10,28,43,0.98); /* Почти непрозрачный для читаемости */
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--brand);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+
   .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
   
-  /* Лого и Заголовок */
-  .title{display:flex;flex-direction:column;align-items:center;gap:8px;padding-top:12px}
-  .logo{height:50px;width:auto;object-fit:contain}
-  h1{margin:0;font-size:20px;letter-spacing:.3px;text-align:center}
-  .updated{color:var(--muted);font-size:12px;text-align:center}
+  /* Верхняя часть (всегда видна) */
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    cursor: pointer; /* Клик по шапке тоже может открывать/закрывать */
+  }
 
-  /* Баннер Скидки (Центрирован) */
+  .logo-area { display: flex; align-items: center; gap: 12px; }
+  .logo{height:40px;width:auto;object-fit:contain}
+  .app-title { font-size: 16px; font-weight: bold; line-height: 1.2; }
+  .app-subtitle { font-size: 11px; color: var(--muted); }
+
+  /* Кнопка-индикатор состояния */
+  .toggle-icon {
+    font-size: 24px;
+    color: var(--brand);
+    transition: transform 0.3s;
+  }
+  
+  /* Скрываемая часть (Шторка) */
+  .header-body {
+    max-height: 1000px; /* Достаточно много, чтобы влез контент */
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 1;
+  }
+
+  /* Состояние "Свернуто" */
+  header.collapsed .header-body {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+  }
+  header.collapsed .toggle-icon {
+    transform: rotate(180deg); /* Переворот стрелки */
+  }
+  header.collapsed {
+    border-bottom-color: var(--border); /* Менее яркая граница когда свернуто */
+  }
+
+  /* Язычок управления (снизу шапки) */
+  .toggle-bar {
+    text-align: center;
+    background: rgba(255,255,255,0.03);
+    color: var(--muted);
+    font-size: 11px;
+    padding: 4px;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .toggle-bar:hover { color: var(--brand); background: rgba(170,134,67,0.1); }
+
+  /* --- ВНУТРЕННОСТИ ШТОРКИ --- */
   .club-banner {
     background: linear-gradient(90deg, rgba(170, 134, 67, 0.15) 0%, rgba(10, 28, 43, 0) 100%);
     border: 1px solid rgba(170, 134, 67, 0.3);
     padding: 10px 12px;
-    margin: 12px 0;
-    font-size: 14px;
+    margin-bottom: 12px;
+    font-size: 13px;
     color: #e9f0f7;
     border-radius: 8px;
     text-align: center;
   }
-  /* Ссылка на Инстаграм клуба */
-  .club-link {
-    color: var(--brand);
-    font-weight: 800;
-    text-decoration: underline;
-    transition: 0.2s;
-  }
-  .club-link:hover {
-    color: #fff;
-    text-decoration: none;
-  }
+  .club-link { color: var(--brand); font-weight: 800; text-decoration: underline; }
 
-  /* Панель управления (Flex для размещения калькулятора справа) */
   .controls-row { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
-  
-  /* Блок выбора моделей */
   .select-group { flex: 1; min-width: 0; }
-  .select-label { color:#9ab1c8; font-size:13px; margin-bottom:6px; display:block; }
+  .select-label { color:#9ab1c8; font-size:12px; margin-bottom:6px; display:block; }
   
-  .chips{display:grid;grid-template-columns:repeat(auto-fit, minmax(100px, 1fr));gap:8px}
-  .chip{display:block;text-align:center;user-select:none;padding:8px 10px;border-radius:99px;border:1px solid var(--border);background:var(--chip);color:#c3d7eb;cursor:pointer;font-size:13px; transition:0.2s}
-  .chip:hover { border-color: var(--brand); }
-  .chip.active{background:var(--brand);border-color:var(--brand);color:#fff;box-shadow:0 0 10px rgba(170,134,67,0.3)}
+  .chips{display:grid;grid-template-columns:repeat(auto-fit, minmax(90px, 1fr));gap:8px}
+  .chip{display:block;text-align:center;padding:8px 4px;border-radius:8px;border:1px solid var(--border);background:var(--chip);color:#c3d7eb;cursor:pointer;font-size:12px; transition:0.2s}
+  .chip.active{background:var(--brand);border-color:var(--brand);color:#fff;}
 
-  /* Кнопка Калькулятора (Справа) */
   .calc-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: #122233;
-    border: 1px dashed var(--brand);
-    color: #fff;
-    padding: 0 20px;
-    height: 74px; /* Высота выровнена под блок чипсов */
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.2s;
-    white-space: nowrap;
-    flex-shrink: 0;
+    display: inline-flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    background: #122233; border: 1px dashed var(--brand);
+    color: #fff; padding: 0 15px; height: 74px; 
+    border-radius: 12px; text-decoration: none;
+    font-weight: 600; font-size: 12px; transition: all 0.2s; flex-shrink: 0;
   }
-  .calc-btn:hover { background: var(--brand); border-style: solid; color: #000; }
+  .calc-btn span { font-size: 20px; margin-bottom: 4px; }
   
-  /* Поиск */
-  .search-container{display:none;align-items:center;gap:8px; margin-top: 10px;}
+  .search-container{display:none;align-items:center;gap:8px; margin-bottom: 12px;}
   .search-box{position:relative;flex:1;display:flex;align-items:center}
-  #searchInput{width:100%;padding:10px 35px 10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--chip);color:var(--text);font-size:14px;outline:none;transition:0.2s}
-  #searchInput:focus{border-color:var(--brand);}
+  #searchInput{width:100%;padding:10px 35px 10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--chip);color:var(--text);font-size:14px;outline:none;}
   .clear-btn{position:absolute;right:8px;width:20px;height:20px;border:none;border-radius:50%;background:var(--muted);color:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:bold;}
 
-  /* Сетка товаров */
+  /* --- СЕТКА ТОВАРОВ --- */
   .grid{display:grid;grid-template-columns:repeat( auto-fill, minmax(280px,1fr));gap:14px;margin:20px auto}
   .card{position:relative;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}
-  .card:hover{transform:translateY(-3px);border-color:var(--brand);}
-  .imgwrap{aspect-ratio:4/3;background:#0c1322;display:flex;align-items:center;justify-content:center; overflow:hidden;}
-  .imgwrap img{max-width:100%;max-height:100%;object-fit:contain}
   
+  /* КАРУСЕЛЬ */
+  .imgwrap{position:relative; aspect-ratio:4/3; background:#0c1322; overflow:hidden;}
+  .slide-img{
+    position:absolute; top:0; left:0; width:100%; height:100%; object-fit:contain;
+    opacity:0; transition:opacity 0.3s; pointer-events:none;
+  }
+  .slide-img.active{opacity:1; pointer-events:initial;}
+  
+  .c-arr{
+    position:absolute; top:50%; transform:translateY(-50%);
+    width:30px; height:30px; border-radius:50%;
+    background:rgba(0,0,0,0.6); color:#fff; border:none;
+    cursor:pointer; display:flex; align-items:center; justify-content:center;
+    z-index:2; font-size:18px; line-height:1;
+  }
+  .c-arr.prev{left:5px;} .c-arr.next{right:5px;}
+  .c-dots{position:absolute; bottom:5px; width:100%; text-align:center; z-index:2; pointer-events:none;}
+  .c-dot{display:inline-block; width:6px; height:6px; background:rgba(255,255,255,0.4); border-radius:50%; margin:0 3px;}
+  .c-dot.active{background:var(--brand);}
+
   .content{padding:12px;display:flex;flex-direction:column;flex:1}
   .name{margin:0 0 6px;font-weight:600;font-size:15px;line-height:1.3}
   .desc{margin:0 0 10px;color:var(--muted);font-size:13px}
   .row{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
   .price{font-size:18px;font-weight:700;color:var(--brand)}
-  .btn{display:block;width:100%;text-align:center;padding:10px;border-radius:8px;background:var(--border);color:#fff;text-decoration:none;margin-top:10px;font-size:14px;transition:0.2s}
-  .btn.primary{background:var(--brand);color:#fff}
-  .btn.primary:hover{filter:brightness(1.1)}
+  .btn{display:block;width:100%;text-align:center;padding:10px;border-radius:8px;background:var(--border);color:#fff;text-decoration:none;margin-top:10px;font-size:14px;}
+  .btn.primary{background:var(--brand);}
   
   .empty{text-align:center;padding:40px;color:var(--muted);border:1px dashed var(--border);border-radius:12px}
   footer{color:#586e85;text-align:center;padding:30px 0;font-size:13px}
 
-  /* Адаптив */
   @media (max-width:700px){
-    .title{flex-direction:row;justify-content:center;flex-wrap:wrap}
-    
-    /* На мобильном разносим в колонку */
     .controls-row { flex-direction: column; gap: 10px; }
-    
     .chips { grid-template-columns: repeat(2, 1fr); }
-    
-    /* Кнопка калькулятора становится широкой */
-    .calc-btn { 
-      width: 100%; 
-      height: 48px; 
-      margin-top: 5px;
-    }
-    
-    h1 { font-size: 18px; }
-    .club-banner { font-size: 13px; padding: 8px; }
+    .calc-btn { width: 100%; height: 48px; flex-direction: row; gap: 10px; }
+    .calc-btn span { margin:0; font-size: 18px; }
   }
 </style>
 </head>
 <body>
-  <header>
+  
+  <header id="mainHeader">
     <div class="wrap">
-      <div class="title">
-        <img class="logo" src="https://res.cloudinary.com/djjcxxgfm/image/upload/f_auto,q_auto,h_100/v1757929669/%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%82%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80_geely_coolray_okavango_azkarra_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_9_avfuii.png" alt="Damu Auto">
-        <div>
-          <h1>Каталог 1TYRES | Damu Auto</h1>
-          <div class="updated" id="updated"></div>
+      <div class="header-top" onclick="toggleHeader()">
+        <div class="logo-area">
+          <img class="logo" src="https://res.cloudinary.com/djjcxxgfm/image/upload/f_auto,q_auto,h_100/v1757929669/%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%82%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80_geely_coolray_okavango_azkarra_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_9_avfuii.png" alt="Logo">
+          <div>
+            <div class="app-title">1TYRES | Damu Auto</div>
+            <div class="app-subtitle" id="updated">Обновлено сегодня</div>
+          </div>
         </div>
-      </div>
-      
-      <div class="club-banner">
-        🔥 Для участников 
-        <a href="https://www.instagram.com/geelyclub14pvl/" target="_blank" class="club-link">Geely Club Pavlodar</a> 
-        — скидка на весь ассортимент!
+        <div class="toggle-icon">▲</div>
       </div>
 
-      <div class="controls-row">
+      <div class="header-body">
         
-        <div class="select-group">
-          <span class="select-label">Выберите модель:</span>
-          <div class="chips" id="modelChips"></div>
+        <div class="club-banner">
+          🔥 Для <a href="https://www.instagram.com/geely_club_pavlodar/" target="_blank" class="club-link">Geely Club Pavlodar</a> скидка!
         </div>
 
-        <a href="/regulations.html" class="calc-btn">
-          <span style="font-size:20px">🧮</span> Калькулятор ТО
-        </a>
-      </div>
+        <div class="controls-row">
+          <div class="select-group">
+            <span class="select-label">Выберите модель:</span>
+            <div class="chips" id="modelChips"></div>
+          </div>
+          <a href="/regulations.html" class="calc-btn">
+            <span>🧮</span> Калькулятор ТО
+          </a>
+        </div>
 
-      <div class="search-container" id="searchContainer">
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="Поиск запчасти (например: фильтр)..." autocomplete="off">
-          <button type="button" id="clearSearch" class="clear-btn" style="display:none">×</button>
+        <div class="search-container" id="searchContainer">
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Поиск (например: фильтр)..." autocomplete="off">
+            <button type="button" id="clearSearch" class="clear-btn" style="display:none">×</button>
+          </div>
         </div>
       </div>
+    </div>
+    
+    <div class="toggle-bar" onclick="toggleHeader()">
+      Свернуть / Развернуть меню
     </div>
   </header>
 
   <main class="wrap">
     <div id="grid" class="grid"></div>
-    <div id="empty" class="empty" style="display:none">Выберите модель автомобиля, чтобы увидеть каталог.</div>
+    <div id="empty" class="empty" style="display:none">Выберите модель автомобиля 👆</div>
   </main>
 
   <footer>
     <a href="privacy-policy.html" style="color:inherit;text-decoration:none">Политика конфиденциальности</a>
-    <br><br>
-    Damu Auto © 2025
+    <br><br>Damu Auto © 2025
   </footer>
 
 <script>
-// Настройки
+// === ЛОГИКА ШТОРКИ ===
+const header = document.getElementById('mainHeader');
+
+function toggleHeader() {
+  header.classList.toggle('collapsed');
+}
+
+// Авто-сворачивание при прокрутке вниз (опционально, для удобства)
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > 100 && currentScroll > lastScroll && !header.classList.contains('collapsed')) {
+    // Если крутим вниз и проехали 100px - сворачиваем
+    header.classList.add('collapsed');
+  }
+  lastScroll = currentScroll;
+});
+
+// === КОНФИГУРАЦИЯ КАТАЛОГА ===
 const MODEL_CHIPS = [
   {label:'Monjaro KX11', dbKey:'monjaro', modelKey:'Monjaro'},
   {label:'Coolray (New)', dbKey:'coolray', modelKey:'Coolray'},
@@ -188,7 +247,6 @@ const MODEL_CHIPS = [
 const state = { activeModel: null, searchQuery: '' };
 const db = { atlas: [], monjaro: [], okavango: [], coolray: [], common: [] };
 
-// Элементы
 const elGrid = document.getElementById('grid');
 const elEmpty = document.getElementById('empty');
 const elUpdated = document.getElementById('updated');
@@ -199,7 +257,7 @@ const elChips = document.getElementById('modelChips');
 
 elUpdated.textContent = `Обновлено: ${new Date().toLocaleDateString('ru-RU')}`;
 
-// Оптимизация картинок
+// Оптимизация картинок Cloudinary
 function cldUrl(url, w){
   try{
     if(!url || !url.includes('cloudinary.com')) return url;
@@ -207,7 +265,6 @@ function cldUrl(url, w){
   }catch(_){ return url; }
 }
 
-// Загрузка
 Promise.all([
   fetch('/atlas.json').then(r => r.json()),
   fetch('/monjaro.json').then(r => r.json()),
@@ -221,24 +278,24 @@ Promise.all([
   db.coolray = coolray.items || [];
   db.common = common.items || [];
   
-  // Проверка URL на наличие ?model=...
   const params = new URLSearchParams(window.location.search);
   const urlModel = params.get('model');
   if(urlModel){
-    // Ищем чип, соответствующий id модели
     const target = MODEL_CHIPS.find(m => m.dbKey === urlModel);
     if(target) selectModel(target.label);
   } else {
-    render(); // Показать пустое состояние
+    render();
   }
 }).catch(console.error);
 
-// Генерация кнопок
 MODEL_CHIPS.forEach(c => {
   const el = document.createElement('span');
   el.className = 'chip';
   el.textContent = c.label;
-  el.onclick = () => selectModel(c.label);
+  el.onclick = (e) => {
+    e.stopPropagation(); // Чтобы клик не закрывал шторку сразу
+    selectModel(c.label);
+  };
   elChips.appendChild(el);
 });
 
@@ -267,11 +324,15 @@ function selectModel(label){
     elSearchInput.value = '';
   } else {
     elSearchContainer.style.display = 'flex';
+    // ХИТРОСТЬ: Если выбрали модель, сворачиваем шторку через 0.5 сек,
+    // чтобы пользователь мог сразу смотреть товары
+    setTimeout(() => {
+        header.classList.add('collapsed');
+    }, 500);
   }
   render();
 }
 
-// Поиск
 elSearchInput.oninput = (e) => {
   state.searchQuery = e.target.value.toLowerCase().trim();
   elClearSearch.style.display = state.searchQuery ? 'flex' : 'none';
@@ -284,58 +345,78 @@ elClearSearch.onclick = () => {
   render();
 };
 
-// Рендер
 function getProducts() {
   if (!state.activeModel) return [];
   const config = MODEL_CHIPS.find(c => c.label === state.activeModel);
   if (!config) return [];
-
   const specific = db[config.dbKey] || [];
   const map = new Map();
-
-  // Общие товары
   db.common.forEach(p => {
     if (p.models && p.models.includes(config.modelKey)) map.set(p.id, { ...p });
   });
-
-  // Специфичные (перекрывают общие)
   specific.forEach(p => {
     const ex = map.get(p.id);
     map.set(p.id, ex ? { ...ex, ...p } : { ...p });
   });
-
   let res = Array.from(map.values());
-  
   if (state.searchQuery) {
     res = res.filter(p => p.name.toLowerCase().includes(state.searchQuery));
   }
-  
   return res.sort((a, b) => (a.order || 99) - (b.order || 99));
+}
+
+// === КАРУСЕЛЬ ===
+window.moveSlide = function(btn, dir) {
+  const wrap = btn.closest('.imgwrap');
+  const slides = wrap.querySelectorAll('.slide-img');
+  const dots = wrap.querySelectorAll('.c-dot');
+  let activeIdx = 0;
+  slides.forEach((s, i) => { if(s.classList.contains('active')) activeIdx = i; });
+  slides[activeIdx].classList.remove('active');
+  if(dots.length) dots[activeIdx].classList.remove('active');
+  let nextIdx = activeIdx + dir;
+  if(nextIdx >= slides.length) nextIdx = 0;
+  if(nextIdx < 0) nextIdx = slides.length - 1;
+  slides[nextIdx].classList.add('active');
+  if(dots.length) dots[nextIdx].classList.add('active');
+};
+
+function renderGallery(p) {
+  let images = [];
+  if (p.img) images.push(p.img);
+  if (p.imgs && Array.isArray(p.imgs)) images.push(...p.imgs);
+  images = [...new Set(images)].filter(Boolean);
+  if (images.length === 0) return `<img src="https://via.placeholder.com/300" class="slide-img active">`;
+  if (images.length === 1) {
+    return `<img src="${cldUrl(images[0], 400)}" class="slide-img active" alt="${p.name}">`;
+  }
+  const slidesHtml = images.map((url, i) => 
+    `<img src="${cldUrl(url, 400)}" class="slide-img ${i===0?'active':''}" loading="lazy">`
+  ).join('');
+  const dotsHtml = images.map((_, i) => 
+    `<span class="c-dot ${i===0?'active':''}"></span>`
+  ).join('');
+  return `${slidesHtml}<button class="c-arr prev" onclick="moveSlide(this, -1)">‹</button><button class="c-arr next" onclick="moveSlide(this, 1)">›</button><div class="c-dots">${dotsHtml}</div>`;
 }
 
 function render(){
   const items = getProducts();
-  
   if(!state.activeModel){
     elGrid.innerHTML = '';
     elEmpty.style.display = 'block';
-    elEmpty.textContent = 'Выберите модель автомобиля выше 👆';
+    elEmpty.textContent = 'Выберите модель автомобиля 👆';
     return;
   }
-
   if(items.length === 0){
     elGrid.innerHTML = '';
     elEmpty.style.display = 'block';
     elEmpty.textContent = 'Ничего не найдено 😔';
     return;
   }
-
   elEmpty.style.display = 'none';
   elGrid.innerHTML = items.map(p => `
     <article class="card">
-      <div class="imgwrap">
-        <img src="${cldUrl(p.img || p.imgs?.[0], 400)}" loading="lazy" alt="${p.name}">
-      </div>
+      <div class="imgwrap">${renderGallery(p)}</div>
       <div class="content">
         <h3 class="name">${p.name}</h3>
         <p class="desc">${p.desc || ''}</p>
