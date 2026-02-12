@@ -15,7 +15,7 @@
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui, -apple-system, sans-serif; padding-top: 0;}
   
-  /* --- HEADER (ШТОРКА) --- */
+  /* --- HEADER --- */
   header{
     position:sticky; top:0; z-index:1000;
     background:rgba(10,28,43,0.98);
@@ -27,14 +27,9 @@
 
   .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
   
-  /* Верхняя часть (всегда видна) */
   .header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    cursor: pointer;
-    min-height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 0; cursor: pointer; min-height: 60px;
   }
 
   .logo-area { display: flex; align-items: center; gap: 12px; }
@@ -42,44 +37,22 @@
   .app-title { font-size: 16px; font-weight: bold; line-height: 1.2; }
   .app-subtitle { font-size: 11px; color: var(--muted); }
 
-  .toggle-icon {
-    font-size: 20px;
-    color: var(--brand);
-    transition: transform 0.4s;
-    padding: 10px;
-  }
+  .toggle-icon { font-size: 20px; color: var(--brand); transition: transform 0.4s; padding: 10px; }
   
-  /* Скрываемая часть (Шторка) */
   .header-body {
-    max-height: 1000px;
-    overflow: hidden;
+    max-height: 1000px; overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
     opacity: 1;
   }
 
-  header.collapsed .header-body {
-    max-height: 0;
-    opacity: 0;
-    margin: 0;
-  }
-  header.collapsed .toggle-icon {
-    transform: rotate(180deg);
-  }
-  header.collapsed {
-    border-bottom-color: var(--border);
-  }
+  header.collapsed .header-body { max-height: 0; opacity: 0; margin: 0; }
+  header.collapsed .toggle-icon { transform: rotate(180deg); }
+  header.collapsed { border-bottom-color: var(--border); }
 
-  /* Язычок управления */
   .toggle-bar {
-    text-align: center;
-    background: rgba(255,255,255,0.03);
-    color: var(--muted);
-    font-size: 10px;
-    padding: 12px;
-    cursor: pointer;
-    user-select: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-align: center; background: rgba(255,255,255,0.03); color: var(--muted);
+    font-size: 10px; padding: 12px; cursor: pointer; user-select: none;
+    text-transform: uppercase; letter-spacing: 1px;
     border-top: 1px solid rgba(255,255,255,0.05);
   }
   .toggle-bar:active { background: rgba(170,134,67,0.2); }
@@ -88,26 +61,17 @@
   .club-banner {
     background: linear-gradient(90deg, rgba(170, 134, 67, 0.15) 0%, rgba(10, 28, 43, 0) 100%);
     border: 1px solid rgba(170, 134, 67, 0.3);
-    padding: 12px;
-    margin-bottom: 15px;
-    font-size: 14px;
-    color: #e9f0f7;
-    border-radius: 8px;
-    text-align: center;
-    line-height: 1.6;
+    padding: 12px; margin-bottom: 15px; font-size: 14px;
+    color: #e9f0f7; border-radius: 8px; text-align: center; line-height: 1.6;
   }
   .ig-link {
-    display: inline-flex; align-items: center; gap: 4px;
+    display: inline-flex; align-items: center; gap: 6px;
     color: var(--brand); font-weight: 700; text-decoration: none;
-    border-bottom: 1px dashed var(--brand);
-    transition: 0.2s; margin: 0 4px;
+    border-bottom: 1px dashed var(--brand); transition: 0.2s; margin: 0 4px;
   }
   .ig-link:hover { color: #fff; border-bottom-style: solid; }
-  
-  /* Иконка Инстаграм (SVG) */
   .ig-icon { width: 16px; height: 16px; fill: currentColor; transform: translateY(2px); }
 
-  /* Управление и Чипсы */
   .controls-row { display: flex; gap: 12px; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
   .select-group { flex: 1; min-width: 0; }
   .select-label { color:#9ab1c8; font-size:12px; margin-bottom:6px; display:block; }
@@ -131,11 +95,10 @@
   #searchInput{width:100%;padding:10px 35px 10px 14px;border:1px solid var(--border);border-radius:10px;background:var(--chip);color:var(--text);font-size:14px;outline:none;}
   .clear-btn{position:absolute;right:8px;width:20px;height:20px;border:none;border-radius:50%;background:var(--muted);color:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;font-weight:bold;}
 
-  /* --- СЕТКА ТОВАРОВ --- */
+  /* GRID */
   .grid{display:grid;grid-template-columns:repeat( auto-fill, minmax(280px,1fr));gap:14px;margin:20px auto}
   .card{position:relative;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:.2s;display:flex;flex-direction:column}
   
-  /* КАРУСЕЛЬ */
   .imgwrap{position:relative; aspect-ratio:4/3; background:#0c1322; overflow:hidden;}
   .slide-img{
     position:absolute; top:0; left:0; width:100%; height:100%; object-fit:contain;
@@ -190,23 +153,19 @@
       </div>
 
       <div class="header-body">
-        
         <div class="club-banner">
           <svg style="display:none">
             <symbol id="icon-insta" viewBox="0 0 448 512">
               <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
             </symbol>
           </svg>
-
           🔥 Скидка для 
-          <a href="https://www.instagram.com/geelyclub14pvl/" target="_blank" class="ig-link">
-            <svg class="ig-icon"><use xlink:href="#icon-insta"></use></svg>
-            Geely Club
+          <a href="https://www.instagram.com/geelyclub14pvl/" data-username="geelyclub14pvl" target="_blank" class="ig-link">
+            <svg class="ig-icon"><use xlink:href="#icon-insta"></use></svg>Geely Club Pavlodar
           </a> 
           от 
-          <a href="https://www.instagram.com/damu_auto_kz/" target="_blank" class="ig-link">
-             <svg class="ig-icon"><use xlink:href="#icon-insta"></use></svg>
-             Damu Auto
+          <a href="https://www.instagram.com/damu_auto_kz/" data-username="damu_auto_kz" target="_blank" class="ig-link">
+             <svg class="ig-icon"><use xlink:href="#icon-insta"></use></svg>Damu Auto
           </a>
         </div>
 
@@ -215,9 +174,7 @@
             <span class="select-label">Выберите модель:</span>
             <div class="chips" id="modelChips"></div>
           </div>
-          <a href="/regulations.html" class="calc-btn">
-            <span>🧮</span> Калькулятор ТО
-          </a>
+          <a href="/regulations.html" class="calc-btn"><span>🧮</span> Калькулятор ТО</a>
         </div>
 
         <div class="search-container" id="searchContainer">
@@ -229,9 +186,7 @@
       </div>
     </div>
     
-    <div class="toggle-bar" onclick="toggleHeader()">
-      Свернуть / Развернуть меню
-    </div>
+    <div class="toggle-bar" onclick="toggleHeader()">Свернуть / Развернуть меню</div>
   </header>
 
   <main class="wrap">
@@ -245,7 +200,20 @@
   </footer>
 
 <script>
-// === ЛОГИКА ШТОРКИ ===
+// === ИСПРАВЛЕНИЕ ССЫЛОК ИНСТАГРАМ ДЛЯ МОБИЛЬНЫХ ===
+// Если это телефон, меняем ссылку на instagram://user?username=...
+if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+  document.querySelectorAll('.ig-link').forEach(link => {
+    const user = link.getAttribute('data-username');
+    if (user) {
+      link.setAttribute('href', `instagram://user?username=${user}`);
+      // Убираем target="_blank", чтобы открылось в этом же окне (переключилось на приложение)
+      link.removeAttribute('target');
+    }
+  });
+}
+
+// Logic
 const header = document.getElementById('mainHeader');
 let isAnimating = false;
 
@@ -266,7 +234,7 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 
-// === КОНФИГУРАЦИЯ ===
+// Config
 const MODEL_CHIPS = [
   {label:'Monjaro KX11', dbKey:'monjaro', modelKey:'Monjaro'},
   {label:'Coolray (New)', dbKey:'coolray', modelKey:'Coolray'},
@@ -287,20 +255,12 @@ const elChips = document.getElementById('modelChips');
 
 elUpdated.textContent = `Обновлено: ${new Date().toLocaleDateString('ru-RU')}`;
 
-// === ИСПРАВЛЕННАЯ ФУНКЦИЯ КАРТИНОК ===
-// w - ширина (необязательно). Если не передать, будет оригинал.
+// Картинки: Если w не передан - полный размер!
 function cldUrl(url, w){
   try{
     if(!url || !url.includes('cloudinary.com')) return url;
-    
-    // Если ширина задана -> сжимаем (для иконок и превью)
-    if(w) {
-      return url.replace('/upload/', `/upload/f_auto,q_auto,w_${w}/`);
-    } 
-    // Если ширина НЕ задана -> ТОЛЬКО оптимизация формата (качество оригинала)
-    else {
-      return url.replace('/upload/', `/upload/f_auto,q_auto/`);
-    }
+    if(w) return url.replace('/upload/', `/upload/f_auto,q_auto,w_${w}/`);
+    return url.replace('/upload/', `/upload/f_auto,q_auto/`);
   }catch(_){ return url; }
 }
 
@@ -331,17 +291,13 @@ MODEL_CHIPS.forEach(c => {
   const el = document.createElement('span');
   el.className = 'chip';
   el.textContent = c.label;
-  el.onclick = (e) => {
-    e.stopPropagation(); 
-    selectModel(c.label);
-  };
+  el.onclick = (e) => { e.stopPropagation(); selectModel(c.label); };
   elChips.appendChild(el);
 });
 
 function selectModel(label){
   const chips = document.querySelectorAll('.chip');
   let isUnselect = false;
-
   chips.forEach(chip => {
     if(chip.textContent === label){
       if(chip.classList.contains('active')){
@@ -430,8 +386,6 @@ function renderGallery(p) {
   
   if (images.length === 0) return `<img src="https://via.placeholder.com/300" class="slide-img active">`;
 
-  // ЗДЕСЬ МЫ НЕ ПЕРЕДАЕМ ВТОРОЙ АРГУМЕНТ В cldUrl
-  // Значит, картинки будут грузиться в оригинальном размере!
   if (images.length === 1) {
     return `<img src="${cldUrl(images[0])}" class="slide-img active" alt="${p.name}">`;
   }
