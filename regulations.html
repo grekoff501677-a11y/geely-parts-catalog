@@ -8,47 +8,41 @@
 <link rel="icon" type="image/png" href="https://res.cloudinary.com/djjcxxgfm/image/upload/f_png,w_32,h_32,c_fill/v1757929669/%D0%BE%D1%80%D0%B8%D0%B3%D0%B8%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%82%D0%BE%D0%BF%D0%BB%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%84%D0%B8%D0%BB%D1%8C%D1%82%D1%80_geely_coolray_okavango_azkarra_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F_9_avfuii.png">
 
 <style>
-  :root{ --bg:#0a1c2b; --card:#0f1d2a; --muted:#9fb2c3; --text:#e9f0f7; --brand:#aa8643; --border:#1e3040; --chip:#122233; --head:#112131; }
+  :root{ --bg:#0a1c2b; --card:#0f1d2a; --muted:#9fb2c3; --text:#e9f0f7; --brand:#aa8643; --success:#27ae60; --border:#1e3040; --chip:#122233; --head:#112131; }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--text);font:15px/1.4 system-ui, sans-serif; padding-bottom: 60px;}
   
-  /* Шапка */
   header{background:rgba(10,28,43,0.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:15px 0;position:sticky;top:0;z-index:99}
   .wrap{max-width:1100px;margin:0 auto;padding:0 18px}
   .top-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
   .back-btn{color:var(--brand);text-decoration:none;font-weight:600;font-size:14px;display:flex;align-items:center;gap:5px; border:1px solid var(--border); padding: 5px 10px; border-radius: 6px;}
   
-  /* Выбор модели */
   .chips-scroll{overflow-x:auto;padding-bottom:5px;scrollbar-width:none;margin:0 -18px;padding:0 18px}
   .chips{display:flex;gap:8px;}
   .chip{padding:8px 16px;border-radius:50px;background:var(--chip);border:1px solid var(--border);color:var(--muted);cursor:pointer;white-space:nowrap;transition:0.2s}
   .chip.active{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 4px 12px rgba(170,134,67,0.3)}
 
-  /* Подсказка */
   .hint-text {
     text-align: center; color: var(--brand); font-size: 14px; font-weight: bold;
     margin: 20px 0 10px 0; animation: bounce 2s infinite;
   }
   @keyframes bounce { 0%, 100% {transform:translateY(0)} 50% {transform:translateY(-3px)} }
 
-  /* Таблица регламента */
+  /* Таблица */
   .table-wrap{border-radius:12px;border:1px solid var(--border);background:var(--card);overflow:hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);}
   .table-scroll{overflow-x:auto;}
   table{width:100%;border-collapse:collapse;min-width:700px;font-size:13px}
   th, td{padding:12px 8px;text-align:center;border-bottom:1px solid var(--border)}
   
-  /* ЗАГОЛОВКИ-КНОПКИ */
   th{background:var(--head);color:var(--muted);cursor:pointer;user-select:none;position:relative; vertical-align: top; padding-top: 15px;}
   th:hover{background:#16283a; color: #fff;}
   
-  /* Активная колонка */
   th.active-col{background:var(--brand);color:#fff; border-bottom: none;}
   th.active-col::after {
     content:''; position:absolute; bottom:-6px; left:50%; transform:translateX(-50%);
     border-left:6px solid transparent; border-right:6px solid transparent; border-top:6px solid var(--brand);
   }
 
-  /* Стиль "кнопки" внутри заголовка */
   .th-km { font-size: 14px; font-weight: bold; display: block; margin-bottom: 4px; }
   .th-btn { 
     font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px;
@@ -57,30 +51,45 @@
   }
   th.active-col .th-btn { background: #fff; color: var(--brand); font-weight: bold; }
 
-  /* Первый столбец (названия) */
   th:first-child, td:first-child{text-align:left;position:sticky;left:0;background:var(--card);z-index:2;border-right:1px solid var(--border);min-width:160px;padding-left:15px;font-weight:500}
   th:first-child { background: var(--head); padding-top: 15px;} 
 
-  /* Маркеры */
-  .z-mark{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--brand);color:#fff;border-radius:4px;font-weight:bold;font-size:12px}
-  .i-mark{color:var(--muted);font-size:10px}
+  /* МАРКЕРЫ */
+  .marker { display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:4px;font-weight:bold;font-size:12px; color:#fff; }
+  .marker-z { background:var(--brand); } /* Замена */
+  .marker-r { background:var(--success); } /* Рекомендация (Зеленый) */
+  .i-mark { color:var(--muted);font-size:10px }
   
   .col-highlight { background: rgba(170,134,67,0.1); }
 
-  /* Блок "Что купить" */
+  /* Блок "Почему рекомендуем" */
+  .turbo-hint {
+    margin: 15px 0; padding: 12px; border-radius: 8px;
+    background: rgba(39, 174, 96, 0.1); border: 1px solid var(--success);
+    font-size: 13px; color: #badcc6; display: flex; gap: 10px; align-items: start;
+  }
+  .turbo-hint span { color: var(--success); font-weight: bold; }
+
+  /* Легенда */
+  .legend { margin-top:10px;font-size:12px;color:var(--muted);display:flex;gap:15px;padding-left:5px; flex-wrap: wrap; }
+  .legend span { display:flex;align-items:center;gap:5px }
+
+  /* Корзина */
   #cart-section{display:none;margin-top:30px; border-top: 1px dashed var(--border); padding-top: 20px;}
-  
   .cart-header{border-left:4px solid var(--brand);padding-left:15px;margin-bottom:20px}
   .cart-header h2{margin:0;font-size:20px}
   .cart-header p{margin:5px 0 0;color:var(--muted);font-size:14px}
 
-  /* Сетка товаров */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+  .item-card{display:flex;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px;gap:12px;align-items:center; position: relative; overflow: hidden;}
   
-  .item-card{display:flex;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px;gap:12px;align-items:center}
-  /* Иконки в калькуляторе маленькие, сжимаем их */
+  /* Бейдж рекомендации в карточке */
+  .rec-badge {
+    position: absolute; top: 0; right: 0; background: var(--success); color: #fff;
+    font-size: 9px; padding: 2px 6px; border-bottom-left-radius: 6px; text-transform: uppercase; font-weight: bold;
+  }
+
   .item-img{width:60px;height:60px;object-fit:contain;background:#fff;border-radius:6px;padding:4px}
-  
   .item-info{flex:1;min-width:0}
   .item-name{margin:0 0 4px;font-size:14px;line-height:1.3;color:#fff}
   .item-price{color:var(--brand);font-weight:bold;font-size:15px}
@@ -115,9 +124,17 @@
     </div>
   </div>
   
-  <div style="margin-top:10px;font-size:12px;color:var(--muted);display:flex;gap:15px;padding-left:5px">
-    <span style="display:flex;align-items:center;gap:5px"><span class="z-mark">З</span> — Замена</span>
-    <span>И — Проверка</span>
+  <div class="turbo-hint">
+    <div style="font-size: 20px;">🐌</div>
+    <div>
+      <span>Важно:</span> Мы рекомендуем менять воздушный фильтр каждые 10 000 км (вместе с маслом). Турбированные двигатели потребляют много воздуха, и частая замена фильтра продлевает жизнь турбины.
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><span class="marker marker-z">З</span> — Замена по регламенту</span>
+    <span><span class="marker marker-r">Р</span> — Рекомендация Damu</span>
+    <span><b>И</b> — Проверка</span>
   </div>
 
   <div id="cart-section">
@@ -131,15 +148,16 @@
 
 <script>
 // === ДАННЫЕ РЕГЛАМЕНТА ===
+// З = Замена (Обязательно), Р = Рекомендация (Добавлено нами), И = Инспекция
 const SCHEDULE = {
   monjaro: {
     name: "Geely Monjaro",
     rows: [
       { t: "Моторное масло", k: ["масло"], v: ["З","З","З","З","З","З","З","З","З","З"] },
       { t: "Масляный фильтр", k: ["масляный"], v: ["З","З","З","З","З","З","З","З","З","З"] },
-      { t: "Воздушный фильтр", k: ["воздушный"], v: ["И","З","И","З","И","З","И","З","И","З"] },
+      // ВОЗДУШНЫЙ: Четные - З, Нечетные - Р
+      { t: "Воздушный фильтр", k: ["воздушный"], v: ["Р","З","Р","З","Р","З","Р","З","Р","З"] },
       { t: "Салонный фильтр", k: ["салонный"], v: ["И","З","И","З","И","З","И","З","И","З"] },
-      // Топливный убран по просьбе владельца
       { t: "Свечи зажигания", k: ["свечи"], v: ["-","-","-","З","-","-","-","З","-","-"] },
       { t: "Тормозная жидкость", k: ["тормозная"], v: ["-","-","-","З","-","-","-","З","-","-"] },
       { t: "Антифриз (Охл. жидк.)", k: ["антифриз", "охлаждающая"], v: ["-","-","-","-","-","-","-","-","З","-"] },
@@ -151,7 +169,8 @@ const SCHEDULE = {
     rows: [
       { t: "Моторное масло", k: ["масло"], v: ["З","З","З","З","З","З","З","З","З","З"] },
       { t: "Масляный фильтр", k: ["масляный"], v: ["З","З","З","З","З","З","З","З","З","З"] },
-      { t: "Воздушный фильтр", k: ["воздушный"], v: ["И","З","И","З","И","З","И","З","И","З"] },
+      // ВОЗДУШНЫЙ: Четные - З, Нечетные - Р
+      { t: "Воздушный фильтр", k: ["воздушный"], v: ["Р","З","Р","З","Р","З","Р","З","Р","З"] },
       { t: "Салонный фильтр", k: ["салонный"], v: ["И","З","И","З","И","З","И","З","И","З"] },
       { t: "Топливный фильтр", k: ["топливный"], v: ["-","-","З","-","-","З","-","-","З","-"] },
       { t: "Свечи зажигания", k: ["свечи"], v: ["-","-","-","З","-","-","-","З","-","-"] },
@@ -165,7 +184,8 @@ const SCHEDULE = {
     rows: [
       { t: "Моторное масло", k: ["масло"], v: ["З","З","З","З","З","З","З","З","З","З"] },
       { t: "Масляный фильтр", k: ["масляный"], v: ["З","З","З","З","З","З","З","З","З","З"] },
-      { t: "Воздушный фильтр", k: ["воздушный"], v: ["И","З","И","З","И","З","И","З","И","З"] },
+      // ВОЗДУШНЫЙ: Четные - З, Нечетные - Р
+      { t: "Воздушный фильтр", k: ["воздушный"], v: ["Р","З","Р","З","Р","З","Р","З","Р","З"] },
       { t: "Салонный фильтр", k: ["салонный"], v: ["И","З","И","З","И","З","И","З","И","З"] },
       { t: "Топливный фильтр", k: ["топливный"], v: ["-","-","З","-","-","З","-","-","З","-"] },
       { t: "Свечи зажигания", k: ["свечи"], v: ["-","-","-","З","-","-","-","З","-","-"] },
@@ -180,7 +200,8 @@ const SCHEDULE = {
     rows: [
       { t: "Моторное масло", k: ["масло"], v: ["З","З","З","З","З","З","З","З","З","З"] },
       { t: "Масляный фильтр", k: ["масляный"], v: ["З","З","З","З","З","З","З","З","З","З"] },
-      { t: "Воздушный фильтр", k: ["воздушный"], v: ["И","З","И","З","И","З","И","З","И","З"] },
+      // ВОЗДУШНЫЙ: Четные - З, Нечетные - Р
+      { t: "Воздушный фильтр", k: ["воздушный"], v: ["Р","З","Р","З","Р","З","Р","З","Р","З"] },
       { t: "Салонный фильтр", k: ["салонный"], v: ["И","З","И","З","И","З","И","З","И","З"] },
       { t: "Свечи зажигания", k: ["свечи"], v: ["-","-","-","З","-","-","-","З","-","-"] },
       { t: "Тормозная жидкость", k: ["тормозная"], v: ["-","-","-","З","-","-","-","З","-","-"] },
@@ -198,11 +219,10 @@ const MODELS = [
   {id:'atlas', label:'Atlas'}
 ];
 
-// === ЛОГИКА ===
+// ЛОГИКА
 let currentModel = 'monjaro';
 let catalog = [];
 
-// Оптимизация ТОЛЬКО для калькулятора (маленькие иконки)
 function optimizeImg(url) {
   if (!url || !url.includes('cloudinary.com')) return url;
   return url.replace('/upload/', '/upload/f_auto,q_auto,w_200/');
@@ -237,7 +257,6 @@ async function loadData() {
     catalog = data.items || [];
     renderTable();
     
-    // АВТО-ВЫБОР: Сразу нажимаем на 20 000 км
     setTimeout(() => {
         const defaultCol = document.getElementById('col-header-1');
         if(defaultCol) selectMileage(1, 20, defaultCol);
@@ -264,7 +283,12 @@ function renderTable() {
   data.rows.forEach((row, rIdx) => {
     html += `<tr><td>${row.t}</td>`;
     row.v.forEach((val, cIdx) => {
-      let cellContent = val === 'З' ? `<span class="z-mark">З</span>` : (val === 'И' ? `<span class="i-mark">И</span>` : '');
+      let cellContent = val;
+      // Логика отрисовки маркеров
+      if(val === 'З') cellContent = `<span class="marker marker-z">З</span>`;
+      else if(val === 'Р') cellContent = `<span class="marker marker-r">Р</span>`;
+      else if(val === 'И') cellContent = `<span class="i-mark">И</span>`;
+      
       html += `<td class="col-${cIdx}">${cellContent}</td>`;
     });
     html += `</tr>`;
@@ -275,14 +299,12 @@ function renderTable() {
 }
 
 window.selectMileage = function(colIdx, km, thEl) {
-  // Визуал
   document.querySelectorAll('th').forEach(th => th.classList.remove('active-col'));
   thEl.classList.add('active-col');
   
   document.querySelectorAll('td').forEach(td => td.classList.remove('col-highlight'));
   document.querySelectorAll(`.col-${colIdx}`).forEach(td => td.classList.add('col-highlight'));
   
-  // Сборка корзины
   const section = document.getElementById('cart-section');
   const grid = document.getElementById('result-grid');
   const title = document.getElementById('result-title');
@@ -291,7 +313,8 @@ window.selectMileage = function(colIdx, km, thEl) {
   title.innerText = `ТО ${km} 000 км`;
   grid.innerHTML = '';
   
-  const needed = SCHEDULE[currentModel].rows.filter(r => r.v[colIdx] === 'З');
+  // ТЕПЕРЬ ИЩЕМ И "З" (ЗАМЕНА) И "Р" (РЕКОМЕНДАЦИЯ)
+  const needed = SCHEDULE[currentModel].rows.filter(r => r.v[colIdx] === 'З' || r.v[colIdx] === 'Р');
   
   if (needed.length === 0) {
     grid.innerHTML = '<div class="empty-msg">На этом пробеге только проверки. Замен не требуется.</div>';
@@ -299,9 +322,13 @@ window.selectMileage = function(colIdx, km, thEl) {
   }
   
   needed.forEach(item => {
+    // Определяем, это рекомендация или обязаловка?
+    const isRecommended = item.v[colIdx] === 'Р';
+    
     const group = document.createElement('div');
     group.className = 'group-title';
-    group.innerText = item.t;
+    // Если рекомендация - добавляем пометку в заголовок
+    group.innerHTML = item.t + (isRecommended ? ' <span style="color:var(--success);font-weight:normal">(Рекомендация)</span>' : '');
     grid.appendChild(group);
     
     const found = catalog.filter(prod => {
@@ -313,7 +340,11 @@ window.selectMileage = function(colIdx, km, thEl) {
       found.forEach(p => {
         const div = document.createElement('div');
         div.className = 'item-card';
+        // Если это рекомендация - вешаем бейдж на карточку
+        const badge = isRecommended ? '<div class="rec-badge">Рекомендуем</div>' : '';
+        
         div.innerHTML = `
+          ${badge}
           <img src="${optimizeImg(p.img)}" class="item-img" loading="lazy">
           <div class="item-info">
             <h4 class="item-name">${p.name}</h4>
@@ -334,7 +365,6 @@ window.selectMileage = function(colIdx, km, thEl) {
     }
   });
   
-  // Плавный скролл (если клик руками)
   if(event && event.isTrusted) {
       setTimeout(() => section.scrollIntoView({behavior:'smooth'}), 100);
   }
