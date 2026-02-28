@@ -1,6 +1,34 @@
 {
   "items": [
     {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1772276102/%D0%BC%D0%B0%D1%81%D0%BB%D0%BE_1%D0%BB_akzeg7.png",
+      "price": 11600,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Liqui Moly Special Tec Volvo 1 л",
+      "order": 334,
+      "desc": "Оригинальное масло с допуском Volvo VCC RBS0-2AE",
+      "kaspi": "https://kaspi.kz/shop/p/sinteticheskoe-special-tec-v-0w-20-1-l-159907804/?m=30090572&ms=true",
+      "stock": 30,
+      "id": 996,
+      "sku": "-"
+    },
+    {
+      "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1772275926/%D0%BC%D0%B0%D1%81%D0%BB%D0%BE_5%D0%BB_i7lxlf.png",
+      "price": 45000,
+      "models": [
+        "Monjaro"
+      ],
+      "name": "Liqui Moly Special Tec Volvo 5 л",
+      "order": 333,
+      "desc": "Оригинальное масло с допуском Volvo VCC RBS0-2AE",
+      "kaspi": "https://kaspi.kz/shop/p/sinteticheskoe-special-tec-v-0w-20-5-l-159907633/?m=30090572&ms=true",
+      "stock": 30,
+      "id": 997,
+      "sku": "-"
+    },
+    {
       "img": "https://res.cloudinary.com/djjcxxgfm/image/upload/v1770632979/%D0%B2%D0%BE%D0%B7%D0%B4%D1%83%D1%85_%D0%9C%D0%B0%D0%BB%D0%B5_%D0%90_gzd2fo.png",
       "price": 6500,
       "models": [
